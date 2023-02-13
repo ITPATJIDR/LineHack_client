@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import liff from '@line/liff';
+import WaitingLogin from './waitingLogin';
 
 export default function CampPage() {
 
@@ -28,7 +29,6 @@ export default function CampPage() {
     const idToken = liff.getIDToken();
     setIdToken(idToken);
     liff.getProfile().then(profile => {
-      console.log(profile);
       setDisplayName(profile.displayName);
       setPictureUrl(profile.pictureUrl);
       setStatusMessage(profile.statusMessage);
@@ -36,18 +36,18 @@ export default function CampPage() {
     }).catch(err => console.error(err));
   }
 
-  useEffect(() =>{
-    initLine()
-  },[])
+  // useEffect(() =>{
+  //   initLine()
+  // },[])
 
   return (
-    <div>
-      <div>
-        {displayName ? displayName : "no"}
+    <div style={{backgroundColor:"#1CC09E",height:"1200px"}}>
+      {false 
+      ?<div>
+        <p>Login successfully</p>
       </div>
-      <div>
-        <button onClick={() => logout()}>Line Logout</button>
-      </div>
+      :<WaitingLogin/> 
+      }
     </div>
   )
 }
