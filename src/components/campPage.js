@@ -15,7 +15,7 @@ export default function CampPage() {
   }
 
   const initLine = () => {
-    liff.init({ liffId: '1657835103-oXvwMRa8' }, () => {
+    liff.init({ liffId: '1657835103-oXvwMRa8',withLoginOnExternalBrowser:true }, () => {
       if (liff.isLoggedIn()) {
         runApp();
       } else {
