@@ -36,14 +36,16 @@ export default function CampPage() {
     }).catch(err => console.error(err));
   }
 
+  useEffect(() =>{
+    initLine()
+  },[])
+
   return (
     <div>
       <div>
         {displayName ? displayName : "no"}
       </div>
       <div>
-        <button onClick={() => initLine()}>Line Login</button>
-        <br/>
         <button onClick={() => logout()}>Line Logout</button>
       </div>
     </div>
