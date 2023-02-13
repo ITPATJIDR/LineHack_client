@@ -38,8 +38,11 @@ export default function CampPage() {
 
   return (
     <div>
+      <div>
         <button onClick={() => initLine()}>Line Login</button>
-        <button onClick={() => logout()}>Line Login</button>
+        <br/>
+        <button onClick={() => logout()}>Line Logout</button>
+      </div>
     </div>
   )
 }
