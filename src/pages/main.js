@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import liff from '@line/liff';
 import WaitingLogin from './waitingLogin';
+import CampPage from './campPage';
 
-export default function CampPage() {
+export default function Main() {
 
   const [pictureUrl, setPictureUrl] = useState("");
   const [idToken, setIdToken] = useState("");
@@ -36,16 +37,14 @@ export default function CampPage() {
     }).catch(err => console.error(err));
   }
 
-  // useEffect(() =>{
-  //   initLine()
-  // },[])
+  useEffect(() =>{
+    initLine()
+  },[])
 
   return (
     <div style={{backgroundColor:"#1CC09E",height:"1200px"}}>
-      {false 
-      ?<div>
-        <p>Login successfully</p>
-      </div>
+      {liff.isLoggedIn
+      ?<CampPage/>
       :<WaitingLogin/> 
       }
     </div>

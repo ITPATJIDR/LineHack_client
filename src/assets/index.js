@@ -1,0 +1,7 @@
+export {default as Mountain_white} from "./MonkeyCamp/Mountain.png"
+export {default as Forest_grey} from "./MonkeyCamp/Forest.png"
+export {default as Beach_grey} from "./MonkeyCamp/Beach.png"
+export {default as Mountain_gray} from "./MonkeyCamp/Mountain_gray.png"
+export {default as Forest_white} from "./MonkeyCamp/Forest_white.png"
+export {default as Beach_white} from "./MonkeyCamp/Beach_white.png"
+export {default as Vector_down} from "./util/Vector_down.png"
