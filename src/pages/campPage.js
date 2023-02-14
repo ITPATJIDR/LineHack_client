@@ -28,7 +28,7 @@ export default function CampPage() {
 	const [allCamp, setAllCamp] = useState([])
 	
 	const getAllCamp = async () =>{
-		const data = await axios.get("http://localhost:5001/camp/getAllCamp")
+		const data = await axios.get("https://line-hack-server.vercel.app/camp/getAllCamp")
 			.then(res => {
 				setAllCamp(res.data.data)
 			})
@@ -36,6 +36,7 @@ export default function CampPage() {
 
 	useEffect(() =>{
 		getAllCamp()
+		console.log(process.env.SERVER_URL)
 	},[])
 
 	return (
