@@ -11,10 +11,10 @@ export default function Main() {
   const [statusMessage, setStatusMessage] = useState("");
   const [userId, setUserId] = useState("");
 
-  const logout = () => {
-    liff.logout();
-    window.location.reload();
-  }
+  // const logout = () => {
+  //   liff.logout();
+  //   window.location.reload();
+  // }
 
   const initLine = () => {
     liff.init({ liffId: '1657835103-oXvwMRa8',withLoginOnExternalBrowser:true }, () => {
@@ -37,13 +37,13 @@ export default function Main() {
     }).catch(err => console.error(err));
   }
 
-  useEffect(() =>{
-    initLine()
-  },[])
+  // useEffect(() =>{
+  //   initLine()
+  // },[])
 
   return (
-    <div style={{backgroundColor:"#1CC09E",height:"1200px"}}>
-      {liff.isLoggedIn
+    <div style={{backgroundColor:"#1CC09E",width:390,height:800}}>
+      {true
       ?<CampPage/>
       :<WaitingLogin/> 
       }
