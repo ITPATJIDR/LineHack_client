@@ -3,7 +3,6 @@ import Header from "../components/Header"
 import Body from "../components/Body"
 import { Mountain_gray, Mountain_white, Beach_grey, Beach_white, Forest_grey, Forest_white, Vector_down } from '../assets'
 import axios from 'axios'
-import HorizontalScroll from "react-horizontal-scrolling"
 
 const category = [
 	{
@@ -86,7 +85,7 @@ export default function CampPage() {
 										? allCamp.map((item, index) => {
 											console.log(item)
 											return (
-												<div key={index} style={{ width: 300, height: 250, borderWidth: 1, borderRadius: 10, marginRight: 20, }}>
+												<div key={index} style={{ width: 400, height: 250, borderWidth: 1, borderRadius: 10, marginRight: 20, }}>
 													<img src={item.campImage} alt={item.campName} style={{width:"100%",height:170,borderTopRightRadius:10,borderTopLeftRadius:10}}/>
 													<div style={{padding:10}}>
 														<p style={{fontWeight:'bold'}}>{item.campName}</p>
