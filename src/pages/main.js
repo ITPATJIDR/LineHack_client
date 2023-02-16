@@ -31,7 +31,11 @@ export default function Main() {
     }
 
     const res = await axios.post("https://line-hack-server.vercel.app/user/register",payload,{
-      withCredentials: true
+      withCredentials: true,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "application/json",
+      }
     })
       console.log(res)
   }
