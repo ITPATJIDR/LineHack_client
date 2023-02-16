@@ -23,10 +23,13 @@ export default function Main() {
   // }
 
   const checkNewUser = async (profile) => {
-    const res = await axios.post("https://line-hack-server.vercel.app/user/register",{
+    const payload = {
       userId: profile.userId,
       userImage: profile.pictureUri,
       userName: profile.displayName
+    }
+    const res = await axios.post("https://line-hack-server.vercel.app/user/register",payload,{
+      withCredentials: true,
     })
   }
 
