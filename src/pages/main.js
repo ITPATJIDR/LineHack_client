@@ -24,7 +24,7 @@ export default function Main() {
 
   const checkNewUser = async (userId) => {
     const res = await axios.post("https://line-hack-server.vercel.app/user/register")
-    
+    console.log(res) 
   }
 
   const initLine = () => {
@@ -41,7 +41,7 @@ export default function Main() {
     const idToken = liff.getIDToken();
     setIdToken(idToken);
     liff.getProfile().then(profile => {
-      console.log(profile)
+      checkNewUser(profile.userId)
       setUserInfo(profile)
     }).catch(err => console.error(err));
   }
