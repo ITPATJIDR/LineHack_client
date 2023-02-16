@@ -83,7 +83,6 @@ export default function CampPage() {
 								<div className="flex space-x-4 scrollbar-hide p-3 -ml-3 " style={{width:1100}}>
 									{allCamp.length > 0
 										? allCamp.map((item, index) => {
-											console.log(item)
 											return (
 												<div key={index} style={{ width: 400, height: 270, borderWidth: 1, borderRadius: 10, marginRight: 20, }}>
 													<img src={item.campImage} alt={item.campName} style={{width:"100%",height:170,borderTopRightRadius:10,borderTopLeftRadius:10}}/>
