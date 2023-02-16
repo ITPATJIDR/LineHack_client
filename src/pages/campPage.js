@@ -35,7 +35,6 @@ export default function CampPage() {
 
 	useEffect(() =>{
 		getAllCamp()
-		console.log(process.env.SERVER_URL)
 	},[])
 
 	return (

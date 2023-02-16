@@ -4,6 +4,7 @@ import WaitingLogin from './waitingLogin';
 import CampPage from './campPage';
 import {useSelector , useDispatch } from "react-redux"
 import { setUserInfo } from '../store/userInfoSlice';
+import axios from 'axios';
 
 export default function Main() {
 
@@ -20,6 +21,11 @@ export default function Main() {
   //   liff.logout();
   //   window.location.reload();
   // }
+
+  const checkNewUser = async (userId) => {
+    const res = await axios.post("https://line-hack-server.vercel.app/user/register")
+    
+  }
 
   const initLine = () => {
     liff.init({ liffId: '1657835103-oXvwMRa8',withLoginOnExternalBrowser:true }, () => {
@@ -46,7 +52,7 @@ export default function Main() {
 
   return (
     <div style={{backgroundColor:"#1CC09E",width:390,height:800}}>
-      {true
+      {liff.isLoggedIn
       ?<CampPage/>
       :<WaitingLogin/> 
       }
