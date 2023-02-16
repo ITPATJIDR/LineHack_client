@@ -22,9 +22,12 @@ export default function Main() {
   //   window.location.reload();
   // }
 
-  const checkNewUser = async (userId) => {
-    const res = await axios.post("https://line-hack-server.vercel.app/user/register")
-    console.log(res) 
+  const checkNewUser = async (profile) => {
+    const res = await axios.post("https://line-hack-server.vercel.app/user/register",{
+      userId: profile.userId,
+      userImage: profile.pictureUri,
+      userName: profile.displayName
+    })
   }
 
   const initLine = () => {
@@ -41,7 +44,7 @@ export default function Main() {
     const idToken = liff.getIDToken();
     setIdToken(idToken);
     liff.getProfile().then(profile => {
-      checkNewUser(profile.userId)
+      checkNewUser(profile)
       setUserInfo(profile)
     }).catch(err => console.error(err));
   }
