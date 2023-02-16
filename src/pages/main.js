@@ -30,14 +30,8 @@ export default function Main() {
       userName: profile.displayName
     }
 
-    const res = await axios.post("https://line-hack-server.vercel.app/user/register",payload,{
-      withCredentials: true,
-      headers: {
-        "Access-Control-Allow-Origin": "https://line-hack-server.vercel.app",
-        "Content-Type": "application/json",
-      }
-    })
-      console.log(res)
+    const res = await axios.post("https://line-hack-server.vercel.app/user/register",payload)
+    console.log(res)
   }
 
   const initLine = () => {
