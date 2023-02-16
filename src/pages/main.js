@@ -23,11 +23,13 @@ export default function Main() {
   // }
 
   const checkNewUser = async (profile) => {
+    console.log(profile)
     const payload = {
       userId: profile.userId,
-      userImage: profile.pictureUri,
+      userImage: profile.pictureUrl,
       userName: profile.displayName
     }
+
     const res = await axios.post("https://line-hack-server.vercel.app/user/register",payload,{
       withCredentials: true,
       headers: {
@@ -35,6 +37,7 @@ export default function Main() {
         "Content-Type": "application/json",
       }
     })
+      console.log(res)
   }
 
   const initLine = () => {
