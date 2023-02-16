@@ -35,6 +35,7 @@ export default function Main() {
     const idToken = liff.getIDToken();
     setIdToken(idToken);
     liff.getProfile().then(profile => {
+      console.log(profile)
       setUserInfo(profile)
     }).catch(err => console.error(err));
   }
