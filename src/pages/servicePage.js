@@ -2,28 +2,28 @@ import React, {useEffect, useState} from 'react'
 import Header from "../components/Header"
 import Body from "../components/Body"
 import Footer from '../components/Footer'
-import { Mountain_gray, Mountain_white, Beach_grey, Beach_white, Forest_grey, Forest_white, Vector_down } from '../assets'
+import { Store_gray, Store_white, Food_gray, Food_white, Beverage_white, Beverage_gray ,Vector_down } from '../assets'
 import axios from 'axios'
 
 const category = [
 	{
-		icon_grey: Mountain_gray,
-		icon_white: Mountain_white,
-		categoryName : "Moun-tain"
+		icon_grey: Store_gray,
+		icon_white: Store_white,
+		categoryName : "Store"
 	},
 	{
-		icon_grey: Beach_grey,
-		icon_white: Beach_white,
-		categoryName : "Beach"
+		icon_grey: Food_gray,
+		icon_white: Food_white,
+		categoryName : "Food"
 	},
 	{
-		icon_grey: Forest_grey,
-		icon_white: Forest_white,
-		categoryName : "Forest"
+		icon_grey: Beverage_gray,
+		icon_white: Beverage_white,
+		categoryName : "Beverage"
 	},
 ]
 
-export default function CampPage() {
+export default function ServicePage() {
 
 	const [allCamp, setAllCamp] = useState([])
 	const [seeMore, setSeemore] = useState(false)
@@ -46,9 +46,9 @@ export default function CampPage() {
 	},[])
 
 	return (
-		<div>
-			<Header alignItems={"left"} seeMore={seeMore} page={page} pageService={"Camp"} pageMain={"Monkey"}/>
-			<Body alignItems={""} justifyContent={""} seeMore={seeMore} page={page} display={"flex"} pageService={"Camp"} >
+		<div style={{backgroundColor:"#1CC09E",width:390,height:750}}>
+			<Header alignItems={"left"} seeMore={seeMore} page={page} pageService={"Service"} pageMain={"Monkey"}/>
+			<Body alignItems={""} justifyContent={""} seeMore={seeMore} page={page} pageService={"Service"} display={"flex"} >
 				<div style={{ width: '100%', padding: 20,overflow:"hidden" }}>
 					<div>
 						<div>
@@ -79,7 +79,7 @@ export default function CampPage() {
 						<div style={{ backgroundColor: "#f7f7f7", height: 100, width: "100%", padding: 20 }}>
 							<div style={{ display: "flex", width: "100%", justifyContent: "space-between" }}>
 								<div>
-									<p style={{ fontWeight: "bold", fontSize: 16 }}>Recommendation</p>
+									<p style={{ fontWeight: "bold", fontSize: 16 }}>Nearby Attractions & Food</p>
 								</div>
 								<div onClick={() => handleSeeMore("Camp")}>
 									<p style={{ fontWeight: "bold", fontSize: 16, color: "#FDAF17" }}>see more</p>
@@ -88,18 +88,18 @@ export default function CampPage() {
 
 							<div style={{marginTop:20,overflow:"scroll"}}>
 								<div className="flex " style={{
-									width:seeMore === true && page === "Camp" ? 330 : 1100,
-									height:seeMore === true && page === "Camp" ? 390 : null,
+									width:seeMore === true && page === "Service" ? 330 : 1100,
+									height:seeMore === true && page === "Service" ? 390 : null,
 									overflow: 'auto',
-									flexWrap:seeMore === true && page === "Camp" ? "wrap" : null,
-									justifyContent: seeMore === true && page === "Camp" ? "center" : null,
+									flexWrap:seeMore === true && page === "Service" ? "wrap" : null,
+									justifyContent: seeMore === true && page === "Service" ? "center" : null,
 									}}>
 									{allCamp.length > 0
 										? allCamp.map((item, index) => {
 											return (
-												<div key={index} style={{ width: seeMore === true && page === "Camp" ? 130 : 400
+												<div key={index} style={{ width: seeMore === true && page === "Service" ? 130 : 400
 												, height: 220, borderWidth: 1, borderRadius: 10, marginRight: 20,
-												marginBottom: seeMore === true && page === "Camp" ? 10 :0,
+												marginBottom: seeMore === true && page === "Service" ? 10 :0,
 												overflow:"hidden",textOverflow:"ellipsis"
 												 }}>
 													<img src={item.campImage} alt={item.campName} style={{width:"100%",height:130,borderTopRightRadius:10,borderTopLeftRadius:10}}/>
