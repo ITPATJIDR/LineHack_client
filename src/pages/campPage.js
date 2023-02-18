@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 import { Mountain_gray, Mountain_white, Beach_grey, Beach_white, Forest_grey, Forest_white, Vector_down } from '../assets'
 import axios from 'axios'
 
-const category = [
+const categorys = [
 	{
 		icon_grey: Mountain_gray,
 		icon_white: Mountain_white,
@@ -57,7 +57,7 @@ export default function CampPage() {
 							<p style={{ fontSize: 20, fontWeight: 'bold' }}>Categories</p>
 						</div>
 						<div style={{ display: "flex", marginTop: 15 }}>
-							{category.map((item, index) => {
+							{categorys.map((item, index) => {
 								return (
 									<div key={index} style={{ width: "100%" }}>
 										<div style={{ display: "flex", borderWidth: 1, width: 110, borderRadius: 10, borderColor: "#C4C4C4", marginRight: 10, alignItems: 'center', }}>
