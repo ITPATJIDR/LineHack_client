@@ -28,6 +28,8 @@ export default function CampPage() {
 	const [allCamp, setAllCamp] = useState([])
 	const [seeMore, setSeemore] = useState(false)
 	const [page, setPage] = useState("")
+	const [select, setSelect] = useState("")
+	const [category, setCategory] = useState("")
 
 	const handleSeeMore = (page) =>{
 		setSeemore(true)
