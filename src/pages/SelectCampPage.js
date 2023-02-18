@@ -9,12 +9,20 @@ export default function SelectCampPage() {
 
 	const {campImage ,campName ,campDescription,bookingPrice,campFacility,
 	campFacilityDescription, campFeeDescription, campLocation, campMode,
-	campPromotion, campPromotionRating, campRating
+	campPromotion, campPromotionRating, campRating, 
 	} = location.state.item
-	console.log(location.state.item)
 
 	const handleBack = () => {
 		navigate("/")
+	}
+
+	const handleBookNow = () => {
+		navigate("/campLocation",{
+			state:{
+				campFacilityDescription,
+				bookingPrice
+			}
+		})
 	}
 
   return (
@@ -102,8 +110,9 @@ export default function SelectCampPage() {
 						display:"flex",
 						alignItems:"center",
 						borderRadius:10,
-						fontWeight:"bold"
-					  }}>
+						fontWeight:"bold" }}
+						onClick={() => handleBookNow()}
+					>
 						  Book Now
 					  </div>
 				  </div>
