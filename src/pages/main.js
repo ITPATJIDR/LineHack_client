@@ -3,7 +3,7 @@ import liff from '@line/liff';
 import WaitingLogin from './waitingLogin';
 import CampPage from './campPage';
 import {useSelector , useDispatch } from "react-redux"
-import { setUserInfo } from '../store/userInfoSlice';
+import { setUserInfo, checkNewUser } from '../store/userInfoSlice';
 import axios from 'axios';
 
 export default function Main() {
@@ -12,28 +12,6 @@ export default function Main() {
 
   const userInfo = useSelector((state) => state.userInfo)
   const dispatch = useDispatch()
-  console.log("userInfo", userInfo)
-
-  const checkNewUser = async (profile) => {
-    const payload = {
-      userId: profile.userId,
-      userImage: profile.pictureUrl,
-      userName: profile.displayName
-    }
-
-    await axios.post("https://rich-ruby-pelican-sari.cyclic.app/user/register",payload,{
-      withCredentials: true,
-      headers: {
-        "Access-Control-Allow-Origin": "https://rich-ruby-pelican-sari.cyclic.app",
-      }
-    }).then((res) =>{
-      dispatch(setUserInfo({
-        data: res.data,
-        idToken: idToken
-      }))
-    })
-
-  }
 
   const initLine = () => {
     liff.init({ liffId: '1657835103-oXvwMRa8',withLoginOnExternalBrowser:true }, () => {

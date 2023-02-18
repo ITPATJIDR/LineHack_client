@@ -3,7 +3,7 @@ import Header from '../components/Header'
 import Body from '../components/Body'
 import Footer from '../components/Footer'
 import {useSelector , useDispatch } from "react-redux"
-import { selectUserInfo } from '../store/userInfoSlice'
+import { selectUserInfo, setUserInfo, checkNewUser } from '../store/userInfoSlice'
 import { Banana } from "../assets"
 import axios from 'axios'
 import liff from '@line/liff';
@@ -13,7 +13,10 @@ export default function BananaPointPage() {
   const runApp = () => {
     liff.init({ liffId: '1657835103-oXvwMRa8', withLoginOnExternalBrowser: true }, () => {
       const idToken = liff.getIDToken();
-      liff.getProfile().then(profile => { console.log(profile) }).catch(err => console.error(err));
+      liff.getProfile().then(profile => { 
+        checkNewUser(profile)
+        setUserInfo(profile)
+       }).catch(err => console.error(err));
     })
   }
 
