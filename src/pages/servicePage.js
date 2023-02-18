@@ -3,7 +3,7 @@ import Header from "../components/Header"
 import Body from "../components/Body"
 import Footer from '../components/Footer'
 import { Store_gray, Store_white, Food_gray, Food_white, Beverage_white, Beverage_gray ,Vector_down } from '../assets'
-import axios from 'axios'
+import axios, { all } from 'axios'
 
 const categorys = [
 	{
@@ -25,7 +25,7 @@ const categorys = [
 
 export default function ServicePage() {
 
-	const [allCamp, setAllCamp] = useState([])
+	const [allService, setAllService] = useState([])
 	const [seeMore, setSeemore] = useState(false)
 	const [page, setPage] = useState("")
 	const [category, setCategory] = useState("")
@@ -36,9 +36,9 @@ export default function ServicePage() {
 	}
 	
 	const getAllCamp = async () =>{
-		const data = await axios.get("https://rich-ruby-pelican-sari.cyclic.app/camp/getAllCamp")
+		const data = await axios.get("https://rich-ruby-pelican-sari.cyclic.app/service/getAllService")
 			.then(res => {
-				setAllCamp(res.data.data)
+				setAllService(res.data.data)
 			})
 	} 
 
@@ -83,7 +83,7 @@ export default function ServicePage() {
 								<div>
 									<p style={{ fontWeight: "bold", fontSize: 16 }}>Nearby Attractions & Food</p>
 								</div>
-								<div onClick={() => handleSeeMore("Camp")}>
+								<div onClick={() => handleSeeMore("Service")}>
 									<p style={{ fontWeight: "bold", fontSize: 16, color: "#FDAF17" }}>see more</p>
 								</div>
 							</div>
@@ -96,18 +96,18 @@ export default function ServicePage() {
 									flexWrap:seeMore === true && page === "Service" ? "wrap" : null,
 									justifyContent: seeMore === true && page === "Service" ? "center" : null,
 									}}>
-									{allCamp.length > 0
-										? allCamp.map((item, index) => {
+									{allService.length > 0
+										? allService.map((item, index) => {
 											return (
 												<div key={index} style={{ width: seeMore === true && page === "Service" ? 130 : 400
 												, height: 220, borderWidth: 1, borderRadius: 10, marginRight: 20,
 												marginBottom: seeMore === true && page === "Service" ? 10 :0,
 												overflow:"hidden",textOverflow:"ellipsis"
 												 }}>
-													<img src={item.campImage} alt={item.campName} style={{width:"100%",height:130,borderTopRightRadius:10,borderTopLeftRadius:10}}/>
+													<img src={item.serviceImage} alt={item.serviceName} style={{width:"100%",height:130,borderTopRightRadius:10,borderTopLeftRadius:10}}/>
 													<div style={{padding:10}}>
-														<p style={{fontWeight:'bold'}}>{item.campName}</p>
-														<p style={{lineBreak:"anywhere"}}>{item.campDescription}</p>
+														<p style={{fontWeight:'bold'}}>{item.serviceName}</p>
+														<p style={{lineBreak:"anywhere"}}>{item.serviceDescription}</p>
 													</div>
 												</div>
 

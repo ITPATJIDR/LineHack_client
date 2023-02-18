@@ -8,6 +8,6 @@ export default function CampLoctionPage() {
 	console.log(location.state)
 
 	return (
-		<div>CampLoctionPage</div>
+		<div style={{backgroundColor:"#1CBF9B"}}>CampLoctionPage</div>
 	)
 }
