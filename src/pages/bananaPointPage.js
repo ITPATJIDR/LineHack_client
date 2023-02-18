@@ -7,7 +7,7 @@ import { setUserInfo } from '../store/userInfoSlice';
 import { Banana } from "../assets"
 import axios from 'axios'
 
-export default function bananaPointPage() {
+export default function BananaPointPage() {
 
   const userInfo = useSelector((state) => state.userInfo.value)
   console.log(userInfo)

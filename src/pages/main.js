@@ -52,13 +52,13 @@ export default function Main() {
     }).catch(err => console.error(err));
   }
 
-  useEffect(() =>{
-    initLine()
-  },[])
+  // useEffect(() =>{
+  //   initLine()
+  // },[])
 
   return (
     <div style={{backgroundColor:"#1CC09E",width:390,height:750}}>
-      {liff.isLoggedIn
+      {true
       ?<CampPage/>
       :<WaitingLogin/> 
       }
