@@ -44,6 +44,7 @@ export default function CampPage() {
 	} 
 	
 	const handleClick = async (item) =>{
+		console.log("1")
 		return redirect("/selectCamp")
 	}
 
