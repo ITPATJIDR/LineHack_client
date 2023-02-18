@@ -8,19 +8,9 @@ import axios from 'axios';
 
 export default function Main() {
 
-  const [pictureUrl, setPictureUrl] = useState("");
-  const [idToken, setIdToken] = useState("");
-  const [displayName, setDisplayName] = useState("");
-  const [statusMessage, setStatusMessage] = useState("");
-  const [userId, setUserId] = useState("");
-
-  const userInfo = useSelector((state) => state.userInfo.value)
+  const userInfo = useSelector((state) => state.userInfo)
   const dispatch = useDispatch()
-
-  // const logout = () => {
-  //   liff.logout();
-  //   window.location.reload();
-  // }
+  console.log("userInfo", userInfo)
 
   const checkNewUser = async (profile) => {
     const payload = {
@@ -29,13 +19,14 @@ export default function Main() {
       userName: profile.displayName
     }
 
-    const res = await axios.post("https://rich-ruby-pelican-sari.cyclic.app/user/register",payload,{
+    await axios.post("https://rich-ruby-pelican-sari.cyclic.app/user/register",payload,{
       withCredentials: true,
       headers: {
         "Access-Control-Allow-Origin": "https://rich-ruby-pelican-sari.cyclic.app",
       }
     }).then((res) =>{
-      setUserInfo(res)
+      console.log("res", res)
+      dispatch( setUserInfo(res))
     })
 
   }
