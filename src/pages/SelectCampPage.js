@@ -28,7 +28,7 @@ export default function SelectCampPage() {
 				  </div>
 				  <div style={{display: 'flex',justifyContent: "space-between"}}>
 					  <div style={{display:"flex",alignItems: "center"}}>
-						  <img src={Spot} alt="spot" style={{ width: 10, height: 10 }} />
+						  <img src={Spot} alt="spot" style={{ width: 15, height: 15 }} />
 						  <p style={{marginLeft: 10}}>{campLocation}</p>
 					  </div>
 					  <div>
@@ -37,7 +37,7 @@ export default function SelectCampPage() {
 				  </div>
 				  <div>
 					  <div style={{display:"flex",alignItems: "center"}}>
-						  <img src={Map} alt="Map" style={{ width: 10, height: 10 }} />
+						  <img src={Map} alt="Map" style={{ width: 15, height: 15 }} />
 						  <p style={{marginLeft: 10}}>{campName}</p>
 					  </div>
 				  </div>
