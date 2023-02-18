@@ -5,7 +5,7 @@ export default function CampLoctionPage() {
 
 	const location = useLocation()
 	const navigate = useNavigate()
-	console.log(location.state.item)
+	console.log(location.state)
 
 	return (
 		<div>CampLoctionPage</div>
