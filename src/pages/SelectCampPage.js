@@ -63,7 +63,7 @@ export default function SelectCampPage() {
 			  <div style={{
 				position: 'absolute',
 				display:'flex',
-				bottom: '13',
+				bottom: '-10',
 				justifyContent: "space-between",
 				backgroundColor: "#F7F7F7",
 				width:393,
