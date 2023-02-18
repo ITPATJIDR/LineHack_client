@@ -28,7 +28,6 @@ export default function CampPage() {
 	const [allCamp, setAllCamp] = useState([])
 	const [seeMore, setSeemore] = useState(false)
 	const [page, setPage] = useState("")
-	const [select, setSelect] = useState("")
 	const [category, setCategory] = useState("")
 
 	const handleSeeMore = (page) =>{
@@ -47,6 +46,8 @@ export default function CampPage() {
 		getAllCamp()
 	},[])
 
+	console.log(category)
+
 	return (
 		<div>
 			<Header alignItems={"left"} seeMore={seeMore} page={page} pageService={"Camp"} pageMain={"Monkey"}/>
@@ -59,10 +60,11 @@ export default function CampPage() {
 						<div style={{ display: "flex", marginTop: 15 }}>
 							{categorys.map((item, index) => {
 								return (
-									<div key={index} style={{ width: "100%" }}>
-										<div style={{ display: "flex", borderWidth: 1, width: 110, borderRadius: 10, borderColor: "#C4C4C4", marginRight: 10, alignItems: 'center', }}>
-											<img src={item.icon_grey} alt={item.name} style={{ width: 60, height: 60 }} />
-											<p style={{ fontSize: 14, lineBreak: "anywhere", fontWeight: "bold", color: "#838383" }}>{item.categoryName}</p>
+									<div onClick={() => setCategory(item.categoryName)} key={index} style={{ width: "100%" }}>
+										<div style={{ display: "flex", borderWidth: 1, width: 110, borderRadius: 10, borderColor: "#C4C4C4", marginRight: 10, alignItems: 'center', 
+										backgroundColor: category === item.categoryName ? "#1CBF9B" : "" }}>
+											<img src={category === item.categoryName ? item.icon_white : item.icon_grey} alt={item.name} style={{ width: 60, height: 60 }} />
+											<p style={{ fontSize: 14, lineBreak: "anywhere", fontWeight: "bold", color: category === item.categoryName ? "white" : "#838383" }}>{item.categoryName}</p>
 										</div>
 									</div>
 								)
