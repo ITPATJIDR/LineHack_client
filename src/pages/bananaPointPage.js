@@ -2,10 +2,16 @@ import React from 'react'
 import Header from '../components/Header'
 import Body from '../components/Body'
 import Footer from '../components/Footer'
+import {useSelector , useDispatch } from "react-redux"
+import { setUserInfo } from '../store/userInfoSlice';
 import { Banana } from "../assets"
 import axios from 'axios'
 
 export default function bananaPointPage() {
+
+  const userInfo = useSelector((state) => state.userInfo.value)
+  console.log(userInfo)
+
   return (
     <div style={{ backgroundColor: "#1CC09E", width: 390, height: 750 }}>
       <Header alignItems={"left"} pageService={"Point"} pageMain={"Banana"}/>
