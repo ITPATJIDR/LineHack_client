@@ -33,7 +33,7 @@ export default function Main() {
     const res = await axios.post("https://rich-ruby-pelican-sari.cyclic.app/user/register",payload,{
       withCredentials: true,
       headers: {
-        "Access-Control-Allow-Origin": "https://rich-ruby-pelican-sari.cyclic.app/",
+        "Access-Control-Allow-Origin": "https://rich-ruby-pelican-sari.cyclic.app",
       }
     })
       console.log(res)
