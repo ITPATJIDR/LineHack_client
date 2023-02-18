@@ -15,6 +15,7 @@
     "react-horizontal-scrolling": "^0.1.13",
     "react-liff": "^2.1.0",
     "react-loading": "^2.0.3",
+    "react-rating-stars-component": "^2.2.0",
     "react-redux": "^8.0.5",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.0"
