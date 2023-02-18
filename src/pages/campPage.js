@@ -46,8 +46,11 @@ export default function CampPage() {
 	} 
 	
 	const handleClick = async (item) =>{
-		console.log("1")
-		navigate("/selectCamp")
+		navigate("/selectCamp",{
+			state: {
+				item: item
+			}
+		})
 	}
 
 	useEffect(() =>{
