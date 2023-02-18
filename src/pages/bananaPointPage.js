@@ -32,19 +32,20 @@ export default function BananaPointPage() {
     })
   }
 
-  const runApp = () => {
-    liff.init({ liffId: '1657835103-oXvwMRa8', withLoginOnExternalBrowser: true }, () => {
-      const idToken = liff.getIDToken();
-      liff.getProfile().then(profile => { 
-        checkNewUser(profile)
-        setUserInfo(profile)
-       }).catch(err => console.error(err));
-    })
-  }
+  console.log(userInfo)
+  // const runApp = () => {
+  //   liff.init({ liffId: '1657835103-oXvwMRa8', withLoginOnExternalBrowser: true }, () => {
+  //     const idToken = liff.getIDToken();
+  //     liff.getProfile().then(profile => { 
+  //       checkNewUser(profile)
+  //       setUserInfo(profile)
+  //      }).catch(err => console.error(err));
+  //   })
+  // }
 
-  useEffect(() => {
-    runApp()
-  },[])
+  // useEffect(() => {
+  //   runApp()
+  // },[])
 
   console.log(userInfo)
   return (
