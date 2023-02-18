@@ -79,7 +79,7 @@ export default function SelectCampPage() {
 				padding:20
 			  }}>
 				  <div>
-					  <div style={{
+					  <div onClick={() => handleBack()} style={{
 						width:100,
 						height:50,
 						backgroundColor:"#FDAF17",
