@@ -11,10 +11,10 @@ import liff from '@line/liff';
 export default function BananaPointPage() {
 
   const runApp = () => {
-    const idToken = liff.getIDToken();
-    liff.getProfile().then(profile => {
-      console.log(profile)
-    }).catch(err => console.error(err));
+    liff.init({ liffId: '1657835103-oXvwMRa8', withLoginOnExternalBrowser: true }, () => {
+      const idToken = liff.getIDToken();
+      liff.getProfile().then(profile => { console.log(profile) }).catch(err => console.error(err));
+    })
   }
 
   useEffect(() => {
