@@ -11,6 +11,7 @@ import liff from '@line/liff';
 export default function BananaPointPage() {
 
   const userInfo = useSelector(selectUserInfo)
+  const dispatch = useDispatch()
 
   const checkNewUser = async (profile) => {
     const payload = {

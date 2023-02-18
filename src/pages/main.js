@@ -11,8 +11,8 @@ export default function Main() {
   const [idToken, setIdToken] = useState("");
 
   const userInfo = useSelector((state) => state.userInfo)
-
   const dispatch = useDispatch()
+
   const checkNewUser = async (profile) => {
     const payload = {
       userId: profile.userId,
