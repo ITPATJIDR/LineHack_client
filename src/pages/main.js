@@ -23,7 +23,6 @@ export default function Main() {
   // }
 
   const checkNewUser = async (profile) => {
-    console.log(profile)
     const payload = {
       userId: profile.userId,
       userImage: profile.pictureUrl,
@@ -35,8 +34,10 @@ export default function Main() {
       headers: {
         "Access-Control-Allow-Origin": "https://rich-ruby-pelican-sari.cyclic.app",
       }
+    }).then((res) =>{
+      setUserInfo(res)
     })
-      console.log(res)
+
   }
 
   const initLine = () => {
