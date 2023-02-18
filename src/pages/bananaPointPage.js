@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../components/Header'
 import Body from '../components/Body'
 import Footer from '../components/Footer'
@@ -6,13 +6,20 @@ import {useSelector , useDispatch } from "react-redux"
 import { selectUserInfo } from '../store/userInfoSlice'
 import { Banana } from "../assets"
 import axios from 'axios'
+import liff from '@line/liff';
 
 export default function BananaPointPage() {
 
-  const userInfo = useSelector((state) => state.userInfo.userInfo)
-  const userInfo2 = useSelector(selectUserInfo)  
-  console.log("userinfo1", userInfo)
-  console.log("userinfo2", userInfo2)
+  const runApp = () => {
+    const idToken = liff.getIDToken();
+    liff.getProfile().then(profile => {
+      console.log(profile)
+    }).catch(err => console.error(err));
+  }
+
+  useEffect(() => {
+    runApp()
+  },[])
 
   return (
     <div style={{ backgroundColor: "#1CC09E", width: 390, height: 750 }}>
