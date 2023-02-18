@@ -41,12 +41,14 @@ export default function CampPage() {
 				setAllCamp(res.data.data)
 			})
 	} 
+	
+	const handleClick = async (item) =>{
+		console.log(item)
+	}
 
 	useEffect(() =>{
 		getAllCamp()
 	},[])
-
-	console.log(category)
 
 	return (
 		<div>
@@ -104,8 +106,9 @@ export default function CampPage() {
 												<div key={index} style={{ width: seeMore === true && page === "Camp" ? 130 : 400
 												, height: 220, borderWidth: 1, borderRadius: 10, marginRight: 20,
 												marginBottom: seeMore === true && page === "Camp" ? 10 :0,
-												overflow:"hidden",textOverflow:"ellipsis"
-												 }}>
+												overflow:"hidden",textOverflow:"ellipsis"}} 
+												onClick={() => handleClick(item)}
+												>
 													<img src={item.campImage} alt={item.campName} style={{width:"100%",height:130,borderTopRightRadius:10,borderTopLeftRadius:10}}/>
 													<div style={{padding:10}}>
 														<p style={{fontWeight:'bold'}}>{item.campName}</p>
