@@ -14,7 +14,7 @@ export default function SelectCampPage() {
   return (
 	  <div>
 		  <div>
-			  <img src={campImage} alt={campName} style={{ width: "100%", height: 300, borderBottomRight: 10, borderBottomLeft: 10 }} />
+			  <img src={campImage} alt={campName} style={{ width: "100%", height: 300, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }} />
 		  </div>
 		  <div style={{padding:10}}>
 			  <div>
@@ -22,7 +22,7 @@ export default function SelectCampPage() {
 					  <div style={{ fontSize: 20, fontWeight: "bold" }}>
 						  <p>{campName}</p>
 					  </div>
-					  <div>
+					  <div style={{marginRight:10 }}>
 						  <ReactStars value={campRating} />
 					  </div>
 				  </div>
@@ -69,7 +69,7 @@ export default function SelectCampPage() {
 				width:393,
 				height:70,
 				left:0,
-				bottom:13,
+				bottom:0,
 				alignItems:"center",
 				padding:20
 			  }}>
