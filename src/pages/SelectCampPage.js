@@ -4,7 +4,6 @@ import ReactStars from "react-rating-stars-component";
 import { Map, Spot } from '../assets';
 
 export default function SelectCampPage() {
-	const location = useLocation()
 	const {campImage ,campName ,campDescription,bookingPrice,campFacility,
 	campFacilityDescription, campFeeDescription, campLocation, campMode,
 	campPromotion, campPromotionRating, campRating
