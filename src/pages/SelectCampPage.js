@@ -11,6 +11,7 @@ export default function SelectCampPage() {
 	campFacilityDescription, campFeeDescription, campLocation, campMode,
 	campPromotion, campPromotionRating, campRating
 	} = location.state.item
+	console.log(location.state.item)
 
 	const handleBack = () => {
 		navigate("/")
