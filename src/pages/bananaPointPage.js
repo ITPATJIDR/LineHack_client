@@ -46,7 +46,7 @@ export default function BananaPointPage() {
     runApp()
   },[])
 
-  console.log()
+  console.log(userInfo)
   return (
     <div style={{ backgroundColor: "#1CC09E", width: 390, height: 750 }}>
       <Header alignItems={"left"} pageService={"Point"} pageMain={"Banana"}/>
