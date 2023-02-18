@@ -35,7 +35,7 @@ export default function CampPage() {
 	}
 	
 	const getAllCamp = async () =>{
-		const data = await axios.get("https://line-hack-server.vercel.app/camp/getAllCamp")
+		const data = await axios.get("https://rich-ruby-pelican-sari.cyclic.app//camp/getAllCamp")
 			.then(res => {
 				setAllCamp(res.data.data)
 			})

@@ -30,10 +30,10 @@ export default function Main() {
       userName: profile.displayName
     }
 
-    const res = await axios.post("https://line-hack-server.vercel.app/user/register",payload,{
+    const res = await axios.post("https://rich-ruby-pelican-sari.cyclic.app/user/register",payload,{
       withCredentials: true,
       headers: {
-        "Access-Control-Allow-Origin": "https://line-hack-server.vercel.app",
+        "Access-Control-Allow-Origin": "https://rich-ruby-pelican-sari.cyclic.app/",
       }
     })
       console.log(res)
