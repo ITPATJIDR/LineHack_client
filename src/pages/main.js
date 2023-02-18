@@ -27,7 +27,6 @@ export default function Main() {
         "Access-Control-Allow-Origin": "https://rich-ruby-pelican-sari.cyclic.app",
       }
     }).then((res) =>{
-      console.log("res", res)
       dispatch( setUserInfo(res.data))
     })
 
