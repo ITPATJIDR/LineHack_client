@@ -8,6 +8,8 @@ import axios from 'axios';
 
 export default function Main() {
 
+  const [idToken, setIdToken] = useState("");
+
   const userInfo = useSelector((state) => state.userInfo)
   const dispatch = useDispatch()
   console.log("userInfo", userInfo)
