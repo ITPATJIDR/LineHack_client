@@ -9,7 +9,7 @@ import axios from 'axios'
 
 export default function BananaPointPage() {
 
-  const userInfo = useSelector((state) => state.userInfo.value)
+  const userInfo = useSelector((state) => state.userInfo)
   console.log(userInfo)
 
   return (
