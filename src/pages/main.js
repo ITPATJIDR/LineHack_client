@@ -28,7 +28,7 @@ export default function Main() {
       }
     }).then((res) =>{
       console.log("res", res)
-      dispatch( setUserInfo(res))
+      dispatch( setUserInfo(res.data))
     })
 
   }
