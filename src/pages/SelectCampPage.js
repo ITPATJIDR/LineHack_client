@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLocation } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import ReactStars from "react-rating-stars-component";
 import { Map, Spot } from '../assets';
 
@@ -10,7 +10,12 @@ export default function SelectCampPage() {
 	campPromotion, campPromotionRating, campRating
 	} = location.state.item
 
-	console.log(location.state.item)
+	const navigate = useNavigate()
+
+	const handleBack = () => {
+		navigate("/")
+	}
+
   return (
 	  <div>
 		  <div>
