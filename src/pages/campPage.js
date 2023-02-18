@@ -4,7 +4,7 @@ import Body from "../components/Body"
 import Footer from '../components/Footer'
 import { Mountain_gray, Mountain_white, Beach_grey, Beach_white, Forest_grey, Forest_white, Vector_down } from '../assets'
 import axios from 'axios'
-import { redirect } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const categorys = [
 	{
@@ -31,6 +31,8 @@ export default function CampPage() {
 	const [page, setPage] = useState("")
 	const [category, setCategory] = useState("")
 
+	const navigate = useNavigate()
+
 	const handleSeeMore = (page) =>{
 		setSeemore(true)
 		setPage(page)
@@ -45,7 +47,7 @@ export default function CampPage() {
 	
 	const handleClick = async (item) =>{
 		console.log("1")
-		return redirect("/selectCamp")
+		navigate("/selectCamp")
 	}
 
 	useEffect(() =>{
