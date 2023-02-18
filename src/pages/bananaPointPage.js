@@ -3,12 +3,33 @@ import Header from '../components/Header'
 import Body from '../components/Body'
 import Footer from '../components/Footer'
 import {useSelector , useDispatch } from "react-redux"
-import { selectUserInfo, setUserInfo, checkNewUser } from '../store/userInfoSlice'
+import { selectUserInfo, setUserInfo } from '../store/userInfoSlice'
 import { Banana } from "../assets"
 import axios from 'axios'
 import liff from '@line/liff';
 
 export default function BananaPointPage() {
+
+  const userInfo = useSelector(selectUserInfo)
+
+  const checkNewUser = async (profile) => {
+    const payload = {
+      userId: profile.userId,
+      userImage: profile.pictureUrl,
+      userName: profile.displayName
+    }
+
+    await axios.post("https://rich-ruby-pelican-sari.cyclic.app/user/register", payload, {
+      withCredentials: true,
+      headers: {
+        "Access-Control-Allow-Origin": "https://rich-ruby-pelican-sari.cyclic.app",
+      }
+    }).then((res) => {
+      dispatch(setUserInfo({
+        data: res.data,
+      }))
+    })
+  }
 
   const runApp = () => {
     liff.init({ liffId: '1657835103-oXvwMRa8', withLoginOnExternalBrowser: true }, () => {
@@ -24,6 +45,7 @@ export default function BananaPointPage() {
     runApp()
   },[])
 
+  console.log()
   return (
     <div style={{ backgroundColor: "#1CC09E", width: 390, height: 750 }}>
       <Header alignItems={"left"} pageService={"Point"} pageMain={"Banana"}/>

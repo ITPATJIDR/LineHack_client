@@ -3,7 +3,7 @@ import liff from '@line/liff';
 import WaitingLogin from './waitingLogin';
 import CampPage from './campPage';
 import {useSelector , useDispatch } from "react-redux"
-import { setUserInfo, checkNewUser } from '../store/userInfoSlice';
+import { setUserInfo } from '../store/userInfoSlice';
 import axios from 'axios';
 
 export default function Main() {
@@ -11,10 +11,29 @@ export default function Main() {
   const [idToken, setIdToken] = useState("");
 
   const userInfo = useSelector((state) => state.userInfo)
+
   const dispatch = useDispatch()
+  const checkNewUser = async (profile) => {
+    const payload = {
+      userId: profile.userId,
+      userImage: profile.pictureUrl,
+      userName: profile.displayName
+    }
+
+    await axios.post("https://rich-ruby-pelican-sari.cyclic.app/user/register", payload, {
+      withCredentials: true,
+      headers: {
+        "Access-Control-Allow-Origin": "https://rich-ruby-pelican-sari.cyclic.app",
+      }
+    }).then((res) => {
+      dispatch(setUserInfo({
+        data: res.data,
+      }))
+    })
+  }
 
   const initLine = () => {
-    liff.init({ liffId: '1657835103-oXvwMRa8',withLoginOnExternalBrowser:true }, () => {
+    liff.init({ liffId: '1657835103-oXvwMRa8', withLoginOnExternalBrowser: true }, () => {
       if (liff.isLoggedIn()) {
         runApp();
       } else {
@@ -32,15 +51,15 @@ export default function Main() {
     }).catch(err => console.error(err));
   }
 
-  useEffect(() =>{
+  useEffect(() => {
     initLine()
-  },[])
+  }, [])
 
   return (
-    <div style={{backgroundColor:"#1CC09E",width:390,height:750}}>
+    <div style={{ backgroundColor: "#1CC09E", width: 390, height: 750 }}>
       {liff.isLoggedIn
-      ?<CampPage/>
-      :<WaitingLogin/> 
+        ? <CampPage />
+        : <WaitingLogin />
       }
     </div>
   )
