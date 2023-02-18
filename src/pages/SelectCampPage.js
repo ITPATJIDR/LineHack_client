@@ -1,6 +1,7 @@
 import React from 'react'
 import { useLocation } from "react-router-dom"
 import ReactStars from "react-rating-stars-component";
+import { Map, Spot } from '../assets';
 
 export default function SelectCampPage() {
 	const location = useLocation()
@@ -11,13 +12,13 @@ export default function SelectCampPage() {
 
 	console.log(location.state.item)
   return (
-    <div>
+    <div style={{padding:10}}>
 	<div>
 		<img src={campImage} alt={campName} style={{width:"100%",height:300,borderBottomRight:10,borderBottomLeft:10}}/>
 	</div>
 	<div>
-		<div>
-			<div>
+		<div style={{display:"flex",justifyContent:"space-between",width:390,alignItems: "center"}}>
+			<div style={{fontSize:20,fontWeight:"bold"}}>
 				<p>{campName}</p>
 			</div>
 			<div>
@@ -26,9 +27,11 @@ export default function SelectCampPage() {
 		</div>
 		<div>
 			<div>
+				<img src={Spot} alt="spot" style={{width:10,height:10}}/>
 				<p>{campLocation}</p>
 			</div>
 			<div>
+				<img src={Map} alt="Map" style={{width:10,height:10}}/>
 				<p>{bookingPrice} / person</p>
 			</div>
 		</div>

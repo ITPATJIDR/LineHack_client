@@ -12,4 +12,6 @@ export {default as Food_white} from "./Monkeyservice/Food_white.png"
 export {default as Beverage_gray} from "./Monkeyservice/Beverage_gray.png"
 export {default as Beverage_white} from "./Monkeyservice/Beverage_white.png"
 export {default as Banana} from "./Monkeyservice/Banana.png"
+export {default as Spot} from "../assets/Camping Spot 3/Spot.png"
+export {default as Map} from "../assets/Camping Spot 3/Map.png"
 
