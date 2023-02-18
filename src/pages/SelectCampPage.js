@@ -36,33 +36,54 @@ export default function SelectCampPage() {
 					  </div>
 				  </div>
 				  <div>
-					  <div>
+					  <div style={{display:"flex",alignItems: "center"}}>
 						  <img src={Map} alt="Map" style={{ width: 10, height: 10 }} />
-						  <p>{campName}</p>
+						  <p style={{marginLeft: 10}}>{campName}</p>
 					  </div>
 				  </div>
 			  </div>
-			  <div>
+			  <div style={{marginTop:10}}>
 				  <div>
 					  <div>
-						  <p>Description</p>
+						  <p style={{fontWeight:"bold"}}>Description</p>
 					  </div>
 					  <div>
 						  {campDescription}
 					  </div>
 				  </div>
-				  <div>
+				  <div style={{marginTop:10}}>
 					  <div>
-						  <p>ค่าบริการเข้าชมอุทยานฯ</p>
+						  <p style={{fontWeight:"bold"}}>ค่าบริการเข้าชมอุทยานฯ</p>
 					  </div>
 					  <div>
 						  {campFeeDescription}
 					  </div>
 				  </div>
 			  </div>
-			  <div>
+			  <div style={{
+				position: 'absolute',
+				display:'flex',
+				bottom: '13',
+				justifyContent: 'end',
+				backgroundColor: "#F7F7F7",
+				width:393,
+				height:70,
+				left:0,
+				bottom:13,
+				alignItems:"center",
+				padding:20
+			  }}>
 				  <div>
-					  <div>
+					  <div style={{
+						width:100,
+						height:50,
+						backgroundColor:"#FDAF17",
+						justifyContent: 'center',
+						display:"flex",
+						alignItems:"center",
+						borderRadius:10,
+						fontWeight:"bold"
+					  }}>
 						  Book Now
 					  </div>
 				  </div>
