@@ -159,7 +159,7 @@ export default function ServicePage() {
 									flexWrap:seeMore === true && page === "Service" ? "wrap" : null,
 									justifyContent: seeMore === true && page === "Service" ? "center" : null,
 									}}>
-									{allService.data.Camp.service.length > 0
+									{allService.data?.Camp.service.length > 0
 										? allService.data.Camp.service.map((item, index) => {
 											console.log(item)
 											return (
