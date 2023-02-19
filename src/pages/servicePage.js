@@ -105,7 +105,7 @@ export default function ServicePage() {
 	},[])
 
 	console.log("Service",allService.data)
-	console.log("Service2",allService.data.Camp)
+	console.log("Service2",allService.data?.Camp)
 
 	return (
 		<div style={{backgroundColor:"#1CC09E",width:390,height:750}}>
