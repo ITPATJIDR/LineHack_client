@@ -49,28 +49,22 @@ export default function BananaPointPage() {
 
   return (
     <div style={{ backgroundColor: "#1CC09E", width: 390, height: 750 }}>
-      {Object.keys(userInfo.useInfo).length > 0
-      ? 
-      <>
-          <Header alignItems={"left"} pageService={"Point"} pageMain={"Banana"} />
-          <Body alignItems={""} justifyContent={""} display={""}>
-            <div style={{ padding: 20, display: "flex" }}>
-              <p style={{ fontSize: 34, fontWeight: "bold", color: "#1CC09E" }}>Your Point</p>
-              <div style={{ padding: 10, width: 150, height: 50, borderRadius: 10, backgroundColor: "#1CC09E", marginLeft: 30, display: "flex", alignItems: "center", justifyContent: "space-between", }}>
-                <p style={{ fontSize: 28, fontWeight: "bold", color: "white" }}>{userInfo.data?.bananaPoint}</p>
-                <img src={Banana} alt="Banana" style={{ width: 30, height: 30 }} />
-              </div>
-            </div>
-            <div>
-              <div style={{ paddingTop: 10, paddingLeft: 20 }}>
-                <p style={{ fontSize: 20, fontWeight: "bold" }}>Banana Reward</p>
-              </div>
-            </div>
-          </Body>
-          <Footer />
-      </>
-      : <WaitingLogin/>
-    }
+      <Header alignItems={"left"} pageService={"Point"} pageMain={"Banana"} />
+      <Body alignItems={""} justifyContent={""} display={""}>
+        <div style={{ padding: 20, display: "flex" }}>
+          <p style={{ fontSize: 34, fontWeight: "bold", color: "#1CC09E" }}>Your Point</p>
+          <div style={{ padding: 10, width: 150, height: 50, borderRadius: 10, backgroundColor: "#1CC09E", marginLeft: 30, display: "flex", alignItems: "center", justifyContent: "space-between", }}>
+            <p style={{ fontSize: 28, fontWeight: "bold", color: "white" }}>{userInfo.data?.bananaPoint}</p>
+            <img src={Banana} alt="Banana" style={{ width: 30, height: 30 }} />
+          </div>
+        </div>
+        <div>
+          <div style={{ paddingTop: 10, paddingLeft: 20 }}>
+            <p style={{ fontSize: 20, fontWeight: "bold" }}>Banana Reward</p>
+          </div>
+        </div>
+      </Body>
+      <Footer />
     </div>
   )
 }
