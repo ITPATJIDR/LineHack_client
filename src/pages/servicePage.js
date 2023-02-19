@@ -1,9 +1,12 @@
 import React, {useEffect, useState} from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { setUserInfo } from '../store/userInfoSlice'
 import Header from "../components/Header"
 import Body from "../components/Body"
 import Footer from '../components/Footer'
+import WaitingLogin from './waitingLogin'
 import { Store_gray, Store_white, Food_gray, Food_white, Beverage_white, Beverage_gray ,Vector_down } from '../assets'
-import axios, { all } from 'axios'
+import axios from 'axios'
 
 const categorys = [
 	{
@@ -30,6 +33,8 @@ export default function ServicePage() {
 	const [page, setPage] = useState("")
 	const [category, setCategory] = useState("")
 	const [idToken, setIdToken] = useState("");
+	const userInfo = useSelector((state) => state.userInfo)
+	const dispatch = useDispatch()
 
 	const handleSeeMore = (page) =>{
 		setSeemore(true)
@@ -99,6 +104,8 @@ export default function ServicePage() {
 
 	return (
 		<div style={{backgroundColor:"#1CC09E",width:390,height:750}}>
+			{Object.keys(userInfo.userInfo).length > 0
+			? <>
 			<Header alignItems={"left"} seeMore={seeMore} page={page} pageService={"Service"} pageMain={"Monkey"}/>
 			<Body alignItems={""} justifyContent={""} seeMore={seeMore} page={page} pageService={"Service"} display={"flex"} >
 				<div style={{ width: '100%', padding: 20,overflow:"hidden" }}>
@@ -173,6 +180,9 @@ export default function ServicePage() {
 				</div>
 			</Body>
 			<Footer/>
+			</>
+			: <WaitingLogin/>		
+		}
 		</div>
 	)
 }
