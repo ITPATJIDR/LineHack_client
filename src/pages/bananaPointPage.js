@@ -57,6 +57,9 @@ export default function BananaPointPage() {
 
   return (
     <div style={{ backgroundColor: "#1CC09E", width: 390, height: 750 }}>
+      {Object.keys(userInfo.userInfo).length > 0 
+      ? 
+      <>
       <Header alignItems={"left"} pageService={"Point"} pageMain={"Banana"} />
       <Body alignItems={""} justifyContent={""} display={""}>
         <div style={{ padding: 20, display: "flex" }}>
@@ -73,6 +76,9 @@ export default function BananaPointPage() {
         </div>
       </Body>
       <Footer />
+      </>
+      : <WaitingLogin/>
+      }
     </div>
   )
 }
