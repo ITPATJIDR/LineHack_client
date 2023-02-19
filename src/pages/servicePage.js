@@ -7,6 +7,7 @@ import Footer from '../components/Footer'
 import WaitingLogin from './waitingLogin'
 import { Store_gray, Store_white, Food_gray, Food_white, Beverage_white, Beverage_gray ,Vector_down } from '../assets'
 import axios from 'axios'
+import liff from '@line/liff';
 
 const categorys = [
 	{
