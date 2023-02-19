@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import { setUserInfo } from '../store/userInfoSlice'
 import Header from "../components/Header"
 import Body from "../components/Body"
@@ -34,8 +35,10 @@ export default function ServicePage() {
 	const [page, setPage] = useState("")
 	const [category, setCategory] = useState("")
 	const [idToken, setIdToken] = useState("");
+
 	const userInfo = useSelector((state) => state.userInfo)
 	const dispatch = useDispatch()
+	const navigate = useNavigate()
 
 	const handleSeeMore = (page) =>{
 		setSeemore(true)
