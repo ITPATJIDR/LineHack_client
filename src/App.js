@@ -5,6 +5,7 @@ import BananaPointPage from './pages/bananaPointPage';
 import Service from './pages/servicePage';
 import SelectCamp from "./pages/SelectCampPage"
 import CampLoctionPage from './pages/CampLoctionPage';
+import SelectService from "./pages/SelectServicePage"
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/bananaPoint" element={<BananaPointPage/>}/>
         <Route path="/service" element={<Service/>}/>
         <Route path="/selectCamp" element={<SelectCamp/>}/>
+        <Route path="/selectService" element={<SelectService/>}/>
         <Route path="/campLocation" element={<CampLoctionPage/>}/>
       </Routes>
     </BrowserRouter>
