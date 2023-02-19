@@ -29,7 +29,7 @@ const categorys = [
 
 export default function ServicePage() {
 
-	const [allService, setAllService] = useState([])
+	const [allService, setAllService] = useState({})
 	const [seeMore, setSeemore] = useState(false)
 	const [page, setPage] = useState("")
 	const [category, setCategory] = useState("")
