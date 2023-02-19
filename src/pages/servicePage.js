@@ -46,8 +46,7 @@ export default function ServicePage() {
 		const res = await axios.get("https://rich-ruby-pelican-sari.cyclic.app/service/getAllService", {
 			userId: data.id
 		})
-		console.log("service",res.data.Camp.service)
-		console.log(res.data)
+		setAllService(res.data)
 	} 
 
 	const checkNewUser = async (profile) => {
