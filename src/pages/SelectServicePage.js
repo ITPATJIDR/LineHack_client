@@ -14,12 +14,6 @@ export default function SelectServicePage() {
 	}
 
 	const handleBookNow = () => {
-		navigate("/campLocation",{
-			state:{
-				campFacilityDescription,
-				bookingPrice
-			}
-		})
 	}
 
   return (

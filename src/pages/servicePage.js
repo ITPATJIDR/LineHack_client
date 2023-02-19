@@ -90,12 +90,11 @@ export default function ServicePage() {
 
 
 	const handleClick = async (item) =>{
-		console.log(item)
-		// navigate("/selectCamp",{
-		// 	state: {
-		// 		item: item
-		// 	}
-		// })
+		navigate("/selectCamp",{
+			state: {
+				item: item
+			}
+		})
 	}
 
 
