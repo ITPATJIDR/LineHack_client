@@ -98,7 +98,6 @@ export default function ServicePage() {
 	}
 
 
-
 	useEffect(() =>{
 		initLine()
 	},[])
