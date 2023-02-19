@@ -90,7 +90,7 @@ export default function ServicePage() {
 
 
 	const handleClick = async (item) =>{
-		navigate("/selectCamp",{
+		navigate("/selectService",{
 			state: {
 				item: item
 			}
@@ -101,9 +101,6 @@ export default function ServicePage() {
 	useEffect(() =>{
 		initLine()
 	},[])
-
-	console.log("Service",allService.data)
-	console.log("Service2",allService.data?.Camp.service)
 
 	return (
 		<div style={{backgroundColor:"#1CC09E",width:390,height:750}}>
