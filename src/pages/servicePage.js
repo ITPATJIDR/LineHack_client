@@ -43,9 +43,8 @@ export default function ServicePage() {
 	}
 	
 	const getAllCamp = async (data) =>{
-		console.log(data)
 		await axios.get("https://rich-ruby-pelican-sari.cyclic.app/service/getAllService", {
-			userId: userInfo.userInfo.data.id
+			userId: data.id
 		})
 		.then(res => {
 			setAllService(res.data.data)
