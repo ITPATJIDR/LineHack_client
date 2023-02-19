@@ -29,6 +29,7 @@ export default function ServicePage() {
 	const [seeMore, setSeemore] = useState(false)
 	const [page, setPage] = useState("")
 	const [category, setCategory] = useState("")
+	const [idToken, setIdToken] = useState("");
 
 	const handleSeeMore = (page) =>{
 		setSeemore(true)
@@ -41,6 +42,56 @@ export default function ServicePage() {
 				setAllService(res.data.data)
 			})
 	} 
+
+	const checkNewUser = async (profile) => {
+		const payload = {
+			userId: profile.userId,
+			userImage: profile.pictureUrl,
+			userName: profile.displayName
+		}
+
+		await axios.post("https://rich-ruby-pelican-sari.cyclic.app/user/register", payload, {
+			withCredentials: true,
+			headers: {
+				"Access-Control-Allow-Origin": "https://rich-ruby-pelican-sari.cyclic.app",
+			}
+		}).then((res) => {
+			dispatch(setUserInfo({
+				data: res.data,
+			}))
+		})
+	}
+
+	const initLine = () => {
+		liff.init({ liffId: '1657835103-oXvwMRa8', withLoginOnExternalBrowser: true }, () => {
+			if (liff.isLoggedIn()) {
+				runApp();
+			} else {
+				liff.login();
+			}
+		}, err => console.error(err));
+	}
+
+	const runApp = () => {
+		const idToken = liff.getIDToken();
+		setIdToken(idToken);
+		liff.getProfile().then(profile => {
+			checkNewUser(profile)
+			setUserInfo(profile)
+		}).catch(err => console.error(err));
+	}
+
+
+	const handleClick = async (item) =>{
+		console.log(item)
+		// navigate("/selectCamp",{
+		// 	state: {
+		// 		item: item
+		// 	}
+		// })
+	}
+
+
 
 	useEffect(() =>{
 		getAllCamp()
@@ -102,8 +153,9 @@ export default function ServicePage() {
 												<div key={index} style={{ width: seeMore === true && page === "Service" ? 130 : 400
 												, height: 220, borderWidth: 1, borderRadius: 10, marginRight: 20,
 												marginBottom: seeMore === true && page === "Service" ? 10 :0,
-												overflow:"hidden",textOverflow:"ellipsis"
-												 }}>
+												overflow:"hidden",textOverflow:"ellipsis" }} 
+												onClick={() => handleClick(item)}
+												>
 													<img src={item.serviceImage} alt={item.serviceName} style={{width:"100%",height:130,borderTopRightRadius:10,borderTopLeftRadius:10}}/>
 													<div style={{padding:10}}>
 														<p style={{fontWeight:'bold'}}>{item.serviceName}</p>
