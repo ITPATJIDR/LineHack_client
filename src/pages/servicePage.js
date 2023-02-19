@@ -47,7 +47,7 @@ export default function ServicePage() {
 			userId: data.id
 		})
 		.then(res => {
-			console.log(res.data.Camp.service)
+			console.log(res.data)
 			setAllService(res.data.Camp.service)
 		})
 	} 
