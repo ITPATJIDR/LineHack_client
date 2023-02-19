@@ -67,9 +67,8 @@ export default function ServicePage() {
 			dispatch(setUserInfo({
 				data: res.data,
 			}))
-		}).finally(() => {
-			getAllCamp()
 		})
+		getAllCamp()
 	}
 
 	const initLine = () => {
