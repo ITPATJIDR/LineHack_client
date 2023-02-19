@@ -43,10 +43,12 @@ export default function ServicePage() {
 	}
 	
 	const getAllCamp = async () =>{
-		const data = await axios.get("https://rich-ruby-pelican-sari.cyclic.app/service/getAllService")
-			.then(res => {
-				setAllService(res.data.data)
-			})
+		const data = await axios.get("https://rich-ruby-pelican-sari.cyclic.app/service/getAllService", {
+			userId: "1"
+		})
+		.then(res => {
+			setAllService(res.data.data)
+		})
 	} 
 
 	const checkNewUser = async (profile) => {
@@ -100,7 +102,7 @@ export default function ServicePage() {
 
 
 	useEffect(() =>{
-		getAllCamp()
+		initLine()
 	},[])
 
 	return (
