@@ -6,7 +6,7 @@ import Body from "../components/Body"
 import Footer from '../components/Footer'
 import WaitingLogin from './waitingLogin'
 import { Store_gray, Store_white, Food_gray, Food_white, Beverage_white, Beverage_gray ,Vector_down } from '../assets'
-import axios from 'axios'
+import axios, { all } from 'axios'
 import liff from '@line/liff';
 
 const categorys = [
@@ -106,6 +106,8 @@ export default function ServicePage() {
 	useEffect(() =>{
 		initLine()
 	},[])
+
+	console.log("Service",allService)
 
 	return (
 		<div style={{backgroundColor:"#1CC09E",width:390,height:750}}>
