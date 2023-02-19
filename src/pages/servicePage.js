@@ -159,7 +159,7 @@ export default function ServicePage() {
 									justifyContent: seeMore === true && page === "Service" ? "center" : null,
 									}}>
 									{allService.length > 0
-										? allService.map((item, index) => {
+										? allService.Camp.service.map((item, index) => {
 											return (
 												<div key={index} style={{ width: seeMore === true && page === "Service" ? 130 : 400
 												, height: 220, borderWidth: 1, borderRadius: 10, marginRight: 20,
