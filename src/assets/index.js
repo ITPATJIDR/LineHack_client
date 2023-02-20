@@ -14,4 +14,6 @@ export {default as Beverage_white} from "./Monkeyservice/Beverage_white.png"
 export {default as Banana} from "./Monkeyservice/Banana.png"
 export {default as Spot} from "../assets/Camping Spot 3/Spot.png"
 export {default as Map} from "../assets/Camping Spot 3/Map.png"
+export {default as Plus} from "../assets/util/add.png"
+export {default as Minus} from "../assets/util/minus.png"
 

@@ -2,6 +2,7 @@ import React from 'react'
 import Header from "../components/Header"
 import Body from "../components/Body"
 import { useLocation, useNavigate } from "react-router-dom"
+import { Plus, Minus } from '../assets'
 
 export default function CampLoctionPage() {
 
