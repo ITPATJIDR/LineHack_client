@@ -17,6 +17,18 @@ export default function CampLoctionPage() {
 		navigate("/payment")
 	}
 
+	const handleAddCamp = () => {
+		if (camp !== 3){
+			setCamp(camp + 1)
+		}
+	}
+
+	const handleMinusCamp = () => {
+		if (camp !== 0){
+			setCamp(camp - 1)
+		}
+	}
+
 	const facilityText = {
 		paddingLeft: 20
 	}
@@ -59,11 +71,11 @@ export default function CampLoctionPage() {
 							<p>จำนวนเต้นท์</p>
 						</div>
 						<div style={{width:350,justifyContent:"space-around",display: 'flex',marginTop:10}}>
-							<div onClick={() => setCamp(camp + 1)}>
+							<div onClick={() => handleAddCamp()}>
 								<img src={Plus} alt="Plus" style={{width:20,height:20}}/>
 							</div>
 							<div>{camp}</div>
-							<div onClick={() => setCamp(camp - 1)}>
+							<div onClick={() => handleMinusCamp()}>
 								<img src={Minus} alt="Minus" style={{width:20,height:20}}/>
 							</div>
 						</div>
