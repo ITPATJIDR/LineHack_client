@@ -80,7 +80,7 @@ export default function SelectCampPage() {
 					  </div>
 				  </div>
 			  </div>
-			  <div style={{
+			<div style={{
 				position: 'absolute',
 				display:'flex',
 				bottom: '0',

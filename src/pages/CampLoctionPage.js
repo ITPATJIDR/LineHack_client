@@ -47,14 +47,22 @@ export default function CampLoctionPage() {
 						<input type="checkbox" checked={toilet}/>
 						<p style={facilityText}>ห้องน้ำ</p>
 					</div>
-					<div style={{display: 'flex',justifyContent:"space-around",width:150,margin:15}}>
+					<div style={{display: 'flex',justifyContent:"space-around",width:170,marginBottom:15}}>
 						<p style={{fontWeight:"bold"}}>เหมาะสำหรับ</p>
 						<p>{suitBestFor}</p>
 					</div>
 
-					<div>
-
+					<div style={{width:350,height:150,marginLeft:5}}>
+						<div>
+							<div>plus</div>
+							<div>value</div>
+							<div>minus</div>
+						</div>
+						<div>
+							value
+						</div>
 					</div>
+
 					<div style={{
 						position: 'absolute',
 						display: 'flex',
