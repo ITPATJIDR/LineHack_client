@@ -129,7 +129,7 @@ export default function CampLoctionPage() {
 								borderRadius: 10,
 								fontWeight: "bold"
 							}}>
-								Book Now
+								Pay Now
 							</div>
 						</div>
 					</div>
