@@ -7,7 +7,9 @@ export default function CampLoctionPage() {
 
 	const location = useLocation()
 	const navigate = useNavigate()
-	console.log(location.state)
+	const {bookingPrice, electricity, phoneSignal, rentalEquipment, 
+	suitBestFor,toilet,wifi
+	} = location.state
 
 	const handlePayment = async () =>{
 		navigate("/payment")
@@ -26,32 +28,28 @@ export default function CampLoctionPage() {
 						สิ่งอำนวนความสะดวก
 					</div>
 					<div style={{display: 'flex',justifyContent:"flex-start",width:150,margin:15}}>
-						<input type="checkbox"/>
+						<input type="checkbox" checked={rentalEquipment}/>
 						<p style={facilityText}>อุปกรณ์ให้เช่า</p>
 					</div>
 					<div style={{display: 'flex',justifyContent:"flex-start",width:150,margin:15}}>
-						<input type="checkbox"/>
+						<input type="checkbox" checked={wifi}/>
 						<p style={facilityText}>Wifi</p>
 					</div>
 					<div style={{display: 'flex',justifyContent:"flex-start",width:150,margin:15}}>
-						<input type="checkbox"/>
+						<input type="checkbox" checked={phoneSignal}/>
 						<p style={facilityText}>สัญญาญโทรศัพท์</p>
 					</div>
 					<div style={{display: 'flex',justifyContent:"flex-start",width:150,margin:15}}>
-						<input type="checkbox"/>
+						<input type="checkbox" checked={electricity}/>
 						<p style={facilityText}>ไฟฟ้า</p>
 					</div>
 					<div style={{display: 'flex',justifyContent:"flex-start",width:150,margin:15}}>
-						<input type="checkbox"/>
-						<p style={facilityText}>เหมาะสำหรับ</p>
-					</div>
-					<div style={{display: 'flex',justifyContent:"flex-start",width:150,margin:15}}>
-						<input type="checkbox"/>
+						<input type="checkbox" checked={toilet}/>
 						<p style={facilityText}>ห้องน้ำ</p>
 					</div>
 					<div style={{display: 'flex',justifyContent:"flex-start",width:150,margin:15}}>
-						<input type="checkbox"/>
-						<p style={facilityText}>อุปกรณ์ให้เช่า</p>
+						<p style={facilityText}>เหมาะสำหรับ</p>
+						<p>{suitBestFor}</p>
 					</div>
 				</div>	
 			</Body>
