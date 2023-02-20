@@ -3,7 +3,7 @@ import QRCode from 'qrcode.react'
 const generatePayload = require('promptpay-qr');
 
 export default function PaymentPage() {
-  const [ phoneNumber, setPhoneNumber ] = useState("099-384-8633");
+  const [ phoneNumber, setPhoneNumber ] = useState("0993848633");
   const [ amount, setAmount ] = useState(1.00);         
   const [ qrCode ,setqrCode ] = useState("sample");
 
