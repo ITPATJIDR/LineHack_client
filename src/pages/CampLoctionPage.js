@@ -29,6 +29,11 @@ export default function CampLoctionPage() {
 		}
 	}
 
+
+	const handleBack = () =>{
+		navigate(-1)
+	}
+
 	const facilityText = {
 		paddingLeft: 20
 	}
@@ -107,7 +112,9 @@ export default function CampLoctionPage() {
 								alignItems: "center",
 								borderRadius: 10,
 								fontWeight: "bold"
-							}}>
+							}}
+							onClick={() => handleBack()}
+							>
 								Back
 							</div>
 						</div>
