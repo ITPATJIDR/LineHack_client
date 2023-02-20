@@ -51,6 +51,52 @@ export default function CampLoctionPage() {
 						<p style={{fontWeight:"bold"}}>เหมาะสำหรับ</p>
 						<p>{suitBestFor}</p>
 					</div>
+
+					<div>
+
+					</div>
+					<div style={{
+						position: 'absolute',
+						display: 'flex',
+						bottom: '0',
+						justifyContent: "space-between",
+						backgroundColor: "#F7F7F7",
+						width: 393,
+						height: 70,
+						left: 0,
+						bottom: 0,
+						alignItems: "center",
+						padding: 20
+					}}>
+						<div>
+							<div style={{
+								width: 100,
+								height: 50,
+								backgroundColor: "#FDAF17",
+								justifyContent: 'center',
+								display: "flex",
+								alignItems: "center",
+								borderRadius: 10,
+								fontWeight: "bold"
+							}}>
+								Back
+							</div>
+						</div>
+						<div>
+							<div style={{
+								width: 100,
+								height: 50,
+								backgroundColor: "#FDAF17",
+								justifyContent: 'center',
+								display: "flex",
+								alignItems: "center",
+								borderRadius: 10,
+								fontWeight: "bold"
+							}}>
+								Book Now
+							</div>
+						</div>
+					</div>
 				</div>	
 			</Body>
 		</div>
