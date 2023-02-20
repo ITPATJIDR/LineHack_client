@@ -8,10 +8,10 @@ export default function SelectCampPage() {
 	const navigate = useNavigate()
 
 	const {campImage ,campName ,campDescription,bookingPrice,campFacility,
-	campFacilityDescription, campFeeDescription, campLocation, campMode,
-	campPromotion, campPromotionRating, campRating, 
+	campFeeDescription, campLocation, campMode,
+	campPromotion, campPromotionRating, campRating,electricity,phoneSignal,
+	rentalEquipment,suitBestFor,toilet,wifi 
 	} = location.state.item
-	console.log(location.state.item)
 
 	const handleBack = () => {
 		navigate("/")
@@ -20,8 +20,13 @@ export default function SelectCampPage() {
 	const handleBookNow = () => {
 		navigate("/campLocation",{
 			state:{
-				campFacilityDescription,
-				bookingPrice
+				electricity,
+				bookingPrice,
+				phoneSignal,
+				rentalEquipment,
+				suitBestFor,
+				toilet,
+				wifi,
 			}
 		})
 	}
