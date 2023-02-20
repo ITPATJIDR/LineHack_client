@@ -127,8 +127,9 @@ export default function CampLoctionPage() {
 								display: "flex",
 								alignItems: "center",
 								borderRadius: 10,
-								fontWeight: "bold"
-							}}>
+								fontWeight: "bold" }}
+								onClick={() => handlePayment()}
+							>
 								Pay Now
 							</div>
 						</div>
