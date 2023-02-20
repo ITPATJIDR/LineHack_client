@@ -48,7 +48,7 @@ export default function CampLoctionPage() {
 						<p style={facilityText}>ห้องน้ำ</p>
 					</div>
 					<div style={{display: 'flex',justifyContent:"space-around",width:150,margin:15}}>
-						<p style={{fontWeight:"bold",paddingLeft:13}}>เหมาะสำหรับ</p>
+						<p style={{fontWeight:"bold"}}>เหมาะสำหรับ</p>
 						<p>{suitBestFor}</p>
 					</div>
 				</div>	
