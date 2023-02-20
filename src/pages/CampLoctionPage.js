@@ -54,7 +54,10 @@ export default function CampLoctionPage() {
 					</div>
 
 					<div style={{width:350,height:150,marginLeft:5}}>
-						<div>
+						<div style={{marginTop:10}}>
+							<p>จำนวนเต้นท์</p>
+						</div>
+						<div style={{width:350,justifyContent:"space-around",display: 'flex',marginTop:10}}>
 							<div>
 								<img src={Plus} alt="Plus" style={{width:20,height:20}}/>
 							</div>
