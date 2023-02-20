@@ -13,6 +13,10 @@ export default function CampLoctionPage() {
 		navigate("/payment")
 	}
 
+	const facilityText = {
+		paddingLeft: 20
+	}
+
 	return (
 		<div style={{backgroundColor:"#1CBF9B"}}>
 			<Header alignItems={""} pageService={"Location"} pageMain={"Camp"}/>
@@ -23,34 +27,35 @@ export default function CampLoctionPage() {
 					</div>
 					<div style={{display: 'flex',justifyContent:"space-between",width:150,margin:15}}>
 						<input type="checkbox"/>
-						<p>อุปกรณ์ให้เช่า</p>
+						<p style={facilityText}>อุปกรณ์ให้เช่า</p>
 					</div>
 					<div style={{display: 'flex',justifyContent:"space-between",width:150,margin:15}}>
 						<input type="checkbox"/>
-						<p>Wifi</p>
+						<p style={facilityText}>Wifi</p>
 					</div>
 					<div style={{display: 'flex',justifyContent:"space-between",width:150,margin:15}}>
 						<input type="checkbox"/>
-						<p>สัญญาญโทรศัพท์</p>
+						<p style={facilityText}>สัญญาญโทรศัพท์</p>
 					</div>
 					<div style={{display: 'flex',justifyContent:"space-between",width:150,margin:15}}>
 						<input type="checkbox"/>
-						<p>ไฟฟ้า</p>
+						<p style={facilityText}>ไฟฟ้า</p>
 					</div>
 					<div style={{display: 'flex',justifyContent:"space-between",width:150,margin:15}}>
 						<input type="checkbox"/>
-						<p>เหมาะสำหรับ</p>
+						<p style={facilityText}>เหมาะสำหรับ</p>
 					</div>
 					<div style={{display: 'flex',justifyContent:"space-between",width:150,margin:15}}>
 						<input type="checkbox"/>
-						<p>ห้องน้ำ</p>
+						<p style={facilityText}>ห้องน้ำ</p>
 					</div>
 					<div style={{display: 'flex',justifyContent:"space-between",width:150,margin:15}}>
 						<input type="checkbox"/>
-						<p>อุปกรณ์ให้เช่า</p>
+						<p style={facilityText}>อุปกรณ์ให้เช่า</p>
 					</div>
 				</div>	
 			</Body>
 		</div>
 	)
 }
+
