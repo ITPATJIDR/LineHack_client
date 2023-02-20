@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState} from 'react'
 import Header from "../components/Header"
 import Body from "../components/Body"
 import { useLocation, useNavigate } from "react-router-dom"
@@ -8,6 +8,7 @@ export default function CampLoctionPage() {
 
 	const location = useLocation()
 	const navigate = useNavigate()
+	const [camp , setCamp] = useState(0)
 	const {bookingPrice, electricity, phoneSignal, rentalEquipment, 
 	suitBestFor,toilet,wifi
 	} = location.state
@@ -58,11 +59,11 @@ export default function CampLoctionPage() {
 							<p>จำนวนเต้นท์</p>
 						</div>
 						<div style={{width:350,justifyContent:"space-around",display: 'flex',marginTop:10}}>
-							<div>
+							<div onClick={() => setCamp(camp + 1)}>
 								<img src={Plus} alt="Plus" style={{width:20,height:20}}/>
 							</div>
-							<div>value</div>
-							<div>
+							<div>{camp}</div>
+							<div onClick={() => setCamp(camp - 1)}>
 								<img src={Minus} alt="Minus" style={{width:20,height:20}}/>
 							</div>
 						</div>
