@@ -7,7 +7,15 @@ export default function CampLoctionPage() {
 	const navigate = useNavigate()
 	console.log(location.state)
 
+	const handlePayment = async () =>{
+		navigate("/payment")
+	}
+
 	return (
-		<div style={{backgroundColor:"#1CBF9B"}}>CampLoctionPage</div>
+		<div style={{backgroundColor:"#1CBF9B"}}>
+			<div onClick={() => handlePayment()}>
+				Paynow	
+			</div>
+		</div>
 	)
 }
