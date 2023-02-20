@@ -21,31 +21,31 @@ export default function CampLoctionPage() {
 					<div style={{fontWeight:'bold',fontSize:20,marginBottom:10}}>
 						สิ่งอำนวนความสะดวก
 					</div>
-					<div style={{display: 'flex',justifyContent:"space-between",width:120}}>
+					<div style={{display: 'flex',justifyContent:"space-between",width:150,margin:15}}>
 						<input type="checkbox"/>
 						<p>อุปกรณ์ให้เช่า</p>
 					</div>
-					<div style={{display: 'flex',justifyContent:"space-between",width:120}}>
+					<div style={{display: 'flex',justifyContent:"space-between",width:150,margin:15}}>
 						<input type="checkbox"/>
 						<p>Wifi</p>
 					</div>
-					<div style={{display: 'flex',justifyContent:"space-between",width:120}}>
+					<div style={{display: 'flex',justifyContent:"space-between",width:150,margin:15}}>
 						<input type="checkbox"/>
 						<p>สัญญาญโทรศัพท์</p>
 					</div>
-					<div style={{display: 'flex',justifyContent:"space-between",width:120}}>
+					<div style={{display: 'flex',justifyContent:"space-between",width:150,margin:15}}>
 						<input type="checkbox"/>
 						<p>ไฟฟ้า</p>
 					</div>
-					<div style={{display: 'flex',justifyContent:"space-between",width:120}}>
+					<div style={{display: 'flex',justifyContent:"space-between",width:150,margin:15}}>
 						<input type="checkbox"/>
 						<p>เหมาะสำหรับ</p>
 					</div>
-					<div style={{display: 'flex',justifyContent:"space-between",width:120}}>
+					<div style={{display: 'flex',justifyContent:"space-between",width:150,margin:15}}>
 						<input type="checkbox"/>
 						<p>ห้องน้ำ</p>
 					</div>
-					<div style={{display: 'flex',justifyContent:"space-between",width:120}}>
+					<div style={{display: 'flex',justifyContent:"space-between",width:150,margin:15}}>
 						<input type="checkbox"/>
 						<p>อุปกรณ์ให้เช่า</p>
 					</div>
