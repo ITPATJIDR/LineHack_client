@@ -11,6 +11,7 @@ export default function SelectCampPage() {
 	campFacilityDescription, campFeeDescription, campLocation, campMode,
 	campPromotion, campPromotionRating, campRating, 
 	} = location.state.item
+	console.log(location.state.item)
 
 	const handleBack = () => {
 		navigate("/")
@@ -61,15 +62,15 @@ export default function SelectCampPage() {
 					  <div>
 						  <p style={{fontWeight:"bold"}}>Description</p>
 					  </div>
-					  <div>
+					  <div style={{width:375,overflow:hidden,lineBreak:'anywher' }}>
 						  {campDescription}
 					  </div>
 				  </div>
 				  <div style={{marginTop:10}}>
 					  <div>
-						  <p style={{fontWeight:"bold"}}>ค่าบริการเข้าชมอุทยานฯ</p>
+						  <p style={{fontWeight:"bold"}}>ค่าบริการต่อเต็นท์</p>
 					  </div>
-					  <div>
+					  <div style={{width:375,overflow:hidden,lineBreak:'anywher' }}>
 						  {campFeeDescription}
 					  </div>
 				  </div>
