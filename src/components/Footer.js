@@ -1,9 +1,12 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function Footer() {
 
+
+	const navigate = useNavigate()
 	const handleRedirect = (path) =>{
-		window.location.replace(path)
+		navigate(path)
 	}
 
   return (
