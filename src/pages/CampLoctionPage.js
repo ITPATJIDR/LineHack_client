@@ -25,31 +25,31 @@ export default function CampLoctionPage() {
 					<div style={{fontWeight:'bold',fontSize:20,marginBottom:10}}>
 						สิ่งอำนวนความสะดวก
 					</div>
-					<div style={{display: 'flex',justifyContent:"space-between",width:150,margin:15}}>
+					<div style={{display: 'flex',justifyContent:"flex-start",width:150,margin:15}}>
 						<input type="checkbox"/>
 						<p style={facilityText}>อุปกรณ์ให้เช่า</p>
 					</div>
-					<div style={{display: 'flex',justifyContent:"space-between",width:150,margin:15}}>
+					<div style={{display: 'flex',justifyContent:"flex-start",width:150,margin:15}}>
 						<input type="checkbox"/>
 						<p style={facilityText}>Wifi</p>
 					</div>
-					<div style={{display: 'flex',justifyContent:"space-between",width:150,margin:15}}>
+					<div style={{display: 'flex',justifyContent:"flex-start",width:150,margin:15}}>
 						<input type="checkbox"/>
 						<p style={facilityText}>สัญญาญโทรศัพท์</p>
 					</div>
-					<div style={{display: 'flex',justifyContent:"space-between",width:150,margin:15}}>
+					<div style={{display: 'flex',justifyContent:"flex-start",width:150,margin:15}}>
 						<input type="checkbox"/>
 						<p style={facilityText}>ไฟฟ้า</p>
 					</div>
-					<div style={{display: 'flex',justifyContent:"space-between",width:150,margin:15}}>
+					<div style={{display: 'flex',justifyContent:"flex-start",width:150,margin:15}}>
 						<input type="checkbox"/>
 						<p style={facilityText}>เหมาะสำหรับ</p>
 					</div>
-					<div style={{display: 'flex',justifyContent:"space-between",width:150,margin:15}}>
+					<div style={{display: 'flex',justifyContent:"flex-start",width:150,margin:15}}>
 						<input type="checkbox"/>
 						<p style={facilityText}>ห้องน้ำ</p>
 					</div>
-					<div style={{display: 'flex',justifyContent:"space-between",width:150,margin:15}}>
+					<div style={{display: 'flex',justifyContent:"flex-start",width:150,margin:15}}>
 						<input type="checkbox"/>
 						<p style={facilityText}>อุปกรณ์ให้เช่า</p>
 					</div>
