@@ -55,9 +55,13 @@ export default function CampLoctionPage() {
 
 					<div style={{width:350,height:150,marginLeft:5}}>
 						<div>
-							<div>plus</div>
+							<div>
+								<img src={Plus} alt="Plus" style={{width:20,height:20}}/>
+							</div>
 							<div>value</div>
-							<div>minus</div>
+							<div>
+								<img src={Minus} alt="Minus" style={{width:20,height:20}}/>
+							</div>
 						</div>
 						<div>
 							value
