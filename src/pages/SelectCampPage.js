@@ -62,7 +62,7 @@ export default function SelectCampPage() {
 					  <div>
 						  <p style={{fontWeight:"bold"}}>Description</p>
 					  </div>
-					  <div style={{width:375,overflow:hidden,lineBreak:'anywher' }}>
+					  <div style={{width:375,overflow:"hidden",lineBreak:'anywher' }}>
 						  {campDescription}
 					  </div>
 				  </div>
@@ -70,7 +70,7 @@ export default function SelectCampPage() {
 					  <div>
 						  <p style={{fontWeight:"bold"}}>ค่าบริการต่อเต็นท์</p>
 					  </div>
-					  <div style={{width:375,overflow:hidden,lineBreak:'anywher' }}>
+					  <div style={{width:375,overflow:"hidden",lineBreak:'anywher' }}>
 						  {campFeeDescription}
 					  </div>
 				  </div>
