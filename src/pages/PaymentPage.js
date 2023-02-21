@@ -15,6 +15,7 @@ export default function PaymentPage() {
   const userInfo = useSelector(selectUserInfo)
 
   console.log("userInfo", userInfo)
+  console.log("Date",  new Date(new Date() - Math.random()*(1e+12)))
 
   const {
 			electricity, bookingPrice, phoneSignal, rentalEquipment,
