@@ -51,8 +51,14 @@ export default function BananaPointPage() {
     }).catch(err => console.error(err));
   }
 
+	const checkUserInfo = () => {
+		if (Object.keys(userInfo.userInfo).length > 0) {
+			initLine()
+		}
+	}
+
   useEffect(() => {
-    initLine()
+    checkUserInfo()
   },[])
 
   return (

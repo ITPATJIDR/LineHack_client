@@ -46,6 +46,7 @@ export default function ServicePage() {
 	}
 	
 	const getAllCamp = async (data) =>{
+		console.log(data.id)
 		const res = await axios.get("https://rich-ruby-pelican-sari.cyclic.app/service/getAllService", {
 			userId: data.id
 		})
@@ -100,9 +101,14 @@ export default function ServicePage() {
 		})
 	}
 
+	const checkUserInfo = () => {
+		if (Object.keys(userInfo.userInfo).length > 0) {
+			initLine()
+		}
+	}
 
 	useEffect(() =>{
-		initLine()
+		checkUserInfo()
 	},[])
 
 	return (
