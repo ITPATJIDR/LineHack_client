@@ -24,12 +24,12 @@ export default function PaymentPage() {
   },[])
 
   return(
-    <div style={{ backgroundColor: "#1CC09E", width: 390, height: 750,zIndex:1}}>
-      <div style={{position:"absolute",zIndex:0}}></div>
+    <div style={{ backgroundColor: "#1CC09E", width: 390, height: 750}}>
       <div style={{display: "flex", justifyContent:"center",fontSize:50,fontWeight:'bold',color:'#FFFFFF',height:150,alignItems:'center'}}>
         <p>Payment</p>
       </div>
-      <div style={{display: "flex", justifyContent:"center",height:300,alignItems:'center'}}>
+      <div style={{display: "flex", justifyContent:"center",height:300,alignItems:'center',zIndex:1}}>
+      <div style={{position:"absolute",zIndex:0,width:100,height:100}}></div>
         <div style={{width:250,height:300,display: "flex",justifyContent:"center",marginTop:50,background:"white",flexDirection:"column",justifyContent:"center",borderRadius:10,alignItems:"center",padding:10}}>
           <QRCode value={qrCode} />
           <div style={{margin:20,fontSize:20,fontWeight:"bold",color:"#1CC09E"}}>
