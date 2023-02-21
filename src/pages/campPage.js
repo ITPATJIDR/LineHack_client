@@ -53,8 +53,15 @@ export default function CampPage() {
 		})
 	}
 
+	const checkFetchCamp = async () =>{
+		console.log(allCamp.length)
+		if (allCamp.length === 0){
+			getAllCamp()
+		}
+	}
+
 	useEffect(() =>{
-		getAllCamp()
+		checkFetchCamp()
 	},[])
 
 	return (
