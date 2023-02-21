@@ -54,7 +54,7 @@ export default function CampLoctionPage() {
 						<input type="checkbox" checked={wifi}/>
 						<p style={facilityText}>Wifi</p>
 					</div>
-					<div style={{display: 'flex',justifyContent:"flex-start",width:150,margin:15}}>
+					<div style={{display: 'flex',justifyContent:"flex-start",width:160,margin:15}}>
 						<input type="checkbox" checked={phoneSignal}/>
 						<p style={facilityText}>สัญญาญโทรศัพท์</p>
 					</div>
