@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import QRCode from 'qrcode.react'
 const generatePayload = require('promptpay-qr');
 
@@ -10,20 +10,32 @@ export default function PaymentPage() {
   function handlePhoneNumber(e) {
     setPhoneNumber(e.target.value);
   }
+
   function handleAmount(e) {
     setAmount(parseFloat(e.target.value));
   }
+
   function handleQR() {
     setqrCode(generatePayload(phoneNumber, { amount }));
   }
 
+  useEffect(() => {
+    handleQR()
+  },[])
+
   return(
-    <div>
-      <h2>I'm out of money so please donate me!</h2>
-      <input type="text" value={phoneNumber} onChange={handlePhoneNumber} />
-      <input type="number" value={amount} onChange={handleAmount} />
-      <button onClick={handleQR}>Generate Promptpay QR</button>
-      <QRCode value={qrCode} />
+    <div style={{ backgroundColor: "#1CC09E", width: 390, height: 750 }}>
+      <div>
+        <p>Payment</p>
+      </div>
+      <div>
+        <QRCode value={qrCode} />
+      </div>
+      <div>
+        <div>
+          Done
+        </div>
+      </div>
     </div>
    );
 }
