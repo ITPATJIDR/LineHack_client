@@ -25,10 +25,10 @@ export default function PaymentPage() {
 
   return(
     <div style={{ backgroundColor: "#1CC09E", width: 390, height: 750 }}>
-      <div>
+      <div style={{display: "flex", justifyContent:"center",fontSize:50,fontWeight:'bold',color:'#FFFFFF',height:150,alignItems:'center'}}>
         <p>Payment</p>
       </div>
-      <div>
+      <div style={{display: "flex", justifyContent:"center",height:300,alignItems:'center'}}>
         <QRCode value={qrCode} />
       </div>
       <div>
