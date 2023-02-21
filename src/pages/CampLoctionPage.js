@@ -9,12 +9,17 @@ export default function CampLoctionPage() {
 	const location = useLocation()
 	const navigate = useNavigate()
 	const [camp , setCamp] = useState(0)
-	const {bookingPrice, electricity, phoneSignal, rentalEquipment, 
-	suitBestFor,toilet,wifi
+	const { electricity, bookingPrice, phoneSignal, rentalEquipment,
+		 suitBestFor, toilet, wifi, campImage, campName, id
 	} = location.state
 
 	const handlePayment = async () =>{
-		navigate("/payment")
+		navigate("/payment",{
+			state:{
+			electricity, bookingPrice, phoneSignal, rentalEquipment,
+			suitBestFor, toilet, wifi, campImage, campName, id,camp
+			}
+		})
 	}
 
 	const handleAddCamp = () => {

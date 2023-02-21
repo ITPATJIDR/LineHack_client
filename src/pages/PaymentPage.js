@@ -1,31 +1,37 @@
 import React, {useEffect, useState} from 'react'
 import QRCode from 'qrcode.react'
 import { useLocation, useNavigate } from "react-router-dom"
+import {useSelector , useDispatch } from "react-redux"
+import { setUserInfo, selectUserInfo } from '../store/userInfoSlice';
 const generatePayload = require('promptpay-qr');
 
 export default function PaymentPage() {
 
   const [ phoneNumber, setPhoneNumber ] = useState("0993848633");
-  const [ amount, setAmount ] = useState(1.00);         
   const [ qrCode ,setqrCode ] = useState("sample");
+
   const location = useLocation()
   const navigate = useNavigate()
+  const userInfo = useSelector(selectUserInfo)
 
-  function handlePhoneNumber(e) {
-    setPhoneNumber(e.target.value);
-  }
+  console.log("userInfo", userInfo)
 
-  function handleAmount(e) {
-    setAmount(parseFloat(e.target.value));
-  }
+  const {
+			electricity, bookingPrice, phoneSignal, rentalEquipment,
+			suitBestFor, toilet, wifi, campImage, campName, id,camp
+  } = location.state
 
   function handleQR() {
-    setqrCode(generatePayload(phoneNumber, { amount }));
+    setqrCode(generatePayload(phoneNumber, { bookingPrice }));
   }
 
   const handlePaymentSuccess = () =>{
-    console.log("1")
-    navigate("/paymentSuccess") 
+    navigate("/paymentSuccess",{
+      state:{
+			electricity, bookingPrice, phoneSignal, rentalEquipment,
+			suitBestFor, toilet, wifi, campImage, campName, id
+      }
+    }) 
   }
 
   useEffect(() => {
