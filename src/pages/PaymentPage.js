@@ -29,7 +29,7 @@ export default function PaymentPage() {
         <p>Payment</p>
       </div>
       <div style={{display: "flex", justifyContent:"center",height:300,alignItems:'center'}}>
-        <div style={{width:250,height:300,display: "flex",justifyContent:"center",marginTop:50,background:"white",flexDirection:"column",justifyContent:"center",borderRadius:10}}>
+        <div style={{width:250,height:300,display: "flex",justifyContent:"center",marginTop:50,background:"white",flexDirection:"column",justifyContent:"center",borderRadius:10,alignItems:"center"}}>
           <QRCode value={qrCode} />
           <div style={{margin:20,fontSize:20,fontWeight:"bold",color:"#1CC09E"}}>
             <p>Accept Payment</p>
