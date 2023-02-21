@@ -49,7 +49,7 @@ export default function PaymentPage() {
         </div>
       </div>
       <div style={{display: "flex",justifyContent: "center"}}>
-        <div onclick={() => handlePaymentSuccess()} style={{position:"absolute",bottom:190,display: "flex",justifyContent:"center",width:100,height:50,alignItems: "center",borderRadius:10,fontWeight:"bold",background:"white"}}>
+        <div onClick={() => handlePaymentSuccess()} style={{position:"absolute",bottom:190,display: "flex",justifyContent:"center",width:100,height:50,alignItems: "center",borderRadius:10,fontWeight:"bold",background:"white"}}>
           Done
         </div>
       </div>
