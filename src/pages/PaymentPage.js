@@ -3,7 +3,9 @@ import QRCode from 'qrcode.react'
 import { useLocation, useNavigate } from "react-router-dom"
 import {useSelector , useDispatch } from "react-redux"
 import { setUserInfo, selectUserInfo } from '../store/userInfoSlice';
+import axios from "axios"
 const generatePayload = require('promptpay-qr');
+
 
 export default function PaymentPage() {
 
@@ -28,7 +30,17 @@ export default function PaymentPage() {
     setqrCode(generatePayload(phoneNumber, { bookingPrice }));
   }
 
+  const handleBooking = async () => {
+    await axios.post("https://rich-ruby-pelican-sari.cyclic.app/camp/booking", {
+      "userId": userInfo.userInfo.data.id,
+      "campId": id,
+      "campAmount": camp,
+      "endDate": futureDate
+    })
+  }
+
   const handlePaymentSuccess = () =>{
+    handleBooking()
     navigate("/paymentSuccess",{
       state:{
 			electricity, bookingPrice, phoneSignal, rentalEquipment,
@@ -36,6 +48,7 @@ export default function PaymentPage() {
       }
     }) 
   }
+
 
   useEffect(() => {
     handleQR()
