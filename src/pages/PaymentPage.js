@@ -14,9 +14,10 @@ export default function PaymentPage() {
   const navigate = useNavigate()
   const userInfo = useSelector(selectUserInfo)
   const DateNow = new Date()
+  const futureDate = DateNow.setDate(DateNow.getDate() + 5) 
 
   console.log("userInfo", userInfo)
-  console.log("Date", DateNow.getDate() + 5)
+  console.log("Date", futureDate)
 
   const {
 			electricity, bookingPrice, phoneSignal, rentalEquipment,
