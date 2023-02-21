@@ -24,6 +24,7 @@ export default function PaymentPage() {
   }
 
   const handlePaymentSuccess = () =>{
+    console.log("1")
     navigate("/paymentSuccess") 
   }
 
