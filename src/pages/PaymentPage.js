@@ -29,18 +29,18 @@ export default function PaymentPage() {
         <p>Payment</p>
       </div>
       <div style={{display: "flex", justifyContent:"center",height:300,alignItems:'center'}}>
-        <div style={{width:250,height:300,display: "flex",justifyContent:"center",marginTop:50,background:"white",flexDirection:"column",justifyContent:"center",borderRadius:10,alignItems:"center"}}>
+        <div style={{width:250,height:300,display: "flex",justifyContent:"center",marginTop:50,background:"white",flexDirection:"column",justifyContent:"center",borderRadius:10,alignItems:"center",padding:10}}>
           <QRCode value={qrCode} />
           <div style={{margin:20,fontSize:20,fontWeight:"bold",color:"#1CC09E"}}>
             <p>Accept Payment</p>
           </div>
-          <div style={{marginTop:20,width:210,height:100,background:"#1CC09E",borderRadius:10,padding:10,color:"white"}}>
+          <div style={{width:210,height:100,background:"#1CC09E",borderRadius:10,padding:10,color:"white"}}>
             <p>Accept Payment</p>
           </div>
         </div>
       </div>
       <div style={{display: "flex",justifyContent: "center"}}>
-        <div style={{position:"absolute",bottom:145,display: "flex",justifyContent:"center",width:100,height:50,alignItems: "center",borderRadius:10,fontWeight:"bold"}}>
+        <div style={{position:"absolute",bottom:190,display: "flex",justifyContent:"center",width:100,height:50,alignItems: "center",borderRadius:10,fontWeight:"bold"}}>
           Done
         </div>
       </div>
