@@ -102,7 +102,7 @@ export default function ServicePage() {
 	}
 
 	const checkUserInfo = () => {
-		if (Object.keys(userInfo.userInfo).length > 0) {
+		if (Object.keys(userInfo.userInfo).length < 0) {
 			initLine()
 		}
 	}

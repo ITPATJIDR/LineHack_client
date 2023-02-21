@@ -7,7 +7,7 @@ export default function waitingLogin() {
   return (
     <div >
 	<Header alignItems={"center"}/>
-	<Body>
+	<Body alignItems={"center"} justifyContent={"center"}>
 		<div style={{ marginBottom: 300, width: 300, display: 'flex', alignItems: "center", flexDirection: 'column' }}>
 			<div style={{ marginBottom: 30 }}>
 				<p style={{ fontSize: 30, fontWeight: "bold" }}>Line Web Login</p>
