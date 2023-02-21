@@ -64,7 +64,7 @@ export default function SelectServicePage() {
 				  position: 'absolute',
 				  display: 'flex',
 				  bottom: '0',
-				  justifyContent: "space-between",
+				  justifyContent: "flex-start",
 				  backgroundColor: "#F7F7F7",
 				  width: 393,
 				  height: 70,
@@ -85,22 +85,6 @@ export default function SelectServicePage() {
 						  fontWeight: "bold"
 					  }}>
 						  Back
-					  </div>
-				  </div>
-				  <div>
-					  <div style={{
-						  width: 100,
-						  height: 50,
-						  backgroundColor: "#FDAF17",
-						  justifyContent: 'center',
-						  display: "flex",
-						  alignItems: "center",
-						  borderRadius: 10,
-						  fontWeight: "bold"
-					  }}
-						  onClick={() => handleBookNow()}
-					  >
-						  Book Now
 					  </div>
 				  </div>
 			  </div>

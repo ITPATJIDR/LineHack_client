@@ -1,27 +1,16 @@
 import React, {useEffect, useState} from 'react'
-import QRCode from 'qrcode.react'
-const generatePayload = require('promptpay-qr');
+import { useLocation, useNavigate } from "react-router-dom"
 
 export default function PaymentPage() {
-  const [ phoneNumber, setPhoneNumber ] = useState("0993848633");
-  const [ amount, setAmount ] = useState(1.00);         
-  const [ qrCode ,setqrCode ] = useState("sample");
+  const location = useLocation()
+  const navigate = useNavigate()
 
-  function handlePhoneNumber(e) {
-    setPhoneNumber(e.target.value);
+  console.log(location.state)
+
+
+  const handleDone = () =>{
+    navigate("/")
   }
-
-  function handleAmount(e) {
-    setAmount(parseFloat(e.target.value));
-  }
-
-  function handleQR() {
-    setqrCode(generatePayload(phoneNumber, { amount }));
-  }
-
-  useEffect(() => {
-    handleQR()
-  },[])
 
   return(
     <div style={{ backgroundColor: "#1CC09E", width: 390, height: 750}}>
@@ -35,7 +24,7 @@ export default function PaymentPage() {
             </div>
         </div>
       </div>
-      <div style={{display: "flex",justifyContent: "center"}}>
+      <div onClick={() => handleDone()} style={{display: "flex",justifyContent: "center"}}>
         <div style={{position:"absolute",bottom:190,display: "flex",justifyContent:"center",width:100,height:50,alignItems: "center",borderRadius:10,fontWeight:"bold",background:"white"}}>
           Done
         </div>
