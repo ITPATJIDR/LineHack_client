@@ -53,7 +53,7 @@ export default function BananaPointPage() {
 
 	const checkUserInfo = () => {
     console.log(Object.keys(userInfo.userInfo).length)
-		if (Object.keys(userInfo.userInfo).length < 0) {
+		if (Object.keys(userInfo.userInfo).length === 0) {
 			initLine()
 		}
 	}
