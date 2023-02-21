@@ -12,6 +12,7 @@ export default function SelectCampPage() {
 	campPromotion, campPromotionRating, campRating,electricity,phoneSignal,
 	rentalEquipment,suitBestFor,toilet,wifi 
 	} = location.state.item
+	console.log(location.state.item)
 
 	const handleBack = () => {
 		navigate("/")
@@ -27,6 +28,8 @@ export default function SelectCampPage() {
 				suitBestFor,
 				toilet,
 				wifi,
+				campImage,
+				campName,
 			}
 		})
 	}
