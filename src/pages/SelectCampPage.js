@@ -36,6 +36,7 @@ export default function SelectCampPage() {
 
   return (
 	  <div>
+
 		  <div>
 			  <img src={campImage} alt={campName} style={{ width: "100%", height: 300, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }} />
 		  </div>
