@@ -27,7 +27,7 @@ export default function PaymentPage() {
             </div>
             <div>
               <div>
-                <p>{userInfo.data.userName}</p>
+                <p>{userInfo.userInfo.data.userName}</p>
                 <p>{bookingDetail.data.startDate}</p>
                 <p>{bookingDetail.data.endDate}</p>
               </div>
