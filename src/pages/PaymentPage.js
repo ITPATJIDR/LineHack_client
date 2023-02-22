@@ -24,7 +24,7 @@ export default function PaymentPage() {
 
   const {
 			electricity, bookingPrice, phoneSignal, rentalEquipment,
-			suitBestFor, toilet, wifi, campImage, campName, id,camp
+			suitBestFor, toilet, wifi, campImage, campName, id,camp 
   } = location.state
 
   function handleQR() {
@@ -45,7 +45,7 @@ export default function PaymentPage() {
     navigate("/paymentSuccess",{
       state:{
 			electricity, bookingPrice, phoneSignal, rentalEquipment,
-			suitBestFor, toilet, wifi, campImage, campName, id, bookingDetail
+			suitBestFor, toilet, wifi, campImage, campName, id, bookingDetail,userInfo
       }
     }) 
   }
