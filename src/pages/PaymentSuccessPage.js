@@ -27,9 +27,9 @@ export default function PaymentPage() {
             </div>
             <div style={{maringTop:10}}>
               <div>
-                <p>{userInfo.userInfo.data.userName}</p>
-                <p>{bookingDetail.data.startDate}</p>
-                <p>{bookingDetail.data.endDate}</p>
+                <p>คุณ: {userInfo.userInfo.data.userName}</p>
+                <p>เข้าพักวันที่: {bookingDetail.data.startDate}</p>
+                <p>จนถึงวันที่: {bookingDetail.data.endDate}</p>
               </div>
             </div>
         </div>
