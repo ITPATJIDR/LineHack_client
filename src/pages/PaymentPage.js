@@ -10,6 +10,7 @@ const generatePayload = require('promptpay-qr');
 export default function PaymentPage() {
 
   const [ phoneNumber, setPhoneNumber ] = useState("0993848633");
+  const [ bookingDetail, setBookingDetail ] = useState("");
   const [ qrCode ,setqrCode ] = useState("sample");
 
   const location = useLocation()
@@ -31,20 +32,20 @@ export default function PaymentPage() {
   }
 
   const handleBooking = async () => {
-    await axios.post("https://rich-ruby-pelican-sari.cyclic.app/camp/booking", {
+    const res = await axios.post("https://rich-ruby-pelican-sari.cyclic.app/camp/booking", {
       "userId": userInfo.userInfo.data.id,
       "campId": id,
       "campAmount": camp,
       "endDate": futureDate
     })
+    setBookingDetail(res.data)
   }
 
   const handlePaymentSuccess = () =>{
-    handleBooking()
     navigate("/paymentSuccess",{
       state:{
 			electricity, bookingPrice, phoneSignal, rentalEquipment,
-			suitBestFor, toilet, wifi, campImage, campName, id
+			suitBestFor, toilet, wifi, campImage, campName, id, bookingDetail
       }
     }) 
   }
@@ -52,6 +53,7 @@ export default function PaymentPage() {
 
   useEffect(() => {
     handleQR()
+    handleBooking()
   },[])
 
   return(
