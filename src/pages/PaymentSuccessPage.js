@@ -6,6 +6,7 @@ export default function PaymentPage() {
   const navigate = useNavigate()
 
   const {campImage, campName} = location.state
+  console.log(location.state)
 
   const handleDone = () =>{
     navigate("/")
