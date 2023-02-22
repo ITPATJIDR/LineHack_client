@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { useLocation, useNavigate } from "react-router-dom"
+import moment from "moment"
 
 export default function PaymentPage() {
   const location = useLocation()
@@ -28,8 +29,8 @@ export default function PaymentPage() {
             <div style={{maringTop:10}}>
               <div>
                 <p>คุณ: {userInfo.userInfo.data.userName}</p>
-                <p>เข้าพักวันที่: {bookingDetail.data.startDate}</p>
-                <p>จนถึงวันที่: {bookingDetail.data.endDate}</p>
+                <p>เข้าพักวันที่: {moment(bookingDetail.data.startDate).format("MMMM DD YYYY")}</p>
+                <p>จนถึงวันที่: {moment(bookingDetail.data.endDate).format("MMMM DD YYYY")}</p>
               </div>
             </div>
         </div>
