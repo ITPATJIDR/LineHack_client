@@ -26,7 +26,7 @@ export default function PaymentPage() {
             <div>
               <img src={campImage} alt={campName} style={{width:150,height:150,borderRadius:10}}/>
             </div>
-            <div style={{maringTop:10}}>
+            <div style={{marginTop:10}}>
               <div>
                 <p>คุณ: {userInfo.userInfo.data.userName}</p>
                 <p>เข้าพักวันที่: {moment(bookingDetail.data.startDate).format("MMMM DD YYYY")}</p>
