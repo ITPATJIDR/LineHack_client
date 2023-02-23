@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../components/Header'
 import Body from '../components/Body'
 import Footer from '../components/Footer'
@@ -13,6 +13,8 @@ export default function BananaPointPage() {
 
   const userInfo = useSelector(selectUserInfo)
   const dispatch = useDispatch()
+
+  const [allShop, setAllShop] = useState([])
 
   const checkNewUser = async (profile) => {
     const payload = {
@@ -57,6 +59,11 @@ export default function BananaPointPage() {
 			initLine()
 		}
 	}
+
+  const fetchAllShop = async () =>{
+    const res = await axios.get("https://rich-ruby-pelican-sari.cyclic.app/shop/getAllShop") 
+    setAllShop(res.data)
+  }
 
   useEffect(() => {
     checkUserInfo()
