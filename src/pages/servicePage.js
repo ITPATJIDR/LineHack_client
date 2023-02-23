@@ -168,8 +168,8 @@ export default function ServicePage() {
 									{allService.data?.Camp.service.length > 0
 										? allService.data.Camp.service.map((item, index) => {
 											return (
-												<div key={index} style={{ width: seeMore === true && page === "Service" ? 130 : 400
-												, height: 220, borderWidth: 1, borderRadius: 10,
+												<div key={index} style={{ width: seeMore === true && page === "Service" ? 0 : 400 ,
+												height: 220, borderWidth: 1, borderRadius: 10,marginRight: seeMore === true && page === "Service" ? 0 : 20,
 												marginBottom: seeMore === true && page === "Service" ? 10 :0,
 												overflow:"hidden",textOverflow:"ellipsis" }} 
 												onClick={() => handleClick(item)}
