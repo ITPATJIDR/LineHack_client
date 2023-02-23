@@ -115,10 +115,9 @@ export default function CampPage() {
 									}}>
 									{allCamp.length > 0
 										? allCamp.map((item, index) => {
-											console.log(item)
 											return (
 												<div key={index} style={{ width: seeMore === true && page === "Camp" ? 130 : 400
-												, height: 220, borderWidth: 1, borderRadius: 10, marginRight: 20,
+												, height: 220, borderWidth: 1, borderRadius: 10, marginRight: seeMore === true && page === "Camp" ? 0 : 20,
 												marginBottom: seeMore === true && page === "Camp" ? 10 :0,
 												overflow:"hidden",textOverflow:"ellipsis"}} 
 												onClick={() => handleClick(item)}
