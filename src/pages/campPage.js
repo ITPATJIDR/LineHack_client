@@ -111,7 +111,7 @@ export default function CampPage() {
 									height:seeMore === true && page === "Camp" ? 390 : null,
 									overflow: 'auto',
 									flexWrap:seeMore === true && page === "Camp" ? "wrap" : null,
-									justifyContent: seeMore === true && page === "Camp" ? "center" : null,
+									justifyContent: seeMore === true && page === "Camp" ? "space-evenly" : null,
 									}}>
 									{allCamp.length > 0
 										? allCamp.map((item, index) => {
