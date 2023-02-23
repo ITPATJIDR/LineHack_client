@@ -91,8 +91,8 @@ export default function BananaPointPage() {
             <p style={{ fontSize: 20, fontWeight: "bold" }}>Banana Reward</p>
           </div>
           <div>
-									{allShop.data.length > 0
-										? allShop.data.map((item, index) => {
+									{allShop?.data.length > 0
+										? allShop?.data.map((item, index) => {
 											return (
 												<div key={index} style={{ width: 130 
 												, height: 220, borderWidth: 1, borderRadius: 10, marginRight: 20,
