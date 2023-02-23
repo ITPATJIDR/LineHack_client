@@ -98,7 +98,7 @@ export default function BananaPointPage() {
 												, height: 220, borderWidth: 1, borderRadius: 10, marginRight: 20,
 												marginBottom: 10,
 												overflow:"hidden",textOverflow:"ellipsis" }} 
-												onClick={() => handleClick(item)}
+												onClick={() => console.log(item)}
 												>
 													<img src={item.itemImage} alt={item.itemName} style={{width:"100%",height:130,borderTopRightRadius:10,borderTopLeftRadius:10}}/>
 													<div style={{padding:10}}>
