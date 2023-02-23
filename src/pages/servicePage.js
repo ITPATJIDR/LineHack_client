@@ -163,13 +163,13 @@ export default function ServicePage() {
 									height:seeMore === true && page === "Service" ? 390 : null,
 									overflow: 'auto',
 									flexWrap:seeMore === true && page === "Service" ? "wrap" : null,
-									justifyContent: seeMore === true && page === "Service" ? "center" : null,
+									justifyContent: seeMore === true && page === "Service" ? "space-evenly" : null,
 									}}>
 									{allService.data?.Camp.service.length > 0
 										? allService.data.Camp.service.map((item, index) => {
 											return (
 												<div key={index} style={{ width: seeMore === true && page === "Service" ? 130 : 400
-												, height: 220, borderWidth: 1, borderRadius: 10, marginRight: 20,
+												, height: 220, borderWidth: 1, borderRadius: 10,
 												marginBottom: seeMore === true && page === "Service" ? 10 :0,
 												overflow:"hidden",textOverflow:"ellipsis" }} 
 												onClick={() => handleClick(item)}
