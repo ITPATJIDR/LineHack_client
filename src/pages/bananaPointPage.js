@@ -90,7 +90,7 @@ export default function BananaPointPage() {
           <div style={{ paddingTop: 10, paddingLeft: 20 }}>
             <p style={{ fontSize: 20, fontWeight: "bold" }}>Banana Reward</p>
           </div>
-          <div style={{padding:20,display:"flex",flexWrap:"wrap",justifyContent: "center",overflow: "auto",height:300,marginTop:10}}>
+          <div style={{padding:20,display:"flex",flexWrap:"wrap",justifyContent:"space-evenly",overflow: "auto",height:300,marginTop:10}}>
 									{allShop.data?.length > 0
 										? allShop.data?.map((item, index) => {
 											return (
