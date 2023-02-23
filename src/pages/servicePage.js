@@ -159,7 +159,7 @@ export default function ServicePage() {
 
 							<div style={{marginTop:20,overflow:"scroll"}}>
 								<div className="flex " style={{
-									width:seeMore === true && page === "Service" ? 330 : 1100,
+									width:seeMore === true && page === "Service" ? 0 : 1100,
 									height:seeMore === true && page === "Service" ? 390 : null,
 									overflow: 'auto',
 									flexWrap:seeMore === true && page === "Service" ? "wrap" : null,
