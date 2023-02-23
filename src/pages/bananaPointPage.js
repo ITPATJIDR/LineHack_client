@@ -67,6 +67,7 @@ export default function BananaPointPage() {
 
   useEffect(() => {
     checkUserInfo()
+    fetchAllShop()
   },[])
 
   return (
