@@ -94,9 +94,9 @@ export default function BananaPointPage() {
 									{allShop.data.length > 0
 										? allShop.data.map((item, index) => {
 											return (
-												<div key={index} style={{ width: seeMore === true && page === "Service" ? 130 : 400
+												<div key={index} style={{ width: 130 
 												, height: 220, borderWidth: 1, borderRadius: 10, marginRight: 20,
-												marginBottom: seeMore === true && page === "Service" ? 10 :0,
+												marginBottom: 10,
 												overflow:"hidden",textOverflow:"ellipsis" }} 
 												onClick={() => handleClick(item)}
 												>
