@@ -91,24 +91,21 @@ export default function BananaPointPage() {
             <p style={{ fontSize: 20, fontWeight: "bold" }}>Banana Reward</p>
           </div>
           <div>
-									{allShop.length > 0
-										? allShop.map((item, index) => {
-                      console.log(item)
+									{allShop.data.length > 0
+										? allShop.data.map((item, index) => {
 											return (
-												// <div key={index} style={{ width: seeMore === true && page === "Service" ? 130 : 400
-												// , height: 220, borderWidth: 1, borderRadius: 10, marginRight: 20,
-												// marginBottom: seeMore === true && page === "Service" ? 10 :0,
-												// overflow:"hidden",textOverflow:"ellipsis" }} 
-												// onClick={() => handleClick(item)}
-												// >
-												// 	<img src={item.serviceImage} alt={item.serviceName} style={{width:"100%",height:130,borderTopRightRadius:10,borderTopLeftRadius:10}}/>
-												// 	<div style={{padding:10}}>
-												// 		<p style={{fontWeight:'bold'}}>{item.serviceName}</p>
-												// 		<p style={{lineBreak:"anywhere"}}>{item.serviceDescription}</p>
-												// 	</div>
-												// </div>
-                        <div></div>
-
+												<div key={index} style={{ width: seeMore === true && page === "Service" ? 130 : 400
+												, height: 220, borderWidth: 1, borderRadius: 10, marginRight: 20,
+												marginBottom: seeMore === true && page === "Service" ? 10 :0,
+												overflow:"hidden",textOverflow:"ellipsis" }} 
+												onClick={() => handleClick(item)}
+												>
+													<img src={item.itemImage} alt={item.itemName} style={{width:"100%",height:130,borderTopRightRadius:10,borderTopLeftRadius:10}}/>
+													<div style={{padding:10}}>
+														<p style={{fontWeight:'bold'}}>{item.itemName}</p>
+														<p style={{lineBreak:"anywhere"}}>{item.itemDescription}</p>
+													</div>
+												</div>
 											)
 										})
 										: <div>
