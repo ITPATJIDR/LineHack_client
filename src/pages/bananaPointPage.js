@@ -90,13 +90,11 @@ export default function BananaPointPage() {
           <div style={{ paddingTop: 10, paddingLeft: 20 }}>
             <p style={{ fontSize: 20, fontWeight: "bold" }}>Banana Reward</p>
           </div>
-          <div>
+          <div style={{padding:20,display:"flex",flexWrap:"wrap",justifyContent: "center",overflow: "auto",height:300,marginTop:10}}>
 									{allShop.data?.length > 0
 										? allShop.data?.map((item, index) => {
 											return (
-												<div key={index} style={{ width: 130 
-												, height: 220, borderWidth: 1, borderRadius: 10, marginRight: 20,
-												marginBottom: 10,
+												<div key={index} style={{ width: 130 , height: 220, borderWidth: 1, borderRadius: 10, marginBottom: 10,
 												overflow:"hidden",textOverflow:"ellipsis" }} 
 												onClick={() => console.log(item)}
 												>
