@@ -69,6 +69,8 @@ export default function BananaPointPage() {
     checkUserInfo()
     fetchAllShop()
   },[])
+  
+  console.log(allShop)
 
   return (
     <div style={{ backgroundColor: "#1CC09E", width: 390, height: 750 }}>
