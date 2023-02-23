@@ -7,14 +7,10 @@ export default function SelectServicePage() {
 	const location = useLocation()
 	const navigate = useNavigate()
 
-
 	const { serviceImage, serviceDescription, serviceName, serviceLineContact, serviceDistance, serviceContact } = location.state.item
 
 	const handleBack = () => {
-		navigate("/")
-	}
-
-	const handleBookNow = () => {
+		navigate("/service")
 	}
 
   return (
