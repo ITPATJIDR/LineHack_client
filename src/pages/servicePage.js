@@ -152,9 +152,16 @@ export default function ServicePage() {
 								<div>
 									<p style={{ fontWeight: "bold", fontSize: 16 }}>Nearby Attractions & Food</p>
 								</div>
+								{page === "Service"
+								?
+								<div onClick={() => handleSeeMore("")}>
+									<p style={{ fontWeight: "bold", fontSize: 16, color: "#FDAF17" }}>see less</p>
+								</div>
+								:	
 								<div onClick={() => handleSeeMore("Service")}>
 									<p style={{ fontWeight: "bold", fontSize: 16, color: "#FDAF17" }}>see more</p>
 								</div>
+								}
 							</div>
 
 							<div style={{marginTop:20,overflow:"scroll"}}>
