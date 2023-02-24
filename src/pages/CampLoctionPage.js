@@ -82,7 +82,7 @@ export default function CampLoctionPage() {
 							</div>
 							<div>
 								<p>วันเกิด</p>
-								<DatePicker onChange={setAge} value={birthDate} />
+								<DatePicker onChange={setBirthDate} value={birthDate} />
 							</div>
 						</div>
 						<div style={{marginTop:10}}>
