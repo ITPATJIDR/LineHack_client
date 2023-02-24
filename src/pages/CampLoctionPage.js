@@ -78,7 +78,7 @@ export default function CampLoctionPage() {
 							</div>
 							<div>
 								<p>อายุ</p>
-								<input type="text" value={age} onChange={(e) => setAge(e.target.value)} placeholder="ที่อยุ่"/>
+								<input type="text" value={age} onChange={(e) => setAge(e.target.value)} placeholder="อายุ"/>
 							</div>
 							<div>
 								<p>วันเกิด</p>

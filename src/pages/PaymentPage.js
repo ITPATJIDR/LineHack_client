@@ -16,17 +16,13 @@ export default function PaymentPage() {
   const {
 			electricity, bookingPrice, phoneSignal, rentalEquipment,
 			suitBestFor, toilet, wifi, campImage, campName, id,camp,
-			name, phoneNumber, age, birthDate, email, address
+			name, phoneNumber, age, birthDate, email, address,startDate
   } = location.state
 
   const location = useLocation()
   const navigate = useNavigate()
   const userInfo = useSelector(selectUserInfo)
-  const DateNow = new Date()
-  const futureDate = new Date(DateNow.setDate(DateNow.getDate() + 5)) 
-
-  console.log("userInfo", userInfo)
-  console.log("Date", futureDate)
+  const futureDate = new Date(startDate.setDate(startDate.getDate() + 5)) 
 
 
   function handleQR() {
@@ -38,7 +34,14 @@ export default function PaymentPage() {
       "userId": userInfo.userInfo.data.id,
       "campId": id,
       "campAmount": camp,
-      "endDate": futureDate
+      "startDate": startDate,
+      "endDate": futureDate,
+      "phoneNumber": phoneNumber,
+      "name": name,
+      "age": age,
+      "birthDate": birthDate,
+      "email": email,
+      "address": address
     })
     setBookingDetail(res.data)
   }
