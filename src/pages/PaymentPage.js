@@ -36,7 +36,7 @@ export default function PaymentPage() {
       "campId": id,
       "campAmount": camp,
       "startDate": new Date(startDate),
-      "endDate": new Date(futureDate),
+      "endDate": futureDate,
       "phoneNumber": phoneNumber,
       "name": name,
       "age": age,
