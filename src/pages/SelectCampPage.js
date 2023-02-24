@@ -71,14 +71,6 @@ export default function SelectCampPage() {
 				  </div>
 			  </div>
 			  <div style={{marginTop:10,overflow:"auto",height:250}}>
-				  <div>
-					  <div>
-						  <p style={{fontWeight:"bold"}}>Description</p>
-					  </div>
-					  <div style={{width:375,overflow:"hidden",lineBreak:'anywher' }}>
-						  {campDescription}
-					  </div>
-				  </div>
 				  <div style={{marginTop:10}}>
 					  <div style={{ fontWeight: 'bold', fontSize: 20, marginBottom: 10 }}>
 						  สิ่งอำนวนความสะดวก
@@ -106,6 +98,14 @@ export default function SelectCampPage() {
 					  <div style={{ display: 'flex', justifyContent: "space-around", width: 170, marginBottom: 15 }}>
 						  <p style={{ fontWeight: "bold" }}>เหมาะสำหรับ</p>
 						  <p>{suitBestFor}</p>
+					  </div>
+				  </div>
+				  <div>
+					  <div>
+						  <p style={{fontWeight:"bold"}}>Description</p>
+					  </div>
+					  <div style={{width:375,overflow:"hidden",lineBreak:'anywher' }}>
+						  {campDescription}
 					  </div>
 				  </div>
 			  </div>
