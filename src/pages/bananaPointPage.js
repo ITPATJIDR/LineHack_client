@@ -78,6 +78,9 @@ export default function BananaPointPage() {
       ? 
       <>
       <Header alignItems={"left"} pageService={"Point"} pageMain={"Banana"} />
+      <div style={{position:"absolute"}}>
+          <p>{userInfo.userInfo.data.name}</p>
+      </div>
       <Body alignItems={""} justifyContent={""} display={""}>
         <div style={{ padding: 20, display: "flex" }}>
           <p style={{ fontSize: 34, fontWeight: "bold", color: "#1CC09E" }}>Your Point</p>
