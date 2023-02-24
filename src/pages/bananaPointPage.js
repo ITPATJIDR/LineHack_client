@@ -107,7 +107,6 @@ export default function BananaPointPage() {
 											)
 										})
 										: <div>
-											<p>Please Booking First</p>
 										</div>
 										}
           </div>
@@ -120,3 +119,6 @@ export default function BananaPointPage() {
     </div>
   )
 }
+
+
+// 100 = 5 bananaPoint
