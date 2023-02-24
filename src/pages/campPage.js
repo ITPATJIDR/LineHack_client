@@ -100,9 +100,16 @@ export default function CampPage() {
 								<div>
 									<p style={{ fontWeight: "bold", fontSize: 16 }}>Recommendation</p>
 								</div>
+								{page === Camp 
+								? 
+								<div onClick={() => handleSeeMore("")}>
+									<p style={{ fontWeight: "bold", fontSize: 16, color: "#FDAF17" }}>see less</p>
+								</div>
+								:
 								<div onClick={() => handleSeeMore("Camp")}>
 									<p style={{ fontWeight: "bold", fontSize: 16, color: "#FDAF17" }}>see more</p>
 								</div>
+								}
 							</div>
 
 							<div style={{marginTop:20,overflow:"scroll"}}>
