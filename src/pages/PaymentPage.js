@@ -9,7 +9,7 @@ const generatePayload = require('promptpay-qr');
 
 export default function PaymentPage() {
 
-  const [ phoneNumber, setPhoneNumber ] = useState("0993848633");
+  const [ phoneNumbers, setPhoneNumber ] = useState("0993848633");
   const [ bookingDetail, setBookingDetail ] = useState("");
   const [ qrCode ,setqrCode ] = useState("sample");
 
@@ -24,11 +24,12 @@ export default function PaymentPage() {
 
   const {
 			electricity, bookingPrice, phoneSignal, rentalEquipment,
-			suitBestFor, toilet, wifi, campImage, campName, id,camp 
+			suitBestFor, toilet, wifi, campImage, campName, id,camp,
+			name, phoneNumber, age, birthDate, email, address
   } = location.state
 
   function handleQR() {
-    setqrCode(generatePayload(phoneNumber, { bookingPrice }));
+    setqrCode(generatePayload(phoneNumbers, { bookingPrice }));
   }
 
   const handleBooking = async () => {

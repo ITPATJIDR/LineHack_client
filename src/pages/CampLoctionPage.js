@@ -3,6 +3,7 @@ import Header from "../components/Header"
 import Body from "../components/Body"
 import { useLocation, useNavigate } from "react-router-dom"
 import { Plus, Minus } from '../assets'
+import DatePicker from 'react-date-picker';
 
 export default function CampLoctionPage() {
 
@@ -15,19 +16,20 @@ export default function CampLoctionPage() {
 	const [birthDate,setBirthDate] = useState("")
 	const [email,setEmail] = useState("")
 	const [address,setAddress] = useState("")
+	const [value, onChange] = useState(new Date());
 
 	const { electricity, bookingPrice, phoneSignal, rentalEquipment,
 		 suitBestFor, toilet, wifi, campImage, campName, id
 	} = location.state
 
 	const handlePayment = async () =>{
-		console.log(name,phoneNumber,age,birthDate,email,address)
-		// navigate("/payment",{
-		// 	state:{
-		// 	electricity, bookingPrice, phoneSignal, rentalEquipment,
-		// 	suitBestFor, toilet, wifi, campImage, campName, id,camp
-		// 	}
-		// })
+		navigate("/payment",{
+			state:{
+			electricity, bookingPrice, phoneSignal, rentalEquipment,
+			suitBestFor, toilet, wifi, campImage, campName, id,camp,
+			name, phoneNumber, age, birthDate, email, address
+			}
+		})
 	}
 
 	const handleAddCamp = () => {
@@ -80,7 +82,7 @@ export default function CampLoctionPage() {
 							</div>
 							<div>
 								<p>วันเกิด</p>
-								<input type="text" value={birthDate} onChange={(e) => setBirthDate(e.target.value)} placeholder="ที่อยุ่"/>
+								<DatePicker onChange={setAge} value={birthDate} />
 							</div>
 						</div>
 						<div style={{marginTop:10}}>
