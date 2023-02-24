@@ -9,6 +9,13 @@ export default function CampLoctionPage() {
 	const location = useLocation()
 	const navigate = useNavigate()
 	const [camp , setCamp] = useState(0)
+	const [name,setName] = useState("")
+	const [phoneNumber,setPhoneNumber] = useState("")
+	const [age,setAge] = useState("")
+	const [birthDate,setBirthDate] = useState("")
+	const [email,setEmail] = useState("")
+	const [address,setAddress] = useState("")
+
 	const { electricity, bookingPrice, phoneSignal, rentalEquipment,
 		 suitBestFor, toilet, wifi, campImage, campName, id
 	} = location.state
@@ -40,12 +47,42 @@ export default function CampLoctionPage() {
 	}
 
 
+
 	return (
 		<div style={{backgroundColor:"#1CBF9B"}}>
 			<Header alignItems={""} pageService={"Location"} pageMain={"Camp"}/>
 			<Body alignItems={""} justifyContent={""} display={""}>
 				<div style={{padding:20}}>
 					<div style={{width:350,height:150,marginLeft:5}}>
+						<div style={{marginTop:10}}>
+							<p>ข้อมูลส่วนตัว</p>
+						</div>
+						<div style={{marginTop:10}}>
+							<div>
+								<p>ชื่อ-นามสกุล</p>
+								<input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="ชื่อนามสกุล"/>
+							</div>
+							<div>
+								<p>เบอร์โทรศัพท์</p>
+								<input type="text" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} placeholder="เบอร์โทรศัพท์"/>
+							</div>
+							<div>
+								<p>Email</p>
+								<input type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"/>
+							</div>
+							<div>
+								<p>ที่อยุ่</p>
+								<input type="text" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="ที่อยุ่"/>
+							</div>
+							<div>
+								<p>อายุ</p>
+								<input type="text" value={age} onChange={(e) => setAge(e.target.value)} placeholder="ที่อยุ่"/>
+							</div>
+							<div>
+								<p>วันเกิด</p>
+								<input type="text" value={birthDate} onChange={(e) => setBirthDate(e.target.value)} placeholder="ที่อยุ่"/>
+							</div>
+						</div>
 						<div style={{marginTop:10}}>
 							<p>จำนวนเต้นท์</p>
 						</div>
