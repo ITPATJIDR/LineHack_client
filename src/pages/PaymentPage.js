@@ -15,15 +15,14 @@ export default function PaymentPage() {
   const location = useLocation()
   const navigate = useNavigate()
   const userInfo = useSelector(selectUserInfo)
-  const futureDate = new Date(startDate.setDate(startDate.getDate() + 5)) 
+  const StartDate = new Date(startDate)
+  const futureDate = new Date(StartDate.setDate(startDate.getDate() + 5)) 
 
   const {
 			electricity, bookingPrice, phoneSignal, rentalEquipment,
 			suitBestFor, toilet, wifi, campImage, campName, id,camp,
 			name, phoneNumber, age, birthDate, email, address,startDate
   } = location.state
-
-
 
   function handleQR() {
     setqrCode(generatePayload(phoneNumbers, { bookingPrice }));
