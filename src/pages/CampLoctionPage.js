@@ -39,9 +39,6 @@ export default function CampLoctionPage() {
 		navigate(-1)
 	}
 
-	const facilityText = {
-		paddingLeft: 20
-	}
 
 	return (
 		<div style={{backgroundColor:"#1CBF9B"}}>
