@@ -13,6 +13,12 @@ export default function PaymentPage() {
   const [ bookingDetail, setBookingDetail ] = useState("");
   const [ qrCode ,setqrCode ] = useState("sample");
 
+  const {
+			electricity, bookingPrice, phoneSignal, rentalEquipment,
+			suitBestFor, toilet, wifi, campImage, campName, id,camp,
+			name, phoneNumber, age, birthDate, email, address
+  } = location.state
+
   const location = useLocation()
   const navigate = useNavigate()
   const userInfo = useSelector(selectUserInfo)
@@ -22,11 +28,6 @@ export default function PaymentPage() {
   console.log("userInfo", userInfo)
   console.log("Date", futureDate)
 
-  const {
-			electricity, bookingPrice, phoneSignal, rentalEquipment,
-			suitBestFor, toilet, wifi, campImage, campName, id,camp,
-			name, phoneNumber, age, birthDate, email, address
-  } = location.state
 
   function handleQR() {
     setqrCode(generatePayload(phoneNumbers, { bookingPrice }));

@@ -13,10 +13,10 @@ export default function CampLoctionPage() {
 	const [name,setName] = useState("")
 	const [phoneNumber,setPhoneNumber] = useState("")
 	const [age,setAge] = useState("")
-	const [birthDate,setBirthDate] = useState("")
+	const [birthDate,setBirthDate] = useState(new Date())
+	const [startDate,setStartDate] = useState(new Date())
 	const [email,setEmail] = useState("")
 	const [address,setAddress] = useState("")
-	const [value, onChange] = useState(new Date());
 
 	const { electricity, bookingPrice, phoneSignal, rentalEquipment,
 		 suitBestFor, toilet, wifi, campImage, campName, id
@@ -27,7 +27,7 @@ export default function CampLoctionPage() {
 			state:{
 			electricity, bookingPrice, phoneSignal, rentalEquipment,
 			suitBestFor, toilet, wifi, campImage, campName, id,camp,
-			name, phoneNumber, age, birthDate, email, address
+			name, phoneNumber, age, birthDate, email, address,startDate
 			}
 		})
 	}
@@ -55,8 +55,8 @@ export default function CampLoctionPage() {
 			<Header alignItems={""} pageService={"Location"} pageMain={"Camp"}/>
 			<Body alignItems={""} justifyContent={""} display={""}>
 				<div style={{padding:20}}>
-					<div style={{width:350,height:150,marginLeft:5}}>
-						<div style={{marginTop:10}}>
+					<div style={{width:350,height:400,marginLeft:5,overflow:"auto"}}>
+						<div style={{marginTop:10,fontSize:20,fontWeight:"bold"}}>
 							<p>ข้อมูลส่วนตัว</p>
 						</div>
 						<div style={{marginTop:10}}>
@@ -84,6 +84,11 @@ export default function CampLoctionPage() {
 								<p>วันเกิด</p>
 								<DatePicker onChange={setBirthDate} value={birthDate} />
 							</div>
+							<div>
+								<p>วันไป</p>
+								<DatePicker onChange={setStartDate} value={startDate} />
+							</div>
+						
 						</div>
 						<div style={{marginTop:10}}>
 							<p>จำนวนเต้นท์</p>
