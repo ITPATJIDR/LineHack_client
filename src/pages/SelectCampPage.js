@@ -34,6 +34,10 @@ export default function SelectCampPage() {
 		})
 	}
 
+	const facilityText = {
+		paddingLeft: 20
+	}
+
   return (
 	  <div>
 
