@@ -21,12 +21,13 @@ export default function CampLoctionPage() {
 	} = location.state
 
 	const handlePayment = async () =>{
-		navigate("/payment",{
-			state:{
-			electricity, bookingPrice, phoneSignal, rentalEquipment,
-			suitBestFor, toilet, wifi, campImage, campName, id,camp
-			}
-		})
+		console.log(name,phoneNumber,age,birthDate,email,address)
+		// navigate("/payment",{
+		// 	state:{
+		// 	electricity, bookingPrice, phoneSignal, rentalEquipment,
+		// 	suitBestFor, toilet, wifi, campImage, campName, id,camp
+		// 	}
+		// })
 	}
 
 	const handleAddCamp = () => {
@@ -40,7 +41,6 @@ export default function CampLoctionPage() {
 			setCamp(camp - 1)
 		}
 	}
-
 
 	const handleBack = () =>{
 		navigate(-1)
