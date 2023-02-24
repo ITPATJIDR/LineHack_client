@@ -25,9 +25,9 @@ export default function CampLoctionPage() {
 	const handlePayment = async () =>{
 		navigate("/payment",{
 			state:{
-			electricity, bookingPrice, phoneSignal, rentalEquipment,
-			suitBestFor, toilet, wifi, campImage, campName, id,camp,
-			name, phoneNumber, age, birthDate, email, address,startDate
+				electricity, bookingPrice, phoneSignal, rentalEquipment,
+				suitBestFor, toilet, wifi, campImage, campName, id, camp,
+				name, phoneNumber, age, birthDate, email, address, startDate
 			}
 		})
 	}

@@ -12,6 +12,10 @@ export default function PaymentPage() {
   const [ phoneNumbers, setPhoneNumber ] = useState("0993848633");
   const [ bookingDetail, setBookingDetail ] = useState("");
   const [ qrCode ,setqrCode ] = useState("sample");
+  const location = useLocation()
+  const navigate = useNavigate()
+  const userInfo = useSelector(selectUserInfo)
+  const futureDate = new Date(startDate.setDate(startDate.getDate() + 5)) 
 
   const {
 			electricity, bookingPrice, phoneSignal, rentalEquipment,
@@ -19,10 +23,6 @@ export default function PaymentPage() {
 			name, phoneNumber, age, birthDate, email, address,startDate
   } = location.state
 
-  const location = useLocation()
-  const navigate = useNavigate()
-  const userInfo = useSelector(selectUserInfo)
-  const futureDate = new Date(startDate.setDate(startDate.getDate() + 5)) 
 
 
   function handleQR() {
