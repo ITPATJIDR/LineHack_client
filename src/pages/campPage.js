@@ -100,7 +100,7 @@ export default function CampPage() {
 								<div>
 									<p style={{ fontWeight: "bold", fontSize: 16 }}>Recommendation</p>
 								</div>
-								{page === Camp 
+								{page === "Camp"
 								? 
 								<div onClick={() => handleSeeMore("")}>
 									<p style={{ fontWeight: "bold", fontSize: 16, color: "#FDAF17" }}>see less</p>
