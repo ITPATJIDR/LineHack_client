@@ -66,7 +66,14 @@ export default function BananaPointPage() {
   }
 
   const Buy = (item) => {
-    console.log(item)
+    const itemBananaPoint = Number(item.itemBananaPoint)
+    const userBananaPoint = Number(userInfo.userInfo.data.bananaPoint)
+
+    if (userBananaPoint >= itemBananaPoint) {
+      console.log("can buy it")
+    }else{
+      console.log("can't buy")
+    }
   }
 
   useEffect(() => {
