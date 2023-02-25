@@ -193,7 +193,9 @@ export default function CampLoctionPage() {
 						</div>
 
 						<div style={{marginTop:30,display:"flex",justifyContent:"center"}}>
-							จอง {camp} เต้นท์ ราคารวม {result} บาท
+							<div>
+								<p> จอง {camp} เต้นท์ ราคารวม {result} บาท </p>
+							</div>
 						</div>
 					</div>
 
