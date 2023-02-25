@@ -74,7 +74,7 @@ export default function BananaPointPage() {
     if (userBananaPoint >= itemBananaPoint) {
       const res = await axios.post("https://rich-ruby-pelican-sari.cyclic.app/user/updateBananaPoint",{
         id : userInfo.userInfo.data.id,
-        bananaPoint: userBananaPoint - itemBananaPoint
+        bananaPoint: String(userBananaPoint - itemBananaPoint)
       })
       window.location.reload()
     }else{
