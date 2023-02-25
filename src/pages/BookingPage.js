@@ -85,13 +85,13 @@ export default function BookingPage() {
 							? <div>
 								<div>
 									<div>
-										<img src={booking.data?.Booking.Camp.campImage} alt="เเคมป์จ้า" width={{height:100}}/>
-									</div>
-									<div>
-										<p>{booking.data?.Booking.Camp.campImage}</p> 
+										<div>
+											<img src={booking.data?.Booking.Camp.campImage} alt="เเคมป์จ้า" width={{ height: 100 }} />
+										</div>
+										<p>{booking.data?.Booking.Camp.campName}</p> 
 										<p>วันที่ไป: {booking.data?.Booking.startDate}</p> 
 										<p>วันที่ออก: {booking.data?.Booking.endDate}</p> 
-										<p>ชื่อผู้จอง {booking.data?.Booking.name}</p> 
+										<p>ชื่อผู้จอง: {booking.data?.Booking.name}</p> 
 									</div>
 								</div>	
 							</div>
