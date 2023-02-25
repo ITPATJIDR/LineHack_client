@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation, useNavigate } from "react-router-dom"
 import ReactStars from "react-rating-stars-component";
-import { Map, Spot, Cloud } from '../assets';
+import { Map, Spot, Cloud, Coconut } from '../assets';
 import axios from 'axios';
 
 export default function SelectCampPage() {
@@ -49,6 +49,27 @@ export default function SelectCampPage() {
 		window.location.replace(location)
 	}
 
+	const renderCampMode = (Mode) => {
+		if (Mode === "EASY"){
+			return (
+				<div style={{display:"flex",position:"absolute",width:65,background:"white",top:-20,borderTopLeftRadius:5,right:0,justifyContent:"end"}}>
+				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
+				</div>
+			)
+		}else if (Mode === "MEDIUM"){
+				<div style={{display:"flex",position:"absolute",width:65,background:"white",top:-20,borderTopLeftRadius:5,right:0,justifyContent:"end"}}>
+				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
+				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
+				</div>
+		}else{
+				<div style={{display:"flex",position:"absolute",width:65,background:"white",top:-20,borderTopLeftRadius:5,right:0,justifyContent:"end"}}>
+				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
+				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
+				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
+				</div>
+		}
+	}
+
 	useEffect(() => {
 		fetchWetherDate()
 	},[])
@@ -58,6 +79,9 @@ export default function SelectCampPage() {
 
 		  <div>
 			  <img src={campImage} alt={campName} style={{ width: "100%", height: 300, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }} />
+			  <div>
+				{renderCampMode(campMode)}
+			  </div>
 		  </div>
 		  <div style={{padding:10}}>
 			  <div>
