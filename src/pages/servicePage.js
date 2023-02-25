@@ -9,6 +9,7 @@ import WaitingLogin from './waitingLogin'
 import { Store_gray, Store_white, Food_gray, Food_white, Beverage_white, Beverage_gray ,Vector_down } from '../assets'
 import axios, { all } from 'axios'
 import liff from '@line/liff';
+import { isAllOf } from '@reduxjs/toolkit'
 
 const categorys = [
 	{
@@ -104,6 +105,10 @@ export default function ServicePage() {
 	useEffect(() =>{
 		initLine()
 	},[])
+
+	useEffect(() =>{
+		console.log(allService)
+	},[allService])
 
 
 	return (
