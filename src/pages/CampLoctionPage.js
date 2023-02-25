@@ -7,6 +7,7 @@ import DatePicker from 'react-date-picker';
 import axios from 'axios'
 import {useSelector , useDispatch } from "react-redux"
 import { setUserInfo, selectUserInfo } from '../store/userInfoSlice';
+import ModalMain from '../components/Modal'
 
 export default function CampLoctionPage() {
 
@@ -25,6 +26,8 @@ export default function CampLoctionPage() {
 	const [result ,setResult] = useState(0)
 	const [booking, setBooking] = useState([]);
 	const userInfo = useSelector(selectUserInfo)
+	const [modalIsOpen, setIsOpen] = useState(false);
+
 
 	const { electricity, bookingPrice, phoneSignal, rentalEquipment,
 		 suitBestFor, toilet, wifi, campImage, campName, id
@@ -40,7 +43,7 @@ export default function CampLoctionPage() {
 				}
 			})
 		}else{
-			console.log("HI")
+			setIsOpen(true)
 		}
 	}
 
@@ -92,11 +95,12 @@ export default function CampLoctionPage() {
 			userId: "Ue65a274e1b57cc99e110bc39b30281d9"
 		})
 		setBooking(res.data)
+		console.log(res.data)
 	}
 
 	useEffect(() => {
 		checkBooking()
-	})
+	},[])
 
 
 	return (
@@ -178,6 +182,10 @@ export default function CampLoctionPage() {
 							จอง {camp} เต้นท์ ราคารวม {result} บาท
 						</div>
 					</div>
+
+					{modalIsOpen ?
+						<ModalMain show={modalIsOpen} onHide={() => setIsOpen(!modalIsOpen)} title={"alert"} body={"PDPA OR Camp"}/>
+					 :null}
 
 					<div style={{
 						position: 'absolute',
