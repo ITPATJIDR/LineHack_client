@@ -49,6 +49,7 @@ export default function ServicePage() {
 		const res = await axios.post("https://rich-ruby-pelican-sari.cyclic.app/service/getServiceById", {
 			userId: data.userId
 		})
+		console.log(res.data)
 		setAllService(res.data)
 	} 
 
