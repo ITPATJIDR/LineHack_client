@@ -17,7 +17,7 @@ export default function BookingPage() {
 	const dispatch = useDispatch()
 
 	const checkBooking = async (data) => {
-		const res = await axios.post("https://rich-ruby-pelican-sari.cyclic.app/camp/checkBooking", {
+		const res = await axios.post("https://rich-ruby-pelican-sari.cyclic.app/camp/checkBooking2", {
 			userId: data.userId
 		})
 		setBooking(res.data)
@@ -78,9 +78,14 @@ export default function BookingPage() {
 					<Header alignItems={"left"} pageService={"Booking"} pageMain={"Monkey"} />
 					<Body alignItems={""} justifyContent={""} display={"flex"} pageService={"Camp"} >
 						<div>
-							<div>
+							<div style={{padding:20}}>
 								<p>Booking</p>
 							</div>	
+							{booking 
+							? <div>
+								
+							</div>
+							: null }
 						</div>
 					</Body>
 					<Footer />
