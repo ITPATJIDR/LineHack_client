@@ -1,10 +1,12 @@
-import React, { useState} from 'react'
+import React, { useEffect, useState} from 'react'
 import Header from "../components/Header"
 import Body from "../components/Body"
 import { useLocation, useNavigate } from "react-router-dom"
 import { Plus, Minus, Vector_down } from '../assets'
 import DatePicker from 'react-date-picker';
-import { Link } from 'react-router-dom'
+import axios from 'axios'
+import {useSelector , useDispatch } from "react-redux"
+import { setUserInfo, selectUserInfo } from '../store/userInfoSlice';
 
 export default function CampLoctionPage() {
 
@@ -21,6 +23,8 @@ export default function CampLoctionPage() {
 	const [insurance, setInsurance] = useState(false)
 	const [PDPA, setPDPA] = useState(false)
 	const [result ,setResult] = useState(0)
+	const [booking, setBooking] = useState([]);
+	const userInfo = useSelector(selectUserInfo)
 
 	const { electricity, bookingPrice, phoneSignal, rentalEquipment,
 		 suitBestFor, toilet, wifi, campImage, campName, id
@@ -82,6 +86,17 @@ export default function CampLoctionPage() {
 	const Detailbox = {
 		marginBottom : 10
 	}
+
+	const checkBooking = async () => {
+		const res = await axios.post("https://rich-ruby-pelican-sari.cyclic.app/camp/checkBooking", {
+			userId: "Ue65a274e1b57cc99e110bc39b30281d9"
+		})
+		setBooking(res.data)
+	}
+
+	useEffect(() => {
+		checkBooking()
+	})
 
 
 	return (
