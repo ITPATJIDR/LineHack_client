@@ -2,7 +2,7 @@ import React, { useState} from 'react'
 import Header from "../components/Header"
 import Body from "../components/Body"
 import { useLocation, useNavigate } from "react-router-dom"
-import { Plus, Minus } from '../assets'
+import { Plus, Minus, Vector_down } from '../assets'
 import DatePicker from 'react-date-picker';
 
 export default function CampLoctionPage() {
@@ -128,11 +128,12 @@ export default function CampLoctionPage() {
 
 						<div style={{display:"flex",justifyContent:"center",marginTop:20}}>
 							<div style={{
-								display: "flex", justifyContent: "center", background: "#0cb43a", width: 250,
-								height: 40, borderRadius: 10, alignItems: "center"
+								display: "flex", justifyContent: "space-between", background: "#0cb43a", width: 250,
+								height: 40, borderRadius: 10, alignItems: "center",padding:10
 							}}>
 								<input type="checkbox" style={{width:20,height:20}} value={insurance} onChange={setInsurance} />
 								<p style={{marginLeft:10,color:"white"}}>ยอมรับเงื่อนไขเเละนโยบายความเป็นส่วนตัว</p>	
+								<img src={Vector_down} alt="Down" style={{width:20,height:20}}/>
 							</div>
 						</div>
 					</div>
