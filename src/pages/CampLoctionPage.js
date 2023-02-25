@@ -158,7 +158,7 @@ export default function CampLoctionPage() {
 						
 						</div>
 						<div style={{marginTop:10}}>
-							<p>จำนวนเต้นท์</p>
+							<p>จำนวนเต็นท์</p>
 						</div>
 						<div style={{width:350,justifyContent:"space-around",display: 'flex',marginTop:40}}>
 							<div onClick={() => handleMinusCamp()}>
@@ -194,7 +194,7 @@ export default function CampLoctionPage() {
 
 						<div style={{marginTop:30,display:"flex",justifyContent:"center"}}>
 							<div style={{height:50,width:300,display:"flex",justifyContent:"center",alignItems:"center",borderRadius:30,background:"#0cb43a",color:"white"}}>
-								<p> จอง {camp} เต้นท์ ราคารวม {result} บาท </p>
+								<p> จอง {camp} เต็นท์ ราคารวม {result} บาท </p>
 							</div>
 						</div>
 					</div>
