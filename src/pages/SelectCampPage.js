@@ -57,7 +57,7 @@ export default function SelectCampPage() {
 				  <div style={{display: 'flex',justifyContent: "space-between"}}>
 					  <div style={{display:"flex",alignItems: "center"}}>
 						  <img src={Spot} alt="spot" style={{ width: 15, height: 15 }} />
-						  <p style={{marginLeft: 10}}>{campLocation}</p>
+						  <p style={{marginLeft: 10,overflow:"hidden",width:200}}>{campLocation}</p>
 					  </div>
 					  <div>
 						  <p>{bookingPrice} / person</p>

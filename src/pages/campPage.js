@@ -132,7 +132,7 @@ export default function CampPage() {
 													<img src={item.campImage} alt={item.campName} style={{width:"100%",height:130,borderTopRightRadius:10,borderTopLeftRadius:10}}/>
 													<div style={{padding:10}}>
 														<p style={{fontWeight:'bold'}}>{item.campName}</p>
-														<p style={{lineBreak:"anywhere"}}>{item.campDescription}</p>
+														<p style={{lineBreak:"anywhere",overflow:"hidden",height:50}}>{item.campDescription}</p>
 													</div>
 												</div>
 
