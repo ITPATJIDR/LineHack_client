@@ -8,6 +8,7 @@ import { selectUserInfo, setUserInfo } from '../store/userInfoSlice'
 import { Banana } from "../assets"
 import axios from 'axios'
 import liff from '@line/liff';
+import ModalMain from "../components/Modal"
 
 export default function BananaPointPage() {
 
@@ -15,6 +16,7 @@ export default function BananaPointPage() {
   const dispatch = useDispatch()
 
   const [allShop, setAllShop] = useState([])
+  const [buyModal, setBuyModal] = useState(false)
 
   const checkNewUser = async (profile) => {
     const payload = {
@@ -70,7 +72,7 @@ export default function BananaPointPage() {
     const userBananaPoint = Number(userInfo.userInfo.data.bananaPoint)
 
     if (userBananaPoint >= itemBananaPoint) {
-      console.log("can buy it")
+      console.log(userBananaPoint - itemBananaPoint)
     }else{
       console.log("can't buy")
     }
@@ -129,6 +131,9 @@ export default function BananaPointPage() {
       </>
       : <WaitingLogin/>
       }
+      {buyModal 
+      ? <ModalMain show={buyModal} onHide={() => setBuyModal(!buyModal)} title={"เจี๊ยกกกกกกก"} body={"จุ้มเหม่งงงงตางงม่ายยพออ"}/>
+      :null}
     </div>
   )
 }
