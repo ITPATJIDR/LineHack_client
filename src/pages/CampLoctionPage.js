@@ -121,7 +121,7 @@ export default function CampLoctionPage() {
 								display: "flex", justifyContent: "space-evenly", background: "#0cb43a", width: 250,
 								height: 40, borderRadius: 10, alignItems: "center"
 							}}>
-								<input type="checkbox" value={insurance} onChange={setInsurance} />
+								<input type="checkbox" style={{width:20,height:20}} value={insurance} onChange={setInsurance} />
 								<p style={{marginLeft:10 }}>รับประกันการเดินทาง</p>	
 							</div>
 						</div>
