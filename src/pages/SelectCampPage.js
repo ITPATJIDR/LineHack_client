@@ -78,13 +78,13 @@ export default function SelectCampPage() {
 	  <div>
 
 		  <div>
-			  <img src={campImage} alt={campName} style={{ width: "100%", height: 300, borderBottomLeftRadius: 10, borderBottomRightRadius: 10,zIndex:0 }} />
-			  <div style={{zIndex:1}}>
-				{renderCampMode(campMode)}
-			  </div>
+			  <img src={campImage} alt={campName} style={{ width: "100%", height: 300, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }} />
 		  </div>
 		  <div style={{padding:10}}>
 			  <div>
+				  <div style={{position:"absolute" }}>
+					  {renderCampMode(campMode)}
+				  </div>
 				  <div style={{ display: "flex", justifyContent: "space-between", width: 390, alignItems: "center" }}>
 					  <div style={{ fontSize: 20, fontWeight: "bold" }}>
 						  <p>{campName}</p>
