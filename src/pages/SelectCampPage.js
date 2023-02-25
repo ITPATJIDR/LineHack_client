@@ -10,8 +10,9 @@ export default function SelectCampPage() {
 	const {campImage ,campName ,campDescription,bookingPrice,campFacility,
 	campFeeDescription, campLocation, campMode,
 	campPromotion, campPromotionRating, campRating,electricity,phoneSignal,
-	rentalEquipment,suitBestFor,toilet,wifi,id 
+	rentalEquipment,suitBestFor,toilet,wifi, 
 	} = location.state.item
+	console.log(location.state.item)
 
 	const handleBack = () => {
 		navigate("/")
@@ -38,6 +39,10 @@ export default function SelectCampPage() {
 		paddingLeft: 20
 	}
 
+	const clickToGoogleMap = (location) => {
+		window.location.replace(location)
+	}
+
   return (
 	  <div>
 
@@ -57,7 +62,7 @@ export default function SelectCampPage() {
 				  <div style={{display: 'flex',justifyContent: "space-between"}}>
 					  <div style={{display:"flex",alignItems: "center"}}>
 						  <img src={Spot} alt="spot" style={{ width: 15, height: 15 }} />
-						  <p style={{marginLeft: 10,overflow:"hidden",width:200}}>{campLocation}</p>
+						  <p style={{marginLeft: 10,overflow:"hidden",width:200}} onClick={() => clickToGoogleMap(campLocation)}>{campLocation}</p>
 					  </div>
 					  <div>
 						  <p>{bookingPrice} / person</p>
@@ -66,7 +71,7 @@ export default function SelectCampPage() {
 				  <div>
 					  <div style={{display:"flex",alignItems: "center"}}>
 						  <img src={Map} alt="Map" style={{ width: 15, height: 15 }} />
-						  <p style={{marginLeft: 10}}>{campName}</p>
+						  <p style={{marginLeft: 10}}>{campFeeDescription}</p>
 					  </div>
 				  </div>
 			  </div>
