@@ -3,6 +3,7 @@ import QRCode from 'qrcode.react'
 import { useLocation, useNavigate } from "react-router-dom"
 import {useSelector , useDispatch } from "react-redux"
 import { setUserInfo, selectUserInfo } from '../store/userInfoSlice';
+import ReactLoading from 'react-loading';
 import axios from "axios"
 const generatePayload = require('promptpay-qr');
 
@@ -32,9 +33,6 @@ export default function PaymentPage() {
   }
 
   const handleBooking = async () => {
-    console.log(electricity, result, phoneSignal, rentalEquipment,
-			suitBestFor, toilet, wifi, campImage, campName, id,camp,
-			name, phoneNumber, age, birthDate, email, address,startDate)
     const res = await axios.post("https://rich-ruby-pelican-sari.cyclic.app/camp/booking", {
       "userId": userInfo.userInfo.data.id,
       "campId": id,
@@ -94,9 +92,16 @@ export default function PaymentPage() {
         </div>
       </div>
       <div style={{display: "flex",justifyContent: "center"}}>
+        {Object.keys(bookingDetail).length > 0 
+        ?
         <div onClick={() => handlePaymentSuccess()} style={{position:"absolute",bottom:100,display: "flex",justifyContent:"center",width:100,height:50,alignItems: "center",borderRadius:10,fontWeight:"bold",background:"white"}}>
           Done
         </div>
+        :
+        <div style={{position:"absolute",bottom:100,display: "flex",justifyContent:"center",width:100,height:50,alignItems: "center",borderRadius:10,fontWeight:"bold",background:"white"}}>
+            <ReactLoading type={"spin"} color={"#fffff"} height={'20%'} width={'20%'} />
+        </div>
+        }
       </div>
     </div>
    );
