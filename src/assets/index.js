@@ -25,9 +25,5 @@ export {default as Love} from "../assets/BananaPoint/Love.jpg"
 export {default as Monkey} from "../assets/BananaPoint/Monkey.jpg"
 export {default as P} from "../assets/BananaPoint/P.jpg"
 export {default as Point} from "../assets/BananaPoint/Point.jpg"
+export {default as Coconut } from "../assets/MonkeyCamp/coconut.png"
 
-
-//https://www.picz.in.th/image/LINE-ALBUM-230226-0.e0Mg1n
-//https://www.picz.in.th/image/LINE-ALBUM-230226-1.e0MiAg
-//https://www.picz.in.th/image/LINE-ALBUM-230226-2.e0MReW
-//https://www.picz.in.th/image/LINE-ALBUM-230226-3.e0MQk2

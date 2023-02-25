@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 import { Mountain_gray, Mountain_white, Beach_grey, Beach_white, Forest_grey, Forest_white, Vector_down } from '../assets'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { Coconut } from '../assets'
 
 const categorys = [
 	{
@@ -61,11 +62,22 @@ export default function CampPage() {
 
 	const renderCampMode = (Mode) => {
 		if (Mode === "EASY"){
-			console.log("EASY")
+			return (
+				<div style={{display:"flex"}}>
+				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
+				</div>
+			)
 		}else if (Mode === "MEDIUM"){
-			console.log("MEDIUM")
+				<div style={{display:"flex"}}>
+				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
+				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
+				</div>
 		}else{
-			console.log("HARF")
+				<div style={{display:"flex"}}>
+				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
+				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
+				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
+				</div>
 		}
 	}
 
