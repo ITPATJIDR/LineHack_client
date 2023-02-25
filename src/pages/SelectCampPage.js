@@ -81,7 +81,7 @@ export default function SelectCampPage() {
 			  <img src={campImage} alt={campName} style={{ width: "100%", height: 300, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }} />
 		  </div>
 		  <div style={{padding:10}}>
-			  <div>
+			  <div style={{overflow:"auto"}}>
 				  <div style={{position:"absolute",top:30,right:20 }}>
 					  {renderCampMode(campMode)}
 				  </div>
@@ -115,7 +115,7 @@ export default function SelectCampPage() {
 					  </div>
 				  </div>
 			  </div>
-			  <div style={{marginTop:10,overflowY:"scroll",height:180}}>
+			  <div style={{marginTop:10,height:180}}>
 				  <div style={{marginTop:10}}>
 					  <div style={{ fontWeight: 'bold', fontSize: 20, marginBottom: 10 }}>
 						  สิ่งอำนวนความสะดวก
