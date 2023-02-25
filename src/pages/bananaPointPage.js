@@ -67,12 +67,16 @@ export default function BananaPointPage() {
     setAllShop(res.data)
   }
 
-  const Buy = (item) => {
+  const Buy = async (item) => {
     const itemBananaPoint = Number(item.itemBananaPoint)
     const userBananaPoint = Number(userInfo.userInfo.data.bananaPoint)
 
     if (userBananaPoint >= itemBananaPoint) {
-      console.log(userBananaPoint - itemBananaPoint)
+      const res = await axios.post("https://rich-ruby-pelican-sari.cyclic.app/user/updateBananaPoint",{
+        id : userInfo.userInfo.data.id,
+        bananaPoint: userBananaPoint - itemBananaPoint
+      })
+      window.location.reload()
     }else{
       setBuyModal(true)
     }
