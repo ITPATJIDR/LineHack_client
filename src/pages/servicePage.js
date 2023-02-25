@@ -172,6 +172,7 @@ export default function ServicePage() {
 									}}>
 									{allService?.data?.Booking[0].Camp.length > 0
 										? allService?.data?.Booking[0].Camp.map((item, index) => {
+											console.log(item)
 											return (
 												<div></div>
 											// 	// <div key={index} style={{ width: seeMore === true && page === "Service" ? 130 : 400 ,
