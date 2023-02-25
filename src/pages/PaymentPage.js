@@ -56,6 +56,7 @@ export default function PaymentPage() {
       "id" : userInfo.userInfo.data.id,
       "bananaPoint": "5"
     })
+
   }
 
   const handlePaymentSuccess = () =>{
