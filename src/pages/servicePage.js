@@ -105,6 +105,8 @@ export default function ServicePage() {
 		initLine()
 	},[])
 
+	console.log(allService)
+
 	return (
 		<div style={{backgroundColor:"#1CC09E",width:390,height:750}}>
 			{Object.keys(userInfo.userInfo).length > 0
