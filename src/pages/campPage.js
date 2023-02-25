@@ -59,6 +59,16 @@ export default function CampPage() {
 		}
 	}
 
+	const renderCampMode = (Mode) => {
+		if (Mode === "EASY"){
+			console.log("EASY")
+		}else if (Mode === "MEDIUM"){
+			console.log("MEDIUM")
+		}else{
+			console.log("HARF")
+		}
+	}
+
 	useEffect(() =>{
 		checkFetchCamp()
 	},[])
@@ -131,6 +141,9 @@ export default function CampPage() {
 												onClick={() => handleClick(item)}
 												>
 													<img src={item.campImage} alt={item.campName} style={{width:"100%",height:130,borderTopRightRadius:10,borderTopLeftRadius:10}}/>
+													<div>
+														{renderCampMode(item.campMode)}
+													</div>
 													<div style={{padding:10}}>
 														<p style={{fontWeight:'bold'}}>{item.campName}</p>
 														<p style={{lineBreak:"anywhere",overflow:"hidden",height:50}}>{item.campDescription}</p>
