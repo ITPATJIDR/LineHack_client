@@ -10,6 +10,7 @@ import { Store_gray, Store_white, Food_gray, Food_white, Beverage_white, Beverag
 import axios, { all } from 'axios'
 import liff from '@line/liff';
 import { isAllOf } from '@reduxjs/toolkit'
+import { Sorry } from '../assets'
 
 const categorys = [
 	{
@@ -105,11 +106,6 @@ export default function ServicePage() {
 		initLine()
 	},[])
 
-	useEffect(() =>{
-		console.log("data213",allService?.data?.Booking[0].Camp.service.length)
-	},[allService])
-
-
 	return (
 		<div style={{backgroundColor:"#1CC09E",width:390,height:750}}>
 			{Object.keys(userInfo.userInfo).length > 0
@@ -171,7 +167,6 @@ export default function ServicePage() {
 									}}>
 									{allService?.data?.Booking[0]?.Camp.service.length > 0
 										? allService?.data?.Booking[0].Camp.service.map((item, index) => {
-											console.log(item)
 											return (
 											 	<div key={index} style={{ width: seeMore === true && page === "Service" ? 130 : 400 ,
 											 	height: 220, borderWidth: 1, borderRadius: 10,marginRight: seeMore === true && page === "Service" ? 0 : 20,
@@ -188,7 +183,7 @@ export default function ServicePage() {
 											)
 										})
 										: <div>
-											<p>Please Booking First</p>
+											<image src={Sorry} alt="Sorry" style={{width:200,height:200}}/>
 										</div>
 										}
 								</div>
