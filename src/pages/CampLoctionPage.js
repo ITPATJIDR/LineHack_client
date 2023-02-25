@@ -18,6 +18,7 @@ export default function CampLoctionPage() {
 	const [email,setEmail] = useState("")
 	const [address,setAddress] = useState("")
 	const [insurance, setInsurance] = useState(false)
+	const [PDPA, setPDPA] = useState(false)
 
 	const { electricity, bookingPrice, phoneSignal, rentalEquipment,
 		 suitBestFor, toilet, wifi, campImage, campName, id
@@ -128,12 +129,12 @@ export default function CampLoctionPage() {
 
 						<div style={{display:"flex",justifyContent:"center",marginTop:20}}>
 							<div style={{
-								display: "flex", justifyContent: "flex-start", background: "#0cb43a", width: 250,
-								height: 40, borderRadius: 10, alignItems: "center",padding:10
+								display: "flex", justifyContent: "flex-start", background: "#0cb43a", width: 400,
+								height: 60, borderRadius: 10, alignItems: "center",padding:10
 							}}>
-								<input type="checkbox" style={{width:20,height:20}} value={insurance} onChange={setInsurance} />
+								<input type="checkbox" style={{width:20,height:20}} value={PDPA} onChange={setPDPA} />
 								<p style={{marginLeft:10,color:"white"}}>ยอมรับเงื่อนไขเเละนโยบายความเป็นส่วนตัว</p>	
-								<img src={Vector_down} alt="Down" style={{width:10,height:10}}/>
+								<img src={Vector_down} alt="Down" style={{width:10,height:10,marginLeft:10}}/>
 							</div>
 						</div>
 					</div>

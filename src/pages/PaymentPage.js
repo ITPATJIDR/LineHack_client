@@ -74,7 +74,9 @@ export default function PaymentPage() {
             <p>Accept Payment</p>
           </div>
           <div style={{width:210,height:100,background:"#1CC09E",borderRadius:10,padding:10,color:"white"}}>
-            <p>Accept Payment</p>
+            <p style={{fontWeight:"bold"}}>โปรดแสกนจ่าย</p>
+            <p style={{fontWeight:"normal"}}>โดยใช้แอพพลิเคชั่นธนาคาร ได้ทุกธนาคาร</p>
+            <p style={{fontWeight:"lighter"}}>หากท่านแสกนจ่ายแล้ว หมายความว่าท่านได้ยอมรับเงื่อนไขและนโยบายความเป็นส่วนตัวแล้ว</p>
           </div>
         </div>
       </div>
