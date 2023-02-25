@@ -50,7 +50,13 @@ export default function CampLoctionPage() {
 					})
 				}
 			}else{
-				setAlreadyBooking(true)
+				navigate("/payment", {
+					state: {
+						electricity, result, phoneSignal, rentalEquipment,
+						suitBestFor, toilet, wifi, campImage, campName, id, camp,
+						name, phoneNumber, age, birthDate, email, address, startDate
+					}
+				})
 			}
 		}else{
 			setIsOpen(true)
