@@ -81,12 +81,12 @@ export default function BookingPage() {
 							<div style={{padding:20}}>
 								<p>Booking</p>
 							</div>	
-							{booking 
+							{booking.data 
 							? <div style={{padding:20,width:380}}>
 								<div style={{borderRadius:10,overflow:"hidden",borderWidth:"thin" }}>
 									<div>
-										<div>
-											<img src={booking.data?.Booking.Camp.campImage} alt="เเคมป์จ้า" style={{ width:350,height: 100 }} />
+										<div style={{ width:350,height: 100 }}>
+											<img src={booking.data?.Booking.Camp.campImage} alt="เเคมป์จ้า"  />
 										</div>
 										<div style={{padding:20}}>
 											<p>{booking.data?.Booking.Camp.campName}</p>
