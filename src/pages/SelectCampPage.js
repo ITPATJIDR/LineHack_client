@@ -52,20 +52,20 @@ export default function SelectCampPage() {
 	const renderCampMode = (Mode) => {
 		if (Mode === "EASY"){
 			return (
-				<div style={{display:"flex",position:"absolute",width:25,background:"white",top:-20,borderTopLeftRadius:5,right:0,justifyContent:"end"}}>
-				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
+				<div style={{display:"flex",position:"absolute",width:30,background:"white",top:-20,borderTopLeftRadius:5,right:0,justifyContent:"end"}}>
+				 <img src={Coconut} alt="coconut" style={{width:25,height:25}}/>
 				</div>
 			)
 		}else if (Mode === "MEDIUM"){
-				<div style={{display:"flex",position:"absolute",width:50,background:"white",top:-20,borderTopLeftRadius:5,right:0,justifyContent:"end"}}>
-				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
-				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
+				<div style={{display:"flex",position:"absolute",width:60,background:"white",top:-20,borderTopLeftRadius:5,right:0,justifyContent:"end"}}>
+				 <img src={Coconut} alt="coconut" style={{width:25,height:25}}/>
+				 <img src={Coconut} alt="coconut" style={{width:25,height:25}}/>
 				</div>
 		}else{
-				<div style={{display:"flex",position:"absolute",width:65,background:"white",top:-20,borderTopLeftRadius:5,right:0,justifyContent:"end"}}>
-				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
-				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
-				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
+				<div style={{display:"flex",position:"absolute",width:75,background:"white",top:-20,borderTopLeftRadius:5,right:0,justifyContent:"end"}}>
+				 <img src={Coconut} alt="coconut" style={{width:25,height:25}}/>
+				 <img src={Coconut} alt="coconut" style={{width:25,height:25}}/>
+				 <img src={Coconut} alt="coconut" style={{width:25,height:25}}/>
 				</div>
 		}
 	}
