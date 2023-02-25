@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Header from "../components/Header"
 import Body from "../components/Body"
 import Footer from '../components/Footer'
@@ -68,7 +68,7 @@ export default function BookingPage() {
 	<>
 		  {Object.keys(userInfo.userInfo).length > 0
 			  ? <div style={{ backgroundColor: "#1CC09E", width: 390, height: 750 }}>
-				  <Header alignItems={"left"} pageService={"Camp"} pageMain={"Monkey"} />
+				  <Header alignItems={"left"} pageService={"Booking"} pageMain={"Monkey"} />
 				  <Body alignItems={""} justifyContent={""} display={"flex"} pageService={"Camp"} >
 
 				  </Body>
