@@ -80,9 +80,9 @@ export default function SelectCampPage() {
 		  <div>
 			  <img src={campImage} alt={campName} style={{ width: "100%", height: 300, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }} />
 		  </div>
-			  <div>
-				{renderCampMode(campMode)}
-			  </div>
+		  <div>
+			  {renderCampMode(campMode)}
+		  </div>
 		  <div style={{padding:10}}>
 			  <div>
 				  <div style={{ display: "flex", justifyContent: "space-between", width: 390, alignItems: "center" }}>
