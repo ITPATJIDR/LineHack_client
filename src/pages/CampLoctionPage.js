@@ -35,6 +35,7 @@ export default function CampLoctionPage() {
 	} = location.state
 
 	const handlePayment = async () =>{
+		console.log(booking.data.Booking)
 		if (PDPA && camp > 0){
 			navigate("/payment", {
 				state: {
@@ -44,7 +45,6 @@ export default function CampLoctionPage() {
 				}
 			})
 		}else if (booking.data.Booking) {
-			console.log(booking.data.Booking)
 			setIsOpen(true)
 		} else{
 			setIsOpen(true)
