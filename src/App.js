@@ -8,6 +8,7 @@ import CampLoctionPage from './pages/CampLoctionPage';
 import SelectService from "./pages/SelectServicePage"
 import PaymentPage from './pages/PaymentPage';
 import PaymentSuccessPage from './pages/PaymentSuccessPage';
+import BookingPage from './pages/BookingPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/campLocation" element={<CampLoctionPage/>}/>
         <Route path="/payment" element={<PaymentPage/>}/>
         <Route path="/paymentSuccess" element={<PaymentSuccessPage/>}/>
+        <Route path="/booking" element={<BookingPage/>}/>
       </Routes>
     </BrowserRouter>
   );
