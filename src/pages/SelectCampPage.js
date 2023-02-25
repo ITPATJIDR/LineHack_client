@@ -88,7 +88,9 @@ export default function SelectCampPage() {
 				  <div>
 					  <div style={{display:"flex",alignItems: "center"}}>
 						  <img src={Map} alt="Map" style={{ width: 15, height: 15 }} />
-						  <p style={{marginLeft: 10,overflow:"hidden",width:200,marginTop:10}}>{weather?.weather[0].main}</p>
+						  {weather
+						  ? <p style={{marginLeft: 10,overflow:"hidden",width:200,marginTop:10}}>{weather?.weather[0].main}</p>
+						  :null}
 					  </div>
 				  </div>
 			  </div>
