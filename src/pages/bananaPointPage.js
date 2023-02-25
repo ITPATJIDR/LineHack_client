@@ -98,14 +98,14 @@ export default function BananaPointPage() {
 									{allShop.data?.length > 0
 										? allShop.data?.map((item, index) => {
 											return (
-												<div key={index} style={{ width: 130 , height: 220, borderWidth: 1, borderRadius: 10, marginBottom: 10,
+												<div key={index} style={{ width: 150 , height: 200, borderWidth: 1, borderRadius: 10, marginBottom: 10,
 												overflow:"hidden",textOverflow:"ellipsis" }} 
 												onClick={() => console.log(item)}
 												>
 													<img src={item.itemImage} alt={item.itemName} style={{width:"100%",height:130,borderTopRightRadius:10,borderTopLeftRadius:10}}/>
 													<div style={{padding:10}}>
-														<p style={{fontWeight:'bold'}}>{item.itemName}</p>
-														<p style={{lineBreak:"anywhere"}}>{item.itemDescription}</p>
+														<p style={{fontWeight:'bold',height:20,overflow:"hidden"}}>{item.itemName}</p>
+														<p style={{lineBreak:"anywhere",overflow:"hidden",height:28}}>{item.itemDescription}</p>
 													</div>
 												</div>
 											)
