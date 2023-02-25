@@ -17,11 +17,10 @@ export default function BookingPage() {
 	const dispatch = useDispatch()
 
 	const checkBooking = async (data) => {
-		console.log(data)
-		// const res = await axios.post("https://rich-ruby-pelican-sari.cyclic.app/camp/checkBooking", {
-		// 	userId: userInfo.userInfo.data.userId
-		// })
-		// setBooking(res.data)
+		const res = await axios.post("https://rich-ruby-pelican-sari.cyclic.app/camp/checkBooking", {
+			userId: data.userId
+		})
+		setBooking(res.data)
 	}
 
 	const checkNewUser = async (profile) => {
