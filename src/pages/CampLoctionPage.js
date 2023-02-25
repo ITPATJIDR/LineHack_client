@@ -189,7 +189,7 @@ export default function CampLoctionPage() {
 					</div>
 
 					{modalIsOpen ?
-						<ModalMain show={modalIsOpen} onHide={() => setIsOpen(!modalIsOpen)} title={"เจี๊ยกกก"} body={"PLS CLICK PDPA OR CHOOSE CAMP"}/>
+						<ModalMain show={modalIsOpen} onHide={() => setIsOpen(!modalIsOpen)} title={"เจี๊ยกกก"} body={"PLS CLICK PDPA OR ADD TENT"}/>
 					 :null}
 
 					{alreadyBooking ?
