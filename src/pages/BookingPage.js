@@ -16,6 +16,14 @@ export default function BookingPage() {
 	const userInfo = useSelector((state) => state.userInfo)
 	const dispatch = useDispatch()
 
+	const checkBooking = async (data) => {
+		console.log(data)
+		// const res = await axios.post("https://rich-ruby-pelican-sari.cyclic.app/camp/checkBooking", {
+		// 	userId: userInfo.userInfo.data.userId
+		// })
+		// setBooking(res.data)
+	}
+
 	const checkNewUser = async (profile) => {
 		const payload = {
 			userId: profile.userId,
@@ -32,6 +40,7 @@ export default function BookingPage() {
 			dispatch(setUserInfo({
 				data: res.data,
 			}))
+			checkBooking(res.data)
 		})
 	}
 
@@ -61,16 +70,9 @@ export default function BookingPage() {
 		}
 	}
 
-	const checkBooking = async () => {
-		const res = await axios.post("https://rich-ruby-pelican-sari.cyclic.app/camp/checkBooking", {
-			userId: userInfo.userInfo.data.userId
-		})
-		setBooking(res.data)
-	}
 
 	useEffect(() => {
 		checkUserInfo()
-		checkBooking()
 	}, [])
 
 	useEffect(() => {
@@ -86,7 +88,7 @@ export default function BookingPage() {
 					<Body alignItems={""} justifyContent={""} display={"flex"} pageService={"Camp"} >
 						<div>
 							<div>
-								<p>ฺBooking</p>
+								<p>Booking</p>
 							</div>	
 						</div>
 					</Body>
