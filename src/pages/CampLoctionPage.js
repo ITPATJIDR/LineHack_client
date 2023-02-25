@@ -193,7 +193,7 @@ export default function CampLoctionPage() {
 					 :null}
 
 					{alreadyBooking ?
-						<ModalMain show={modalIsOpen} onHide={() => setIsOpen(!modalIsOpen)} title={"เจี๊ยกกก"} body={"ไปเเคป์ที่จองงไว้ก่อนนน"}/>
+						<ModalMain show={alreadyBooking} onHide={() => setAlreadyBooking(!alreadyBooking)} title={"เจี๊ยกกก"} body={"ไปเเคป์ที่จองงไว้ก่อนนน"}/>
 					 :null}
 
 					<div style={{
