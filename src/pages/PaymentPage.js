@@ -16,7 +16,7 @@ export default function PaymentPage() {
   const navigate = useNavigate()
   const userInfo = useSelector(selectUserInfo)
   const Dates = new Date(startDate)
-  const futureDate = new Date(startDate.getTime() + (5 * 24 * 60 * 60 * 1000));
+  const futureDate = new Date(Dates.getTime() + (5 * 24 * 60 * 60 * 1000));
 
   const {
 			electricity, bookingPrice, phoneSignal, rentalEquipment,
