@@ -37,16 +37,20 @@ export default function CampLoctionPage() {
 
 	const handlePayment = async () =>{
 		if (PDPA && camp > 0){
-			if (Object.keys(booking.data.Booking).length > 0){
-				setAlreadyBooking(true)
+			if (booking.data.Booking !== null) {
+				if (Object.keys(booking.data.Booking).length > 0) {
+					setAlreadyBooking(true)
+				} else {
+					navigate("/payment", {
+						state: {
+							electricity, result, phoneSignal, rentalEquipment,
+							suitBestFor, toilet, wifi, campImage, campName, id, camp,
+							name, phoneNumber, age, birthDate, email, address, startDate
+						}
+					})
+				}
 			}else{
-				navigate("/payment", {
-					state: {
-						electricity, result, phoneSignal, rentalEquipment,
-						suitBestFor, toilet, wifi, campImage, campName, id, camp,
-						name, phoneNumber, age, birthDate, email, address, startDate
-					}
-				})
+				setAlreadyBooking(true)
 			}
 		}else{
 			setIsOpen(true)
