@@ -17,4 +17,6 @@ export {default as Map} from "../assets/Camping Spot 3/Map.png"
 export {default as Plus} from "../assets/util/add.png"
 export {default as Minus} from "../assets/util/minus.png"
 export {default as Sorry} from "../assets/util/Sorry.png"
+export {default as Weather} from "../assets/util/cloudy-day.png"
+
 
