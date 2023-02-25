@@ -53,7 +53,7 @@ export default function PaymentPage() {
 
   const handleUpdateBananaPoint = async () =>{
     const res = await axios.post("https://rich-ruby-pelican-sari.cyclic.app/user/updateBananaPoint",{
-      "id" : userInfo.userInfo.data.userId,
+      "id" : userInfo.userInfo.data.id,
       "bananaPoint": "5"
     })
   }
