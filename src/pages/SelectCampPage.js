@@ -10,7 +10,7 @@ export default function SelectCampPage() {
 	const {campImage ,campName ,campDescription,bookingPrice,campFacility,
 	campFeeDescription, campLocation, campMode,
 	campPromotion, campPromotionRating, campRating,electricity,phoneSignal,
-	rentalEquipment,suitBestFor,toilet,wifi, 
+	rentalEquipment,suitBestFor,toilet,wifi,id
 	} = location.state.item
 	console.log(location.state.item)
 
