@@ -28,6 +28,7 @@ export default function CampLoctionPage() {
 	const [booking, setBooking] = useState([]);
 	const userInfo = useSelector(selectUserInfo)
 	const [modalIsOpen, setIsOpen] = useState(false);
+	const [alreadyBooking, setAlreadyBooking] = useState(false);
 
 
 	const { electricity, bookingPrice, phoneSignal, rentalEquipment,
@@ -38,7 +39,7 @@ export default function CampLoctionPage() {
 		console.log(Object.keys(booking.data.Booking).length > 0)
 		if (PDPA && camp > 0){
 			if (Object.keys(booking.data.Booking).length > 0){
-				setIsOpen(true)
+				setAlreadyBooking(true)
 			}else{
 				navigate("/payment", {
 					state: {
@@ -188,7 +189,11 @@ export default function CampLoctionPage() {
 					</div>
 
 					{modalIsOpen ?
-						<ModalMain show={modalIsOpen} onHide={() => setIsOpen(!modalIsOpen)} title={"alert"} body={"PDPA OR Camp"}/>
+						<ModalMain show={modalIsOpen} onHide={() => setIsOpen(!modalIsOpen)} title={"เจี๊ยกกก"} body={"PLS CLICK PDPA OR CHOOSE CAMP"}/>
+					 :null}
+
+					{alreadyBooking ?
+						<ModalMain show={modalIsOpen} onHide={() => setIsOpen(!modalIsOpen)} title={"เจี๊ยกกก"} body={"ไปเเคป์ที่จองงไว้ก่อนนน"}/>
 					 :null}
 
 					<div style={{
