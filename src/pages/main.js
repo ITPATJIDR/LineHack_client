@@ -58,20 +58,20 @@ export default function Main() {
     }
   }
 
-  // useEffect(() => {
-  //   checkUserInfo()
-  // }, [])
+  useEffect(() => {
+    checkUserInfo()
+  }, [])
 
   return (
     <div style={{ backgroundColor: "#1CC09E", width: 390, height: 750 }}>
-      {/* {Object.keys(userInfo.userInfo).length > 0
-        ? <CampPage />
-        : <WaitingLogin />
-      } */}
-      { true
+      {Object.keys(userInfo.userInfo).length > 0
         ? <CampPage />
         : <WaitingLogin />
       }
+      {/* { true
+        ? <CampPage />
+        : <WaitingLogin />
+      } */}
     </div>
   )
 }

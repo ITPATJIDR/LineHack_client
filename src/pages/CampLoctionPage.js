@@ -92,7 +92,7 @@ export default function CampLoctionPage() {
 
 	const checkBooking = async () => {
 		const res = await axios.post("https://rich-ruby-pelican-sari.cyclic.app/camp/checkBooking", {
-			userId: "Ue65a274e1b57cc99e110bc39b30281d9"
+			userId: userInfo.userInfo.data.userId
 		})
 		setBooking(res.data)
 		console.log(res.data)
