@@ -46,12 +46,11 @@ export default function ServicePage() {
 	}
 	
 	const getAllCamp = async (data) =>{
-		if (Object.keys(userInfo.userInfo).length > 0){
-			const res = await axios.post("https://rich-ruby-pelican-sari.cyclic.app/service/getServiceById", {
-				userId: data.userId
-			})
-			setAllService(res.data)
-		}
+		console.log(data)
+		const res = await axios.post("https://rich-ruby-pelican-sari.cyclic.app/service/getServiceById", {
+			userId: data.userId
+		})
+		setAllService(res.data)
 	} 
 
 	const checkNewUser = async (profile) => {
@@ -70,6 +69,7 @@ export default function ServicePage() {
 			dispatch(setUserInfo({
 				data: res.data,
 			}))
+			getAllCamp(res.data)
 		})
 	}
 
@@ -101,19 +101,9 @@ export default function ServicePage() {
 		})
 	}
 
-	const checkUserInfo = () => {
-		if (Object.keys(userInfo.userInfo).length === 0) {
-			initLine()
-		}
-	}
-
 	useEffect(() =>{
-		checkUserInfo()
+		initLine()
 	},[])
-
-	useEffect(() =>{
-		getAllCamp(userInfo.userInfo)
-	},[userInfo])
 
 	return (
 		<div style={{backgroundColor:"#1CC09E",width:390,height:750}}>
