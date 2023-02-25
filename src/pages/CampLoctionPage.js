@@ -115,6 +115,12 @@ export default function CampLoctionPage() {
 						<div style={{marginTop:30,display:"flex",justifyContent:"center"}}>
 							จอง {camp} เต้นท์ ราคารวม {bookingPrice * camp}	บาท
 						</div>
+						<div>
+							<div style={{display:"flex",justifyContent:"space-evenly", color:"#0cb43a"}}>
+								<p>test</p>	
+								<p>รับประกันการเดินทาง</p>	
+							</div>
+						</div>
 					</div>
 
 					<div style={{
