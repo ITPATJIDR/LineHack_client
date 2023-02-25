@@ -37,7 +37,7 @@ export default function PaymentPage() {
 			suitBestFor, toilet, wifi, campImage, campName, id,camp,
 			name, phoneNumber, age, birthDate, email, address,startDate)
     const res = await axios.post("https://rich-ruby-pelican-sari.cyclic.app/camp/booking", {
-      "userId": userInfo.userInfo.data.id,
+      "userId": userInfo.userInfo.data.userId,
       "campId": id,
       "campAmount": camp,
       "startDate": startDate,
