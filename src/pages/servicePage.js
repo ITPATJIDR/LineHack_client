@@ -112,7 +112,7 @@ export default function ServicePage() {
 
 	useEffect(() =>{
 		getAllCamp(userInfo.userInfo)
-	},[])
+	},[userInfo])
 
 	return (
 		<div style={{backgroundColor:"#1CC09E",width:390,height:750}}>
