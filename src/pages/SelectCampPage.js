@@ -52,12 +52,12 @@ export default function SelectCampPage() {
 	const renderCampMode = (Mode) => {
 		if (Mode === "EASY"){
 			return (
-				<div style={{display:"flex",position:"absolute",width:65,background:"white",top:-20,borderTopLeftRadius:5,right:0,justifyContent:"end"}}>
+				<div style={{display:"flex",position:"absolute",width:25,background:"white",top:-20,borderTopLeftRadius:5,right:0,justifyContent:"end"}}>
 				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
 				</div>
 			)
 		}else if (Mode === "MEDIUM"){
-				<div style={{display:"flex",position:"absolute",width:65,background:"white",top:-20,borderTopLeftRadius:5,right:0,justifyContent:"end"}}>
+				<div style={{display:"flex",position:"absolute",width:50,background:"white",top:-20,borderTopLeftRadius:5,right:0,justifyContent:"end"}}>
 				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
 				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
 				</div>
@@ -79,10 +79,10 @@ export default function SelectCampPage() {
 
 		  <div>
 			  <img src={campImage} alt={campName} style={{ width: "100%", height: 300, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }} />
+		  </div>
 			  <div>
 				{renderCampMode(campMode)}
 			  </div>
-		  </div>
 		  <div style={{padding:10}}>
 			  <div>
 				  <div style={{ display: "flex", justifyContent: "space-between", width: 390, alignItems: "center" }}>
