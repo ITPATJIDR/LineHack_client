@@ -55,6 +55,10 @@ export default function CampLoctionPage() {
 		padding: 10
 	}
 
+	const Detailbox = {
+		marginBottom : 10
+	}
+
 
 	return (
 		<div style={{backgroundColor:"#1CBF9B"}}>
@@ -66,31 +70,31 @@ export default function CampLoctionPage() {
 							<p>ข้อมูลส่วนตัว</p>
 						</div>
 						<div style={{marginTop:10}}>
-							<div>
+							<div style={Detailbox}>
 								<p>ชื่อ-นามสกุล</p>
 								<input type="text" style={DetailInput} value={name} onChange={(e) => setName(e.target.value)} placeholder="ชื่อนามสกุล"/>
 							</div>
-							<div>
+							<div style={Detailbox}>
 								<p>เบอร์โทรศัพท์</p>
 								<input type="text" style={DetailInput} value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} placeholder="เบอร์โทรศัพท์"/>
 							</div>
-							<div>
+							<div style={Detailbox}>
 								<p>Email</p>
 								<input type="text"style={DetailInput} value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"/>
 							</div>
-							<div>
+							<div style={Detailbox}>
 								<p>ที่อยุ่</p>
 								<input type="text"style={DetailInput} value={address} onChange={(e) => setAddress(e.target.value)} placeholder="ที่อยุ่"/>
 							</div>
-							<div>
+							<div style={Detailbox}>
 								<p>อายุ</p>
 								<input type="text"style={DetailInput} value={age} onChange={(e) => setAge(e.target.value)} placeholder="อายุ"/>
 							</div>
-							<div>
+							<div style={Detailbox}>
 								<p>วันเกิด</p>
 								<DatePicker onChange={setBirthDate} value={birthDate} />
 							</div>
-							<div>
+							<div style={Detailbox}>
 								<p>วันไป</p>
 								<DatePicker onChange={setStartDate} value={startDate} />
 							</div>

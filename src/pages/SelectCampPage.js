@@ -38,13 +38,6 @@ export default function SelectCampPage() {
 		paddingLeft: 20
 	}
 
-	const DetailInput = {
-		height: 40,
-		borderRadius: 10,
-		width: "100%",
-		padding: 10
-	}
-
   return (
 	  <div>
 
