@@ -18,6 +18,9 @@ export default function PaymentPage() {
   const Dates = new Date(startDate)
   const futureDate = new Date(Dates);
   const XDate = futureDate.setDate(originalDate.getDate() + 5);
+  console.log(Dates)
+  console.log(futureDate)
+  console.log(XDate)
 
   const {
 			electricity, bookingPrice, phoneSignal, rentalEquipment,
