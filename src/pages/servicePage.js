@@ -46,10 +46,10 @@ export default function ServicePage() {
 	}
 	
 	const getAllCamp = async (data) =>{
-		console.log(data)
 		const res = await axios.post("https://rich-ruby-pelican-sari.cyclic.app/service/getServiceById", {
 			userId: data.userId
 		})
+		console.log(res.data)
 		setAllService(res.data)
 	} 
 
@@ -105,7 +105,6 @@ export default function ServicePage() {
 		initLine()
 	},[])
 
-	console.log(allService)
 
 	return (
 		<div style={{backgroundColor:"#1CC09E",width:390,height:750}}>
