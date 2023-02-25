@@ -48,6 +48,12 @@ export default function CampLoctionPage() {
 		navigate(-1)
 	}
 
+	const DetailInput = {
+		height: 40,
+		borderRadius: 10,
+		width: "100%",
+		padding: 10
+	}
 
 
 	return (
@@ -62,23 +68,23 @@ export default function CampLoctionPage() {
 						<div style={{marginTop:10}}>
 							<div>
 								<p>ชื่อ-นามสกุล</p>
-								<input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="ชื่อนามสกุล"/>
+								<input type="text" style={DetailInput} value={name} onChange={(e) => setName(e.target.value)} placeholder="ชื่อนามสกุล"/>
 							</div>
 							<div>
 								<p>เบอร์โทรศัพท์</p>
-								<input type="text" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} placeholder="เบอร์โทรศัพท์"/>
+								<input type="text" style={DetailInput} value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} placeholder="เบอร์โทรศัพท์"/>
 							</div>
 							<div>
 								<p>Email</p>
-								<input type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"/>
+								<input type="text"style={DetailInput} value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"/>
 							</div>
 							<div>
 								<p>ที่อยุ่</p>
-								<input type="text" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="ที่อยุ่"/>
+								<input type="text"style={DetailInput} value={address} onChange={(e) => setAddress(e.target.value)} placeholder="ที่อยุ่"/>
 							</div>
 							<div>
 								<p>อายุ</p>
-								<input type="text" value={age} onChange={(e) => setAge(e.target.value)} placeholder="อายุ"/>
+								<input type="text"style={DetailInput} value={age} onChange={(e) => setAge(e.target.value)} placeholder="อายุ"/>
 							</div>
 							<div>
 								<p>วันเกิด</p>
