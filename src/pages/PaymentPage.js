@@ -16,7 +16,7 @@ export default function PaymentPage() {
   const navigate = useNavigate()
   const userInfo = useSelector(selectUserInfo)
   const Dates = new Date(startDate)
-  const futureDate = new Date(Dates.getTime() + (5 * 24 * 60 * 60 * 1000));
+  const futureDate = new Date(Dates.getDate() + 5);
 
   const {
 			electricity, bookingPrice, phoneSignal, rentalEquipment,
@@ -69,7 +69,7 @@ export default function PaymentPage() {
         <p>Payment</p>
       </div>
       <div style={{display: "flex", justifyContent:"center",height:300,alignItems:'center',zIndex:1}}>
-        <div style={{width:250,height:300,display: "flex",justifyContent:"center",marginTop:50,background:"white",flexDirection:"column",justifyContent:"center",borderRadius:10,alignItems:"center",padding:10}}>
+        <div style={{width:250,height:400,display: "flex",justifyContent:"center",marginTop:50,background:"white",flexDirection:"column",justifyContent:"center",borderRadius:10,alignItems:"center",padding:10}}>
           <QRCode value={qrCode} />
           <div style={{margin:20,fontSize:20,fontWeight:"bold",color:"#1CC09E"}}>
             <p>Accept Payment</p>
@@ -81,7 +81,7 @@ export default function PaymentPage() {
         </div>
       </div>
       <div style={{display: "flex",justifyContent: "center"}}>
-        <div onClick={() => handlePaymentSuccess()} style={{position:"absolute",bottom:190,display: "flex",justifyContent:"center",width:100,height:50,alignItems: "center",borderRadius:10,fontWeight:"bold",background:"white"}}>
+        <div onClick={() => handlePaymentSuccess()} style={{position:"absolute",bottom:100,display: "flex",justifyContent:"center",width:100,height:50,alignItems: "center",borderRadius:10,fontWeight:"bold",background:"white"}}>
           Done
         </div>
       </div>
