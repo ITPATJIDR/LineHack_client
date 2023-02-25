@@ -83,19 +83,17 @@ export default function BookingPage() {
 							</div>	
 							{booking.data 
 							? <div style={{padding:20,width:380}}>
-								<div style={{borderRadius:10,overflow:"hidden",borderWidth:"thin" }}>
+								<div style={{ width: 350, height: 300 }}>
 									<div>
-										<div style={{ width:350,height: 100 }}>
-											<img src={booking.data?.Booking.Camp.campImage} alt="เเคมป์จ้า"  />
-										</div>
-										<div style={{padding:20}}>
-											<p>{booking.data?.Booking.Camp.campName}</p>
-											<p>วันที่ไป: {booking.data?.Booking.startDate}</p>
-											<p>วันที่ออก: {booking.data?.Booking.endDate}</p>
-											<p>ชื่อผู้จอง: {booking.data?.Booking.name}</p> 
-										</div>
+										<img src={booking.data?.Booking.Camp.campImage} alt="เเคมป์จ้า" style={{width:200,height:200 }}/>
 									</div>
-								</div>	
+									<div style={{ padding: 20 }}>
+										<p>{booking.data?.Booking.Camp.campName}</p>
+										<p>วันที่ไป: {booking.data?.Booking.startDate}</p>
+										<p>วันที่ออก: {booking.data?.Booking.endDate}</p>
+										<p>ชื่อผู้จอง: {booking.data?.Booking.name}</p>
+									</div>
+								</div>
 							</div>
 							: null }
 						</div>
