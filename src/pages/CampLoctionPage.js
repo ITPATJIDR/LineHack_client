@@ -139,6 +139,7 @@ export default function CampLoctionPage() {
 							}}>
 								<input type="checkbox" style={{width:20,height:20}} value={PDPA} onChange={setPDPA} />
 								<p style={{marginLeft:10,color:"white"}}>ยอมรับเงื่อนไขเเละนโยบายความเป็นส่วนตัว</p>	
+
 								<img src={Vector_down} alt="Down" style={{ width: 10, height: 10, marginLeft: 10 }} onClick={() => handlePDPA() } />
 							</div>
 						</div>
