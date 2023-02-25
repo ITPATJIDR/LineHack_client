@@ -166,7 +166,6 @@ export default function ServicePage() {
 									}}>
 									{allService.data?.Booking.length > 0
 										? allService.data.Booking[0].camp.map((item, index) => {
-											console.log(item)
 											return (
 												<div></div>
 											// 	// <div key={index} style={{ width: seeMore === true && page === "Service" ? 130 : 400 ,
@@ -181,7 +180,7 @@ export default function ServicePage() {
 											// 	// 		<p style={{lineBreak:"anywhere"}}>{item.serviceDescription}</p>
 											// 	// 	</div>
 											// 	// </div>
-											// )
+											 )
 										})
 										: <div>
 											<p>Please Booking First</p>
