@@ -77,7 +77,7 @@ export default function CampLoctionPage() {
 	}
 
 	const handlePDPA = () => {
-		window.location.replace("https://google.com")
+		window.location.replace("https://drive.google.com/file/d/1n45TAcvUUng-hHs8yaHejs1h5Ruv5XhX/view?usp=sharing")
 	}
 
 	const DetailInput = {
