@@ -17,7 +17,7 @@ export default function PaymentPage() {
   const userInfo = useSelector(selectUserInfo)
   const Dates = new Date(startDate)
   const futureDate = new Date(Dates);
-  const XDate = futureDate.setDate(originalDate.getDate() + 5);
+  const XDate = futureDate.setDate(futureDate.getDate() + 5);
 
   const {
 			electricity, bookingPrice, phoneSignal, rentalEquipment,

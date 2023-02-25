@@ -4,6 +4,7 @@ import Body from "../components/Body"
 import { useLocation, useNavigate } from "react-router-dom"
 import { Plus, Minus, Vector_down } from '../assets'
 import DatePicker from 'react-date-picker';
+import { Link } from 'react-router-dom'
 
 export default function CampLoctionPage() {
 
@@ -19,30 +20,47 @@ export default function CampLoctionPage() {
 	const [address,setAddress] = useState("")
 	const [insurance, setInsurance] = useState(false)
 	const [PDPA, setPDPA] = useState(false)
+	const [result ,setResult] = useState(0)
 
 	const { electricity, bookingPrice, phoneSignal, rentalEquipment,
 		 suitBestFor, toilet, wifi, campImage, campName, id
 	} = location.state
 
 	const handlePayment = async () =>{
-		navigate("/payment",{
-			state:{
-				electricity, bookingPrice, phoneSignal, rentalEquipment,
-				suitBestFor, toilet, wifi, campImage, campName, id, camp,
-				name, phoneNumber, age, birthDate, email, address, startDate
-			}
-		})
+		if (PDPA && camp > 0){
+			navigate("/payment", {
+				state: {
+					electricity, bookingPrice, phoneSignal, rentalEquipment,
+					suitBestFor, toilet, wifi, campImage, campName, id, camp,
+					name, phoneNumber, age, birthDate, email, address, startDate
+				}
+			})
+		}else{
+			console.log("HI")
+		}
 	}
 
 	const handleAddCamp = () => {
 		if (camp !== 3){
 			setCamp(camp + 1)
+			setResult(Number(result) + Number(bookingPrice))
 		}
 	}
 
 	const handleMinusCamp = () => {
 		if (camp !== 0){
 			setCamp(camp - 1)
+			setResult(Number(result) - Number(bookingPrice))
+		}
+	}
+
+	const handlePrice = () =>{
+		console.log(insurance)
+		if (insurance){
+			setResult(Number(result) - 200)
+		} 
+		if (!insurance){
+			setResult(Number(result) + 200)
 		}
 	}
 
@@ -118,28 +136,31 @@ export default function CampLoctionPage() {
 								<img src={Plus} alt="Plus" style={{width:20,height:20}}/>
 							</div>
 						</div>
-						<div style={{marginTop:30,display:"flex",justifyContent:"center"}}>
-							จอง {camp} เต้นท์ ราคารวม {bookingPrice * camp}	บาท
-						</div>
 						<div style={{display:"flex",justifyContent:"center",marginTop:20}}>
 							<div style={{
 								display: "flex", justifyContent:"flex-start", background: "#0cb43a", width: 250,
 								height: 40, borderRadius: 10, alignItems: "center",padding:10
 							}}>
-								<input type="checkbox" style={{width:20,height:20}} value={insurance} onChange={setInsurance} />
+								<input type="checkbox" style={{width:20,height:20}} value={insurance} onChange={() => {setInsurance(!insurance)}} onClick={() => handlePrice()}/>
 								<p style={{marginLeft:10,color:"white"}}>รับประกันการเดินทาง</p>	
 							</div>
 						</div>
 
 						<div style={{display:"flex",justifyContent:"center",marginTop:20}}>
-							<div style={{
+							<div  style={{
 								display: "flex", justifyContent: "flex-start", background: "#0cb43a", width: 400,
-								height: 60, borderRadius: 10, alignItems: "center",padding:10
+								height: 60, borderRadius: 10, alignItems: "center", padding: 10
 							}}>
-								<input type="checkbox" style={{width:20,height:20}} value={PDPA} onChange={setPDPA} />
-								<p style={{marginLeft:10,color:"white"}}>ยอมรับเงื่อนไขเเละนโยบายความเป็นส่วนตัว</p>	
-								<img src={Vector_down} alt="Down" style={{ width: 10, height: 10, marginLeft: 10 }} onClick={() => handlePDPA() } />
+								<input type="checkbox" style={{ width: 20, height: 20 }} value={PDPA} onClick={() => setPDPA(!PDPA)}/>
+								<div onClick={() => handlePDPA()} style={{display:"flex",alignItems:"center"}}>
+									<p style={{ marginLeft: 10, color: "white" }}>ยอมรับเงื่อนไขเเละนโยบายความเป็นส่วนตัว</p>
+									<img src={Vector_down} alt="Down" style={{ width: 10, height: 10, marginLeft: 10 }} />
+								</div>
 							</div>
+						</div>
+
+						<div style={{marginTop:30,display:"flex",justifyContent:"center"}}>
+							จอง {camp} เต้นท์ ราคารวม {result} บาท
 						</div>
 					</div>
 
