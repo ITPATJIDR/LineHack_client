@@ -169,7 +169,8 @@ export default function ServicePage() {
 									flexWrap:seeMore === true && page === "Service" ? "wrap" : null,
 									justifyContent: seeMore === true && page === "Service" ? "space-evenly" : null,
 									}}>
-									{allService?.data?.Booking.Camp.service.length > 0 && allService?.data?.Booking !== null
+									{allService?.data?.Booking !== null ? 
+									allService?.data?.Booking.Camp.service.length > 0
 										? allService?.data?.Booking.Camp.service.map((item, index) => {
 											return (
 											 	<div key={index} style={{ width: seeMore === true && page === "Service" ? 130 : 400 ,
@@ -189,7 +190,7 @@ export default function ServicePage() {
 										: <div>
 											<img src={Sorry} alt="Sorry" style={{width:300,height:126}}/>
 										</div>
-										}
+									: null}
 								</div>
 							</div>
 						</div>
