@@ -183,7 +183,7 @@ export default function ServicePage() {
 											)
 										})
 										: <div>
-											<image src={Sorry} alt="Sorry" style={{width:200,height:200}}/>
+											<image src={{Sorry}} alt="Sorry" style={{width:200,height:200}}/>
 										</div>
 										}
 								</div>
