@@ -118,7 +118,7 @@ export default function CampLoctionPage() {
 						</div>
 						<div style={{display:"flex",justifyContent:"center",marginTop:20}}>
 							<div style={{
-								display: "flex", justifyContent: "space-evenly", background: "#0cb43a", width: 250,
+								display: "flex", justifyContent: "center", background: "#0cb43a", width: 250,
 								height: 40, borderRadius: 10, alignItems: "center"
 							}}>
 								<input type="checkbox" style={{width:20,height:20}} value={insurance} onChange={setInsurance} />
