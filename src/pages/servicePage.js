@@ -173,19 +173,18 @@ export default function ServicePage() {
 										? allService?.data?.Booking[0].Camp.service.map((item, index) => {
 											console.log(item)
 											return (
-												<div>HI</div>
-											// 	// <div key={index} style={{ width: seeMore === true && page === "Service" ? 130 : 400 ,
-											// 	// height: 220, borderWidth: 1, borderRadius: 10,marginRight: seeMore === true && page === "Service" ? 0 : 20,
-											// 	// marginBottom: seeMore === true && page === "Service" ? 10 :0,
-											// 	// overflow:"hidden",textOverflow:"ellipsis" }} 
-											// 	// onClick={() => handleClick(item)}
-											// 	// >
-											// 	// 	<img src={item.serviceImage} alt={item.serviceName} style={{width:"100%",height:130,borderTopRightRadius:10,borderTopLeftRadius:10}}/>
-											// 	// 	<div style={{padding:10}}>
-											// 	// 		<p style={{fontWeight:'bold'}}>{item.serviceName}</p>
-											// 	// 		<p style={{lineBreak:"anywhere"}}>{item.serviceDescription}</p>
-											// 	// 	</div>
-											// 	// </div>
+											 	<div key={index} style={{ width: seeMore === true && page === "Service" ? 130 : 400 ,
+											 	height: 220, borderWidth: 1, borderRadius: 10,marginRight: seeMore === true && page === "Service" ? 0 : 20,
+											 	marginBottom: seeMore === true && page === "Service" ? 10 :0,
+											 	overflow:"hidden",textOverflow:"ellipsis" }} 
+											 	onClick={() => handleClick(item)}
+											 	>
+											 		<img src={item.serviceImage} alt={item.serviceName} style={{width:"100%",height:130,borderTopRightRadius:10,borderTopLeftRadius:10}}/>
+											 		<div style={{padding:10}}>
+											 			<p style={{fontWeight:'bold'}}>{item.serviceName}</p>
+											 			<p style={{lineBreak:"anywhere"}}>{item.serviceDescription}</p>
+											 		</div>
+											 	</div>
 											)
 										})
 										: <div>
