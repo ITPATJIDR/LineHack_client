@@ -7,6 +7,7 @@ import {useSelector , useDispatch } from "react-redux"
 import { setUserInfo } from '../store/userInfoSlice';
 import liff from '@line/liff';
 import WaitingLogin from './waitingLogin';
+import { Sorry } from '../assets'
 
 export default function BookingPage() {
 
@@ -81,7 +82,7 @@ export default function BookingPage() {
 							<div style={{paddingLeft:20,paddingTop:20}}>
 								<p>Booking</p>
 							</div>	
-							{booking.data?.Booking?.Camp 
+							{booking.data?.Booking !== null 
 							? <div style={{padding:20,width:380}}>
 								<div style={{ width: 350, height: 340,borderWidth:"thin",borderRadius:10,overflow:"hidden" }}>
 									<div style={{height:190}}>
@@ -95,7 +96,10 @@ export default function BookingPage() {
 									</div>
 								</div>
 							</div>
-							: null }
+							: <div>
+								<img src={Sorry} alt="Sorry" style={{ width: 300, height: 126 }} />
+							</div>
+							 }
 						</div>
 					</Body>
 					<Footer />
