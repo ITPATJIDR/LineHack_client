@@ -133,7 +133,7 @@ export default function CampLoctionPage() {
 							}}>
 								<input type="checkbox" style={{width:20,height:20}} value={insurance} onChange={setInsurance} />
 								<p style={{marginLeft:10,color:"white"}}>ยอมรับเงื่อนไขเเละนโยบายความเป็นส่วนตัว</p>	
-								<img src={Vector_down} alt="Down" style={{width:20,height:20}}/>
+								<img src={Vector_down} alt="Down" style={{width:10,height:10}}/>
 							</div>
 						</div>
 					</div>
