@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useLocation, useNavigate } from "react-router-dom"
 import ReactStars from "react-rating-stars-component";
 import { Map, Spot } from '../assets';
@@ -13,7 +13,7 @@ export default function SelectCampPage() {
 	campPromotion, campPromotionRating, campRating,electricity,phoneSignal,
 	rentalEquipment,suitBestFor,toilet,wifi,id,latitude,longitude
 	} = location.state.item
-	console.log(location.state.item)
+	const [ weather, setWeather ] = useState({})
 
 	const handleBack = () => {
 		navigate("/")
@@ -21,7 +21,7 @@ export default function SelectCampPage() {
 
 	const fetchWetherDate = async() => {
 		const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=5678f9374e5adea8da4bc86751a3ea5a`)
-		console.log(res.data)
+		setWeather(res.data)
 	}
 
 	const handleBookNow = () => {
@@ -81,7 +81,13 @@ export default function SelectCampPage() {
 				  <div>
 					  <div style={{display:"flex",alignItems: "center"}}>
 						  <img src={Map} alt="Map" style={{ width: 15, height: 15 }} />
-						  <p style={{marginLeft: 10}}>{campFeeDescription}</p>
+						  <p style={{marginLeft: 10,overflow:"hidden",width:200,marginTop:10}}>{campFeeDescription}</p>
+					  </div>
+				  </div>
+				  <div>
+					  <div style={{display:"flex",alignItems: "center"}}>
+						  <img src={Map} alt="Map" style={{ width: 15, height: 15 }} />
+						  <p style={{marginLeft: 10,overflow:"hidden",width:200,marginTop:10}}>{weather?.weather[0].main}</p>
 					  </div>
 				  </div>
 			  </div>
