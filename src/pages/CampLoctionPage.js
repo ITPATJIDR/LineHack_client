@@ -8,6 +8,7 @@ import axios from 'axios'
 import {useSelector , useDispatch } from "react-redux"
 import { setUserInfo, selectUserInfo } from '../store/userInfoSlice';
 import ModalMain from '../components/Modal'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function CampLoctionPage() {
 
