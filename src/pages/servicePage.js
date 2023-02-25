@@ -165,14 +165,9 @@ export default function ServicePage() {
 									justifyContent: seeMore === true && page === "Service" ? "space-evenly" : null,
 									}}>
 									{allService.data?.Booking.length > 0
-										? allService.data.Booking.map((item, index) => {
-											item.map((item,index) => {
-												console.log(item)
-												return(
-													<div></div>
-												)
-											})
-											// return (
+										? allService.data.Booking[0].camp.map((item, index) => {
+											console.log(item)
+											return (
 											// 	// <div key={index} style={{ width: seeMore === true && page === "Service" ? 130 : 400 ,
 											// 	// height: 220, borderWidth: 1, borderRadius: 10,marginRight: seeMore === true && page === "Service" ? 0 : 20,
 											// 	// marginBottom: seeMore === true && page === "Service" ? 10 :0,
