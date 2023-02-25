@@ -75,27 +75,27 @@ export default function SelectCampPage() {
 					  <div style={{ fontWeight: 'bold', fontSize: 20, marginBottom: 10 }}>
 						  สิ่งอำนวนความสะดวก
 					  </div>
-					  <div style={{ display: 'flex', justifyContent: "flex-start", width: 150, margin: 15 }}>
+					  <div style={{ display: 'flex', justifyContent: "flex-start", width: 150, margin: 15,marginTop:10 }}>
 						  <input type="checkbox" checked={rentalEquipment} />
 						  <p style={facilityText}>อุปกรณ์ให้เช่า</p>
 					  </div>
-					  <div style={{ display: 'flex', justifyContent: "flex-start", width: 150, margin: 15 }}>
+					  <div style={{ display: 'flex', justifyContent: "flex-start", width: 150, margin: 15,marginTop:10 }}>
 						  <input type="checkbox" checked={wifi} />
 						  <p style={facilityText}>Wifi</p>
 					  </div>
-					  <div style={{ display: 'flex', justifyContent: "flex-start", width: 160, margin: 15 }}>
+					  <div style={{ display: 'flex', justifyContent: "flex-start", width: 150, margin: 15,marginTop:10 }}>
 						  <input type="checkbox" checked={phoneSignal} />
 						  <p style={facilityText}>สัญญาญโทรศัพท์</p>
 					  </div>
-					  <div style={{ display: 'flex', justifyContent: "flex-start", width: 150, margin: 15 }}>
+					  <div style={{ display: 'flex', justifyContent: "flex-start", width: 150, margin: 15,marginTop:10 }}>
 						  <input type="checkbox" checked={electricity} />
 						  <p style={facilityText}>ไฟฟ้า</p>
 					  </div>
-					  <div style={{ display: 'flex', justifyContent: "flex-start", width: 150, margin: 15 }}>
+					  <div style={{ display: 'flex', justifyContent: "flex-start", width: 150, margin: 15,marginTop:10 }}>
 						  <input type="checkbox" checked={toilet} />
 						  <p style={facilityText}>ห้องน้ำ</p>
 					  </div>
-					  <div style={{ display: 'flex', justifyContent: "space-around", width: 170, marginBottom: 15 }}>
+					  <div style={{ display: 'flex', justifyContent: "flex-start", width: 150, margin: 15,marginTop:10 }}>
 						  <p style={{ fontWeight: "bold" }}>เหมาะสำหรับ</p>
 						  <p>{suitBestFor}</p>
 					  </div>
