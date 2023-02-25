@@ -10,7 +10,7 @@ const generatePayload = require('promptpay-qr');
 export default function PaymentPage() {
 
   const {
-			electricity, bookingPrice, phoneSignal, rentalEquipment,
+			electricity, result, phoneSignal, rentalEquipment,
 			suitBestFor, toilet, wifi, campImage, campName, id,camp,
 			name, phoneNumber, age, birthDate, email, address,startDate
   } = location.state
@@ -27,11 +27,11 @@ export default function PaymentPage() {
 
 
   function handleQR() {
-    setqrCode(generatePayload(phoneNumbers, { bookingPrice }));
+    setqrCode(generatePayload(phoneNumbers, { result }));
   }
 
   const handleBooking = async () => {
-    console.log(electricity, bookingPrice, phoneSignal, rentalEquipment,
+    console.log(electricity, result, phoneSignal, rentalEquipment,
 			suitBestFor, toilet, wifi, campImage, campName, id,camp,
 			name, phoneNumber, age, birthDate, email, address,startDate)
     const res = await axios.post("https://rich-ruby-pelican-sari.cyclic.app/camp/booking", {
@@ -50,10 +50,17 @@ export default function PaymentPage() {
     setBookingDetail(res.data)
   }
 
+  const handleUpdateBananaPoint = async () =>{
+    const res = await axios.post("https://rich-ruby-pelican-sari.cyclic.app/user/updateBananaPoint",{
+      "id" : userInfo.userInfo.data.userId,
+      "bananaPoint": "5"
+    })
+  }
+
   const handlePaymentSuccess = () =>{
     navigate("/paymentSuccess",{
       state:{
-			electricity, bookingPrice, phoneSignal, rentalEquipment,
+			electricity, result, phoneSignal, rentalEquipment,
 			suitBestFor, toilet, wifi, campImage, campName, id, bookingDetail,userInfo
       }
     }) 
@@ -63,6 +70,7 @@ export default function PaymentPage() {
   useEffect(() => {
     handleQR()
     handleBooking()
+    handleUpdateBananaPoint()
   },[])
 
   return(

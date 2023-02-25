@@ -37,7 +37,7 @@ export default function CampLoctionPage() {
 		if (PDPA && camp > 0){
 			navigate("/payment", {
 				state: {
-					electricity, bookingPrice, phoneSignal, rentalEquipment,
+					electricity, result, phoneSignal, rentalEquipment,
 					suitBestFor, toilet, wifi, campImage, campName, id, camp,
 					name, phoneNumber, age, birthDate, email, address, startDate
 				}
@@ -158,7 +158,7 @@ export default function CampLoctionPage() {
 						<div style={{display:"flex",justifyContent:"center",marginTop:20}}>
 							<div style={{
 								display: "flex", justifyContent:"flex-start", background: "#0cb43a", width: 250,
-								height: 40, borderRadius: 10, alignItems: "center",padding:10
+								height: 40, borderRadius: 10, padding:10
 							}}>
 								<input type="checkbox" style={{width:20,height:20}} value={insurance} onChange={() => {setInsurance(!insurance)}} onClick={() => handlePrice()}/>
 								<p style={{marginLeft:10,color:"white"}}>รับประกันการเดินทาง</p>	
@@ -168,7 +168,7 @@ export default function CampLoctionPage() {
 						<div style={{display:"flex",justifyContent:"center",marginTop:20}}>
 							<div  style={{
 								display: "flex", justifyContent: "flex-start", background: "#0cb43a", width: 400,
-								height: 60, borderRadius: 10, alignItems: "center", padding: 10
+								height: 60, borderRadius: 10, padding: 10, paddingTop:20
 							}}>
 								<input type="checkbox" style={{ width: 20, height: 20 }} value={PDPA} onClick={() => setPDPA(!PDPA)}/>
 								<div onClick={() => handlePDPA()} style={{display:"flex",alignItems:"center"}}>
