@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useLocation, useNavigate } from "react-router-dom"
 import ReactStars from "react-rating-stars-component";
 import { Map, Spot } from '../assets';
+import axios from 'axios';
 
 export default function SelectCampPage() {
 	const location = useLocation()
@@ -10,12 +11,17 @@ export default function SelectCampPage() {
 	const {campImage ,campName ,campDescription,bookingPrice,campFacility,
 	campFeeDescription, campLocation, campMode,
 	campPromotion, campPromotionRating, campRating,electricity,phoneSignal,
-	rentalEquipment,suitBestFor,toilet,wifi,id
+	rentalEquipment,suitBestFor,toilet,wifi,id,latitude,longitude
 	} = location.state.item
 	console.log(location.state.item)
 
 	const handleBack = () => {
 		navigate("/")
+	}
+
+	const fetchWetherDate = async() => {
+		const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=5678f9374e5adea8da4bc86751a3ea5a`)
+		console.log(res.data)
 	}
 
 	const handleBookNow = () => {
@@ -42,6 +48,10 @@ export default function SelectCampPage() {
 	const clickToGoogleMap = (location) => {
 		window.location.replace(location)
 	}
+
+	useEffect(() => {
+		fetchWetherDate()
+	},[])
 
   return (
 	  <div>
