@@ -13,6 +13,10 @@ export default function SelectServicePage() {
 		navigate("/service")
 	}
 
+	const handleGoogleMap = (location) =>{
+		window.location.replace(location)
+	}
+
   return (
 	  <div>
 		  <div>
@@ -49,9 +53,9 @@ export default function SelectServicePage() {
 				  </div>
 				  <div style={{marginTop:10}}>
 					  <div>
-						  <p style={{fontWeight:"bold"}}>ค่าบริการเข้าชมอุทยานฯ</p>
+						  <p style={{fontWeight:"bold"}}>Location</p>
 					  </div>
-					  <div>
+					  <div onClick={() => handleGoogleMap(serviceDistance)}>
 						  {serviceDistance}
 					  </div>
 				  </div>

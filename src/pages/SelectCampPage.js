@@ -91,7 +91,7 @@ export default function SelectCampPage() {
 					  </div>
 				  </div>
 			  </div>
-			  <div style={{marginTop:10,overflow:"auto",height:250}}>
+			  <div style={{marginTop:10,overflowY:"scroll",height:250}}>
 				  <div style={{marginTop:10}}>
 					  <div style={{ fontWeight: 'bold', fontSize: 20, marginBottom: 10 }}>
 						  สิ่งอำนวนความสะดวก
@@ -122,13 +122,13 @@ export default function SelectCampPage() {
 							  <p>{suitBestFor}</p>
 						  </div>
 					  </div>
-				  </div>
-				  <div>
 					  <div>
-						  <p style={{fontWeight:"bold"}}>Description</p>
-					  </div>
-					  <div style={{width:375,overflow:"hidden",lineBreak:'anywher' }}>
-						  {campDescription}
+						  <div>
+							  <p style={{ fontWeight: "bold" }}>Description</p>
+						  </div>
+						  <div style={{ width: 375, overflow: "hidden", lineBreak: 'anywher' }}>
+							  {campDescription}
+						  </div>
 					  </div>
 				  </div>
 			  </div>

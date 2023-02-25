@@ -182,7 +182,7 @@ export default function ServicePage() {
 											 		<img src={item.serviceImage} alt={item.serviceName} style={{width:"100%",height:130,borderTopRightRadius:10,borderTopLeftRadius:10}}/>
 											 		<div style={{padding:10}}>
 											 			<p style={{fontWeight:'bold'}}>{item.serviceName}</p>
-											 			<p style={{lineBreak:"anywhere"}}>{item.serviceDescription}</p>
+											 			<p style={{lineBreak:"anywhere",overflow:"hidden",height:45}}>{item.serviceDescription}</p>
 											 		</div>
 											 	</div>
 											)
