@@ -165,8 +165,8 @@ export default function ServicePage() {
 									flexWrap:seeMore === true && page === "Service" ? "wrap" : null,
 									justifyContent: seeMore === true && page === "Service" ? "space-evenly" : null,
 									}}>
-									{allService.data?.Booking?.Camp.length > 0
-										? allService.data?.Booking[0]?.Camp.map((item, index) => {
+									{allService.data.data?.Booking.length > 0
+										? allService.data.data?.Booking[0]?.Camp.map((item, index) => {
 											return (
 												<div></div>
 											// 	// <div key={index} style={{ width: seeMore === true && page === "Service" ? 130 : 400 ,
