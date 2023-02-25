@@ -168,6 +168,7 @@ export default function ServicePage() {
 										? allService.data.Booking[0].camp.map((item, index) => {
 											console.log(item)
 											return (
+												<div></div>
 											// 	// <div key={index} style={{ width: seeMore === true && page === "Service" ? 130 : 400 ,
 											// 	// height: 220, borderWidth: 1, borderRadius: 10,marginRight: seeMore === true && page === "Service" ? 0 : 20,
 											// 	// marginBottom: seeMore === true && page === "Service" ? 10 :0,
