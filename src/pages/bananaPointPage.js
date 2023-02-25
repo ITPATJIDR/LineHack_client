@@ -79,8 +79,8 @@ export default function BananaPointPage() {
       <>
       <Header alignItems={"left"} pageService={"Point"} pageMain={"Banana"} />
       <div style={{position:"absolute"}}>
+          <img src={userInfo.userInfo.data.userImage} alt={userInfo.userInfo.data.userName} style={{width:40,height:40}}/>
           <p>{userInfo.userInfo.data.userName}</p>
-          <p>{userInfo.userInfo.data.id}</p>
       </div>
       <Body alignItems={""} justifyContent={""} display={""}>
         <div style={{ padding: 20, display: "flex" }}>

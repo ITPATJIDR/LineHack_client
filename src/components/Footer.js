@@ -17,7 +17,7 @@ export default function Footer() {
 	<div onClick={() => handleRedirect("/bananaPoint")} style={{ width: "30%",marginRight:10, height: 40, display: "flex", justifyContent: "center", alignContent: "center",marginTop:5,display:"flex",alignItems:"center",backgroundColor:"#1CC09E",borderRadius:5,color:"white"}}>
 		Point
 	</div>
-	<div onClick={() => handleRedirect("/booking")} style={{ width: "30%", height: 40, display: "flex", justifyContent: "center", alignContent: "center",marginTop:5,display:"flex",alignItems:"center",backgroundColor:"#1CC09E",borderRadius:5,color:"white"}}>
+	<div onClick={() => handleRedirect("/bananaPoint")} style={{ width: "30%",marginRight:10, height: 40, display: "flex", justifyContent: "center", alignContent: "center",marginTop:5,display:"flex",alignItems:"center",backgroundColor:"#1CC09E",borderRadius:5,color:"white"}}>
 		Booking	
 	</div>
 	<div onClick={() => handleRedirect("/service")} style={{ width: "30%", height: 40, display: "flex", justifyContent: "center", alignContent: "center",marginTop:5,display:"flex",alignItems:"center",backgroundColor:"#1CC09E",borderRadius:5,color:"white"}}>
