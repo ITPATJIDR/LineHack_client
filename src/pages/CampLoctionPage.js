@@ -36,7 +36,6 @@ export default function CampLoctionPage() {
 	} = location.state
 
 	const handlePayment = async () =>{
-		console.log(Object.keys(booking.data.Booking).length > 0)
 		if (PDPA && camp > 0){
 			if (Object.keys(booking.data.Booking).length > 0){
 				setAlreadyBooking(true)
