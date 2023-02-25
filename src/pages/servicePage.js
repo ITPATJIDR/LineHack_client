@@ -170,11 +170,10 @@ export default function ServicePage() {
 									flexWrap:seeMore === true && page === "Service" ? "wrap" : null,
 									justifyContent: seeMore === true && page === "Service" ? "space-evenly" : null,
 									}}>
-									{allService?.data?.Booking[0].Camp.length > 0
+									{allService?.data?.Booking[0]?.Camp.length > 0
 										? allService?.data?.Booking[0].Camp.map((item, index) => {
-											console.log(item)
 											return (
-												<div></div>
+												<div>HI</div>
 											// 	// <div key={index} style={{ width: seeMore === true && page === "Service" ? 130 : 400 ,
 											// 	// height: 220, borderWidth: 1, borderRadius: 10,marginRight: seeMore === true && page === "Service" ? 0 : 20,
 											// 	// marginBottom: seeMore === true && page === "Service" ? 10 :0,
