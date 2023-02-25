@@ -43,7 +43,10 @@ export default function CampLoctionPage() {
 					name, phoneNumber, age, birthDate, email, address, startDate
 				}
 			})
-		}else{
+		}else if (booking.data.Booking) {
+			console.log(booking.data.Booking)
+			setIsOpen(true)
+		} else{
 			setIsOpen(true)
 		}
 	}
@@ -96,7 +99,6 @@ export default function CampLoctionPage() {
 			userId: userInfo.userInfo.data.userId
 		})
 		setBooking(res.data)
-		console.log(res.data)
 	}
 
 	useEffect(() => {
