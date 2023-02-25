@@ -75,7 +75,7 @@ export default function SelectCampPage() {
 	},[])
 
   return (
-	  <div style={{overflow:"auto"}}>
+	  <div style={{overflow:"auto",height:660}}>
 		  <div>
 			  <img src={campImage} alt={campName} style={{ width: "100%", height: 300, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }} />
 		  </div>
