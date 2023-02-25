@@ -70,6 +70,7 @@ export default function BookingPage() {
 
 	useEffect(() => {
 		checkUserInfo()
+		checkBooking()
 	}, [])
 
 	useEffect(() => {
@@ -83,7 +84,11 @@ export default function BookingPage() {
 				? <div style={{ backgroundColor: "#1CC09E", width: 390, height: 750 }}>
 					<Header alignItems={"left"} pageService={"Booking"} pageMain={"Monkey"} />
 					<Body alignItems={""} justifyContent={""} display={"flex"} pageService={"Camp"} >
-
+						<div>
+							<div>
+								<p>ฺBooking</p>
+							</div>	
+						</div>
 					</Body>
 					<Footer />
 				</div>
