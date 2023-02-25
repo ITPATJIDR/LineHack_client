@@ -106,7 +106,7 @@ export default function ServicePage() {
 	},[])
 
 	useEffect(() =>{
-		console.log("data213",allService?.data?.Booking[0])
+		console.log("data213",allService?.data?.Booking[0].Camp.service.length)
 	},[allService])
 
 
