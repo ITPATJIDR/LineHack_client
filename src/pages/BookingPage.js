@@ -96,7 +96,7 @@ export default function BookingPage() {
 									</div>
 								</div>
 							</div>
-							: <div>
+							: <div style={{width:380,display:"flex",justifyContent:"center",maringTop:10 }}>
 								<img src={Sorry} alt="Sorry" style={{ width: 300, height: 126 }} />
 							</div>
 							 }
