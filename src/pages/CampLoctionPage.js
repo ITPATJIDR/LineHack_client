@@ -102,8 +102,6 @@ export default function CampLoctionPage() {
 		checkBooking()
 	},[])
 
-
-
 	return (
 		<div style={{backgroundColor:"#1CBF9B"}}>
 			<Header alignItems={""} pageService={"Location"} pageMain={"Camp"}/>

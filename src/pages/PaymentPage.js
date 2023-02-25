@@ -9,11 +9,6 @@ const generatePayload = require('promptpay-qr');
 
 export default function PaymentPage() {
 
-  const {
-			electricity, result, phoneSignal, rentalEquipment,
-			suitBestFor, toilet, wifi, campImage, campName, id,camp,
-			name, phoneNumber, age, birthDate, email, address,startDate
-  } = location.state
 
   const [ phoneNumbers, setPhoneNumber ] = useState("0993848633");
   const [ bookingDetail, setBookingDetail ] = useState("");
@@ -24,6 +19,12 @@ export default function PaymentPage() {
   const Dates = new Date(startDate)
   const futureDate = new Date(Dates);
   const XDate = futureDate.setDate(futureDate.getDate() + 5);
+
+  const {
+			electricity, result, phoneSignal, rentalEquipment,
+			suitBestFor, toilet, wifi, campImage, campName, id,camp,
+			name, phoneNumber, age, birthDate, email, address,startDate
+  } = location.state
 
 
   function handleQR() {
