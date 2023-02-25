@@ -50,7 +50,7 @@ export default function ServicePage() {
 		const res = await axios.post("https://rich-ruby-pelican-sari.cyclic.app/service/getServiceById", {
 			userId: data.userId
 		})
-		console.log(res.data.data.Booking.length)
+		console.log(res.data.data.Booking[0].Camp.length)
 		setAllService(res.data)
 	} 
 
