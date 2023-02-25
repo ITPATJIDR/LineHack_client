@@ -74,7 +74,7 @@ export default function BananaPointPage() {
     if (userBananaPoint >= itemBananaPoint) {
       console.log(userBananaPoint - itemBananaPoint)
     }else{
-      console.log("can't buy")
+      setBuyModal(true)
     }
   }
 
