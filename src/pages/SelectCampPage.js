@@ -91,7 +91,7 @@ export default function SelectCampPage() {
 					  </div>
 				  </div>
 			  </div>
-			  <div style={{marginTop:10,overflowY:"scroll",height:250}}>
+			  <div style={{marginTop:10,overflowY:"scroll",height:190}}>
 				  <div style={{marginTop:10}}>
 					  <div style={{ fontWeight: 'bold', fontSize: 20, marginBottom: 10 }}>
 						  สิ่งอำนวนความสะดวก
