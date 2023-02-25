@@ -17,6 +17,7 @@ export default function CampLoctionPage() {
 	const [startDate,setStartDate] = useState(new Date())
 	const [email,setEmail] = useState("")
 	const [address,setAddress] = useState("")
+	const [insurance, setInsurance] = useState(false)
 
 	const { electricity, bookingPrice, phoneSignal, rentalEquipment,
 		 suitBestFor, toilet, wifi, campImage, campName, id
@@ -120,7 +121,7 @@ export default function CampLoctionPage() {
 								display: "flex", justifyContent: "space-evenly", background: "#0cb43a", width: 250,
 								height: 40, borderRadius: 10, alignItems: "center"
 							}}>
-								<p>test</p>	
+								<input type="checkbox" value={insurance} onChange={setInsurance} />
 								<p>รับประกันการเดินทาง</p>	
 							</div>
 						</div>
