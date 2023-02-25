@@ -118,8 +118,8 @@ export default function CampLoctionPage() {
 						</div>
 						<div style={{display:"flex",justifyContent:"center",marginTop:20}}>
 							<div style={{
-								display: "flex", justifyContent: "center", background: "#0cb43a", width: 250,
-								height: 40, borderRadius: 10, alignItems: "center"
+								display: "flex", justifyContent:"flex-start", background: "#0cb43a", width: 250,
+								height: 40, borderRadius: 10, alignItems: "center",padding:10
 							}}>
 								<input type="checkbox" style={{width:20,height:20}} value={insurance} onChange={setInsurance} />
 								<p style={{marginLeft:10,color:"white"}}>รับประกันการเดินทาง</p>	
@@ -128,7 +128,7 @@ export default function CampLoctionPage() {
 
 						<div style={{display:"flex",justifyContent:"center",marginTop:20}}>
 							<div style={{
-								display: "flex", justifyContent: "space-between", background: "#0cb43a", width: 250,
+								display: "flex", justifyContent: "flex-start", background: "#0cb43a", width: 250,
 								height: 40, borderRadius: 10, alignItems: "center",padding:10
 							}}>
 								<input type="checkbox" style={{width:20,height:20}} value={insurance} onChange={setInsurance} />
