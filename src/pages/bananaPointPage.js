@@ -65,12 +65,14 @@ export default function BananaPointPage() {
     setAllShop(res.data)
   }
 
+  const Buy = (item) => {
+    console.log(item)
+  }
+
   useEffect(() => {
     checkUserInfo()
     fetchAllShop()
   },[])
-  
-  console.log(allShop)
 
   return (
     <div style={{ backgroundColor: "#1CC09E", width: 390, height: 750 }}>
@@ -100,7 +102,7 @@ export default function BananaPointPage() {
 											return (
 												<div key={index} style={{ width: 150 , height: 200, borderWidth: 1, borderRadius: 10, marginBottom: 10,
 												overflow:"hidden",textOverflow:"ellipsis" }} 
-												onClick={() => console.log(item)}
+												onClick={() => Buy(item)}
 												>
 													<img src={item.itemImage} alt={item.itemName} style={{width:"100%",height:130,borderTopRightRadius:10,borderTopLeftRadius:10}}/>
 													<div style={{padding:10}}>
