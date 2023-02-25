@@ -21,8 +21,7 @@ export default function SelectCampPage() {
 
 	const fetchWetherDate = async() => {
 		const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=5678f9374e5adea8da4bc86751a3ea5a`)
-		setWeather(res.data)
-		console.log(res.data.weather)
+		setWeather(res.data.weather[0])
 	}
 
 	const handleBookNow = () => {
