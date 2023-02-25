@@ -166,7 +166,7 @@ export default function ServicePage() {
 									justifyContent: seeMore === true && page === "Service" ? "space-evenly" : null,
 									}}>
 									{allService.data?.Booking.length > 0
-										? allService.data.Booking[0].Camp.map((item, index) => {
+										? allService.data?.Booking[0]?.Camp.map((item, index) => {
 											return (
 												<div></div>
 											// 	// <div key={index} style={{ width: seeMore === true && page === "Service" ? 130 : 400 ,
