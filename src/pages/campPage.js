@@ -63,17 +63,19 @@ export default function CampPage() {
 	const renderCampMode = (Mode) => {
 		if (Mode === "EASY"){
 			return (
-				<div style={{display:"flex"}}>
+				<div style={{display:"flex",position:"absolute",width:70,background:"white",top:-20,borderTopLeftRadius:5,right:0,justifyContent:"end"}}>
+				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
+				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
 				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
 				</div>
 			)
 		}else if (Mode === "MEDIUM"){
-				<div style={{display:"flex"}}>
+				<div style={{display:"flex",position:"absolute",width:70,background:"white",top:-20,borderTopLeftRadius:5,right:0,justifyContent:"end"}}>
 				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
 				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
 				</div>
 		}else{
-				<div style={{display:"flex"}}>
+				<div style={{display:"flex",position:"absolute",width:70,background:"white",top:-20,borderTopLeftRadius:5,right:0,justifyContent:"end"}}>
 				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
 				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
 				 <img src={Coconut} alt="coconut" style={{width:20,height:20}}/>
@@ -153,7 +155,7 @@ export default function CampPage() {
 												onClick={() => handleClick(item)}
 												>
 													<img src={item.campImage} alt={item.campName} style={{width:"100%",height:130,borderTopRightRadius:10,borderTopLeftRadius:10}}/>
-													<div>
+													<div style={{position:"relative"}}>
 														{renderCampMode(item.campMode)}
 													</div>
 													<div style={{padding:10}}>
