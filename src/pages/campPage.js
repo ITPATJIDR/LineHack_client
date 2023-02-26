@@ -99,7 +99,7 @@ export default function CampPage() {
 								return (
 									<div onClick={() => setCategory(item.categoryName)} key={index} style={{ width: "100%" }}>
 										<div style={{ display: "flex", borderWidth: 1, width: 110, borderRadius: 10, borderColor: "#C4C4C4", marginRight: 10, alignItems: 'center', 
-										backgroundColor: category === item.categoryName ? "#1CBF9B" : "" }}>
+										backgroundColor: category === item.categoryName ? "#244a71" : "" }}>
 											<img src={category === item.categoryName ? item.icon_white : item.icon_grey} alt={item.name} style={{ width: 60, height: 60 }} />
 											<p style={{ fontSize: 14, lineBreak: "anywhere", fontWeight: "bold", color: category === item.categoryName ? "white" : "#838383" }}>{item.categoryName}</p>
 										</div>
