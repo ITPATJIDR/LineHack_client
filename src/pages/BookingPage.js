@@ -75,7 +75,7 @@ export default function BookingPage() {
 	return (
 		<>
 			{Object.keys(userInfo.userInfo).length > 0
-				? <div style={{ backgroundColor: "#1CC09E", width: 390, height: 750 }}>
+				? <div style={{ backgroundColor: "#244a71", width: 390, height: 750 }}>
 					<Header alignItems={"left"} pageService={"Booking"} pageMain={"Monkey"} />
 					<div style={{ position: "absolute", top: 50, right: 60, display: "flex", flexDirection: "column", alignItems: "center" }}>
 						<img src={userInfo.userInfo.data.userImage} alt={userInfo.userInfo.data.userName} style={{ width: 100, height: 100, borderRadius: 50 }} />
