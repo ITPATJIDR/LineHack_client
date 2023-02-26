@@ -189,7 +189,7 @@ export default function CampLoctionPage() {
 
 						<div style={{display:"flex",justifyContent:"center",marginTop:20}}>
 							<div  style={{
-								display: "flex", justifyContent: "flex-start", background: "#0cb43a", width: 400,
+								display: "flex", justifyContent: "flex-start", background: "#0cb43a", width: 300,
 								height: 60, borderRadius: 10, padding: 10, 
 							}}>
 								<input type="checkbox" style={{ width: 20, height: 20 }} value={PDPA} onClick={() => setPDPA(!PDPA)}/>
