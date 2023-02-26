@@ -123,7 +123,7 @@ export default function CampLoctionPage() {
 	},[])
 
 	return (
-		<div style={{backgroundColor:"#1CBF9B"}}>
+		<div style={{backgroundColor:"#244a71"}}>
 			<Header alignItems={""} pageService={"Location"} pageMain={"Camp"}/>
 			<Body alignItems={""} justifyContent={""} display={""}>
 				<div style={{padding:20}}>
