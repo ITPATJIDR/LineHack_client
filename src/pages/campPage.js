@@ -25,7 +25,7 @@ const categorys = [
 	},
 ]
 
-export default function CampPage() {
+export default function CampPage({userInfo}) {
 
 	const [allCamp, setAllCamp] = useState([])
 	const [seeMore, setSeemore] = useState(false)

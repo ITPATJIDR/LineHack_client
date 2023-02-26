@@ -65,7 +65,7 @@ export default function Main() {
   return (
     <div style={{ backgroundColor: "#244a71", width: 390, height: 750 }}>
       {Object.keys(userInfo.userInfo).length > 0
-        ? <CampPage />
+        ? <CampPage userInfo={userInfo} />
         : <WaitingLogin />
       }
       {/* { true
