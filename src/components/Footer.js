@@ -10,7 +10,7 @@ export default function Footer() {
 	}
 
   return (
-    <div style={{width:"100%",height:50,position:"absolute",bottom:0,padding:5,display:"flex",justifyContent:"center",borderTopWidth:1,bottom:10,background:"#000000"}}> 
+    <div style={{width:"100%",height:60,position:"absolute",bottom:0,padding:5,display:"flex",justifyContent:"center",borderTopWidth:1,bottom:10,background:"#000000"}}> 
 		  <div onClick={() => (handleRedirect("/"), setCheckOpen("Camp")) } style={{ width: "30%", marginRight: 10, height: 40, display: "flex", justifyContent: "center", alignContent: "center", marginTop: 5, display: "flex", alignItems: "center", 
 		  backgroundColor: checkOpen === "Camp" ? "#FDAF17" : "#DFDFDF", 
 		  borderRadius: 5, color: "white" }}>
