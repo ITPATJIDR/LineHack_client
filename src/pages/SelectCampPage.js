@@ -170,7 +170,7 @@ export default function SelectCampPage() {
 			  }}>
 				  <div>
 					  <div onClick={() => handleBack()} style={{
-						  width: 250,
+						  width: 100,
 						  height: 50,
 						  backgroundColor: "#DFDFDF",
 						  justifyContent: 'center',
@@ -184,7 +184,7 @@ export default function SelectCampPage() {
 				  </div>
 				  <div>
 					  <div style={{
-						width:100,
+						width:250,
 						height:50,
 						backgroundColor:"#FDAF17",
 						justifyContent: 'center',
