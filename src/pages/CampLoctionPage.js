@@ -107,6 +107,10 @@ export default function CampLoctionPage() {
 		marginBottom : 10
 	}
 
+	const inputText = {
+		fontWeight:"bold"
+	}
+
 	const checkBooking = async () => {
 		const res = await axios.post("https://rich-ruby-pelican-sari.cyclic.app/camp/checkBooking", {
 			userId: userInfo.userInfo.data.userId
@@ -129,38 +133,37 @@ export default function CampLoctionPage() {
 						</div>
 						<div style={{marginTop:10}}>
 							<div style={Detailbox}>
-								<p>ชื่อ-นามสกุล</p>
+								<p style={inputText}>ชื่อ-นามสกุล</p>
 								<input type="text" style={DetailInput} value={name} onChange={(e) => setName(e.target.value)} placeholder="ชื่อนามสกุล"/>
 							</div>
 							<div style={Detailbox}>
-								<p>เบอร์โทรศัพท์</p>
+								<p style={inputText}>เบอร์โทรศัพท์</p>
 								<input type="text" style={DetailInput} value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} placeholder="เบอร์โทรศัพท์"/>
 							</div>
 							<div style={Detailbox}>
-								<p>Email</p>
+								<p style={inputText}>Email</p>
 								<input type="text"style={DetailInput} value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"/>
 							</div>
 							<div style={Detailbox}>
-								<p>ที่อยุ่</p>
+								<p style={inputText}>ที่อยุ่</p>
 								<input type="text"style={DetailInput} value={address} onChange={(e) => setAddress(e.target.value)} placeholder="ที่อยุ่"/>
 							</div>
 							<div style={Detailbox}>
-								<p>อายุ</p>
+								<p style={inputText}>อายุ</p>
 								<input type="text"style={DetailInput} value={age} onChange={(e) => setAge(e.target.value)} placeholder="อายุ"/>
 							</div>
 							<div style={Detailbox}>
-								<p>วันเกิด</p>
+								<p style={inputText}>วันเกิด</p>
 								<DatePicker onChange={setBirthDate} value={birthDate} />
 							</div>
 							<div style={Detailbox}>
-								<p>วันไป</p>
+								<p style={inputText}>วันไป</p>
 								<DatePicker onChange={setStartDate} value={startDate} />
 							</div>
 							<div style={Detailbox}>
-								<p>วันกลับ</p>
+								<p style={inputText}>วันกลับ</p>
 								<DatePicker onChange={setEndDate} value={endDate} />
 							</div>
-						
 						</div>
 						<div style={{marginTop:10}}>
 							<p>จำนวนเต็นท์</p>
@@ -198,8 +201,9 @@ export default function CampLoctionPage() {
 						</div>
 
 						<div style={{marginTop:30,display:"flex",justifyContent:"center"}}>
-							<div style={{height:50,width:300,display:"flex",justifyContent:"center",alignItems:"center",borderRadius:30,background:"#0cb43a",color:"white"}}>
-								<p> จอง {camp} เต็นท์ ราคารวม {result} บาท </p>
+							<div style={{height:50,width:300,display:"flex",justifyContent:"center",alignItems:"center",borderRadius:30,background:"#0cb43a",color:"white",flexDirection:"column"}}>
+								<p> จอง {camp} เต็นท์</p> 
+								<p>ราคารวม {result} บาท </p>
 							</div>
 						</div>
 					</div>
