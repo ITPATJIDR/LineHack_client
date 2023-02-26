@@ -6,9 +6,8 @@ export default function Footer() {
 	const navigate = useNavigate()
 	const [checkOpen, setCheckOpen ] = useState("")
 	const handleRedirect = (path,Name) =>{
-		navigate(path)
-		console.log(Name)
 		setCheckOpen(Name)
+		navigate(path)
 	}
 
   return (

@@ -119,7 +119,7 @@ export default function SelectCampPage() {
 					  <div style={{ fontWeight: 'bold', fontSize: 20, marginBottom: 10 }}>
 						  สิ่งอำนวนความสะดวก
 					  </div>
-					  <div style={{display:"flex",flexWrap:"wrap" }}>
+					  <div style={{display:"flex",flexWrap:"wrap",backgroundColor:"#f7f7f7" }}>
 						  <div style={{ display: 'flex', justifyContent: "flex-start", width: 150, margin: 15, marginTop: 10 }}>
 							  <input type="checkbox" checked={rentalEquipment} />
 							  <p style={facilityText}>อุปกรณ์ให้เช่า</p>
