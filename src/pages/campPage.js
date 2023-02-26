@@ -90,7 +90,7 @@ export default function CampPage({userInfo}) {
 			<Header alignItems={"left"} seeMore={seeMore} page={page} pageService={"Camp"} pageMain={"Monkey"}/>
 			<div style={{ position: "absolute", top: 50, right: 60, display: "flex", flexDirection: "column", alignItems: "center" }}>
 				<img src={userInfo?.userInfo?.data?.userImage} alt={userInfo?.userInfo?.data?.userName} style={{ width: 100, height: 100, borderRadius: 50 }} />
-				<p>{userInfo?.userInfo?.data?.userName}</p>
+				<p style={{color:"white"}} >{userInfo?.userInfo?.data?.userName}</p>
 			</div>
 			<Body alignItems={""} justifyContent={""} seeMore={seeMore} page={page} display={"flex"} pageService={"Camp"} >
 				<div style={{ width: '100%', padding: 20,overflow:"hidden" }}>
