@@ -14,7 +14,7 @@ export default function PaymentPage() {
   }
 
   return(
-    <div style={{ backgroundColor: "#1CC09E", width: 390, height: 750}}>
+    <div style={{ backgroundColor: "#244a71", width: 390, height: 750}}>
       <div style={{display: "flex", justifyContent:"center",fontSize:50,fontWeight:'bold',color:'#FFFFFF',height:150,alignItems:'center'}}>
         <p>Payment</p>
       </div>
