@@ -20,6 +20,7 @@ export default function CampLoctionPage() {
 	const [age,setAge] = useState("")
 	const [birthDate,setBirthDate] = useState(new Date())
 	const [startDate,setStartDate] = useState(new Date())
+	const [endDate,setEndDate] = useState(new Date())
 	const [email,setEmail] = useState("")
 	const [address,setAddress] = useState("")
 	const [insurance, setInsurance] = useState(false)
@@ -45,7 +46,7 @@ export default function CampLoctionPage() {
 						state: {
 							electricity, result, phoneSignal, rentalEquipment,
 							suitBestFor, toilet, wifi, campImage, campName, id, camp,
-							name, phoneNumber, age, birthDate, email, address, startDate
+							name, phoneNumber, age, birthDate, email, address, startDate,endDate
 						}
 					})
 				}
@@ -154,6 +155,10 @@ export default function CampLoctionPage() {
 							<div style={Detailbox}>
 								<p>วันไป</p>
 								<DatePicker onChange={setStartDate} value={startDate} />
+							</div>
+							<div style={Detailbox}>
+								<p>วันกลับ</p>
+								<DatePicker onChange={setEndDate} value={endDate} />
 							</div>
 						
 						</div>
