@@ -221,7 +221,7 @@ export default function CampLoctionPage() {
 						display: 'flex',
 						bottom: '0',
 						justifyContent: "space-between",
-						backgroundColor: "#F7F7F7",
+						backgroundColor: "#000000",
 						width: 393,
 						height: 70,
 						left: 0,
@@ -233,7 +233,7 @@ export default function CampLoctionPage() {
 							<div style={{
 								width: 100,
 								height: 50,
-								backgroundColor: "#FDAF17",
+								backgroundColor: "#DFDFDF",
 								justifyContent: 'center',
 								display: "flex",
 								alignItems: "center",
@@ -247,7 +247,7 @@ export default function CampLoctionPage() {
 						</div>
 						<div>
 							<div style={{
-								width: 100,
+								width: 250,
 								height: 50,
 								backgroundColor: "#FDAF17",
 								justifyContent: 'center',
